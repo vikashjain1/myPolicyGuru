@@ -1,13 +1,16 @@
 <?php
 namespace App\Controller;
+use Cake\Core\Configure;
 
 use App\Controller\AppController;
 
 class UsersController extends AppController{
 
     public function initialize()
-    {
-        parent::initialize();
+    {	
+		parent::initialize();
+		Configure::write('debug', 0);
+        
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){

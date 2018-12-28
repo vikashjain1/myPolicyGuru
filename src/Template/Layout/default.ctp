@@ -87,7 +87,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 									
 									<?php //echo	$this->Html->link('Profile', array('controller' => 'users', 'action' => 'edit'));?> </li>
 
-			<li><?php echo	$this->Html->link('Add Policy', array('controller' => 'articles', 'action' => 'add')); 
+			<li><?php echo	$this->Html->link('Add Policy', array('controller' => 'policies', 'action' => 'add')); 
 			?></li>
 			<li><a href="user_sumarry.php">User Summary</a></li>
 			<li><a href="claim_summaries.php">Claim Summaries</a></li>
@@ -101,7 +101,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				</li>				<?php } ?>
 </ul>
 		</div>
-		 <?= $this->fetch('content') ?>
+		 <?php echo $this->fetch('content') ?>
       </div>
 </section>
 	<footer class="footer">
