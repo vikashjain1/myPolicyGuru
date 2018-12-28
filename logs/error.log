@@ -11081,3 +11081,916 @@ Stack Trace:
 #6 {main}
 
 
+2018-12-28 10:33:10 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible.
+Request URL: /policyapp2/vikain/users/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/users/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 10:33:18 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible.
+Request URL: /policyapp2/vikain/users/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 10:35:10 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 10:45:11 Error: [Error] Call to a member function find() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 10:46:47 Error: [Error] Call to a member function find() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 10:48:00 Error: [Error] Call to a member function newEntity() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 11:01:03 Error: [Error] Call to a member function find() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 11:01:06 Error: [Error] Call to a member function find() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 11:01:36 Error: [Error] Call to a member function find() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 11:01:55 Error: [Error] Call to a member function toArray() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 11:02:17 Error: [Error] Call to a member function toArray() on boolean
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->add()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 11:05:13 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'policyapp.policy_types_table' doesn't exist
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'policy_types_ta...', Array, Object(Cake\Database\Schema\Table))
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Table.php(435): Cake\Database\Schema\Collection->describe('policy_types_ta...')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Table.php(1313): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#5 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Table.php(959): Cake\ORM\Table->query()
+#6 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(64): Cake\ORM\Table->find('list')
+#7 [internal function]: App\Controller\PoliciesController->add()
+#8 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#9 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#11 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2018-12-28 11:05:24 Error: [BadMethodCallException] Unknown method "setDisplayField"
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Model\Table\PolicyTypesTable.php(11): Cake\ORM\Table->__call('setDisplayField', Array)
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Table.php(291): App\Model\Table\PolicyTypesTable->initialize(Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(210): Cake\ORM\Table->__construct(Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(177): Cake\ORM\Locator\TableLocator->_create(Array)
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(110): Cake\ORM\Locator\TableLocator->get('PolicyTypes', Array)
+#5 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(59): Cake\ORM\TableRegistry::get('PolicyTypes')
+#6 [internal function]: App\Controller\PoliciesController->add()
+#7 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#9 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#10 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+
+2018-12-28 11:05:37 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 11:06:09 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 11:09:03 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 11:09:28 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 15:35:38 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible.
+Request URL: /policyapp2/vikain/users/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/users/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 15:35:49 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::img() could not be found, or is not accessible.
+Request URL: /policyapp2/vikain/users/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 15:39:52 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 15:42:10 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\edit.ctp, line 128]
+Request URL: /policyapp2/vikain/policies/edit/2
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\edit.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 15:42:11 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(147): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:42:23 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\edit.ctp, line 128]
+Request URL: /policyapp2/vikain/policies/edit/3
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\edit.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 15:42:23 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(147): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:49:48 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\edit.ctp, line 83]
+Request URL: /policyapp2/vikain/policies/edit/3
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\edit.ctp, line 83
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 15:49:49 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(147): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:50:57 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 15:51:40 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 15:51:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:51:53 Error: [Error] Call to a member function find() on null
+Request URL: /policyapp2/vikain/policies/edit/3
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 [internal function]: App\Controller\PoliciesController->edit('3')
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#4 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2018-12-28 15:52:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:52:36 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:52:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:52:44 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:52:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:52:55 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:53:04 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:53:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:53:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:53:09 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/1
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:53:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:53:19 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/1
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:53:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:53:24 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:53:33 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 15:54:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 15:59:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:00:00 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 16:00:03 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 16:00:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:01:53 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 16:01:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:02:07 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 16:02:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:02:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:02:32 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 16:02:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:02:39 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 16:03:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:03:26 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 16:03:31 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 16:03:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:03:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:03:39 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "policies"
+Request URL: /policyapp2/vikain/policies/edit/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/3
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php(156): Cake\ORM\Query->firstOrFail()
+#1 [internal function]: App\Controller\PoliciesController->edit('img', 'logo.jpg')
+#2 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#5 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-28 16:03:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2018-12-28 16:03:56 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 16:04:18 Error: [Cake\Controller\Exception\MissingActionException] Action PoliciesController::img() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PoliciesController',
+  'action' => 'img',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikain/policies/img/logo.jpg
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikain\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#2 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2018-12-28 16:04:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikain/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikain\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

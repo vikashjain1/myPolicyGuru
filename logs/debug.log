@@ -1031,3 +1031,205 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2018-12-28 11:01:55 Notice: Notice (8): Undefined variable: selectListdata in [D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php, line 63]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\PoliciesController::add() - APP/Controller\PoliciesController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 11:09:03 Notice: Notice (8): Trying to get property of non-object in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\add.ctp, line 75]
+Request URL: /policyapp2/vikain/policies/add
+Referer URL: http://localhost/policyapp2/vikain/users/edit
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\add.ctp, line 75
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 15:42:10 Notice: Notice (8): Undefined variable: selectListdata in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\edit.ctp, line 128]
+Request URL: /policyapp2/vikain/policies/edit/2
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\edit.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 15:42:23 Notice: Notice (8): Undefined variable: selectListdata in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\edit.ctp, line 128]
+Request URL: /policyapp2/vikain/policies/edit/3
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\edit.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 15:49:48 Notice: Notice (8): Undefined variable: selectListdata in [D:\xampp\htdocs\policyapp2\vikain\src\Template\Policies\edit.ctp, line 83]
+Request URL: /policyapp2/vikain/policies/edit/3
+Referer URL: http://localhost/policyapp2/vikain/policies/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Policies\edit.ctp, line 83
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1005
+Cake\View\View::_render() - CORE\src\View\View.php, line 964
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-28 15:51:52 Notice: Notice (8): Undefined variable: PolicyTypes in [D:\xampp\htdocs\policyapp2\vikain\src\Controller\PoliciesController.php, line 143]
+Request URL: /policyapp2/vikain/policies/edit/3
+Referer URL: http://localhost/policyapp2/vikain/policies/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\PoliciesController::edit() - APP/Controller\PoliciesController.php, line 143
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 36
+
+
+

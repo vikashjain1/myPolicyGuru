@@ -10,6 +10,9 @@ use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
 use Cake\Network\Email\Email;
+use App\Model\Table\PolicyTypesTable;
+use App\Model\Entity\PolicyType;
+
 
 class PoliciesController extends AppController
 {
@@ -17,7 +20,7 @@ class PoliciesController extends AppController
     public function initialize()
     {
         parent::initialize();
-		Configure::write('debug', 0);
+		//Configure::write('debug', 0);
 
         $this->session = $this->request->session();
 
@@ -52,9 +55,21 @@ class PoliciesController extends AppController
     public function add()
     {
 		$this->set('errorMsg','');
-        $article = $this->Policies->newEntity();			
+        $article = $this->Policies->newEntity();
+		$PolicyTypes = TableRegistry::get('PolicyTypes');
+		
+        //$PolicyTypes = $this->PolicyTypes->newEntity();			
 		$fileuplodStatus=true;
 		$policy_typeStatus=true;
+		$selectListquery = $PolicyTypes->find('list',[		
+							'keyField' => 'id',
+							'valueField' => 'policy_name'	
+		]);
+		$selectListdata = $selectListquery->toArray();
+		$this->set('selectListdata', $selectListdata);
+
+
+// Data now looks like
 
         if ($this->request->is('post')) {
 			$postedData = $this->request->data;
@@ -125,6 +140,15 @@ class PoliciesController extends AppController
 			$postedData = $this->request->data;
 			$fileuplodStatus=true;
 			$policy_typeStatus=true;
+					$PolicyTypes = TableRegistry::get('PolicyTypes');
+
+			$selectListquery = $PolicyTypes->find('list',[		
+							'keyField' => 'id',
+							'valueField' => 'policy_name'	
+		]);
+		$selectListdata = $selectListquery->toArray();
+		$this->set('selectListdata', $selectListdata);
+
 			if(empty($id)){
 				$id= $postedData['id'];
 			}//die;

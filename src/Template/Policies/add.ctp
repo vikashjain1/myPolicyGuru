@@ -68,18 +68,16 @@ echo  $errorMsg;
                     <div class="form-group">
                       <div class="col-md-4">
                         <label>Policy Type <span>(Individual/Family Account)</span></label>
+	
                         <select id="example-selectAllJustVisible" class="my-select" name="policy_type[]" multiple="multiple">
-						
-						 
-                          <option value="Auto">Auto</option>
-                          <option value="Home Owner">Home Owner</option>
-                          <option value="Renter">Renter</option>
-                          <option value="Life">Life</option>
-                          <option value="Boat">Boat</option>
-                          <option value="Bike">Bike</option>
-                          <option value="Liability/Umbrella">Liability/Umbrella</option>
-                          <option value="Other">Other</option>
-                        </select>
+						<?php
+							foreach($selectListdata as $policyid => $policyType){				
+						?>
+						 <option value="<?php echo $policyid;?>"><?php echo $policyType;?></option>						 
+						 <?php 
+						  }
+						  ?>
+						 </select>
                        </div>
                       <div class="col-md-4">
                           <label>Insurance Carrier</label>
@@ -141,11 +139,27 @@ echo  $errorMsg;
                   </thead>
                   <tbody>
 				  
-<?php foreach ($articles as $article): ?>
+<?php foreach ($articles as $article): 
+
+	
+						 $policy_typeexp = [];
+					   	 if(!empty($article->policy_type)){
+							$policy_typeexp  = explode(",",$article->policy_type);
+						 }			
+							
+   
+?>
     
                     <tr>
                       <td><?php echo $article->policy_number;?></td>
-                      <td><?php echo $article->policy_type;?></td>
+                      <td><?php 
+					  $allPolicyType=[];
+					  foreach($policy_typeexp as $id){
+					  
+					   $allPolicyType[]= (isset($selectListdata[$id]))?$selectListdata[$id]:'';
+					  }
+					  echo  implode(",",$allPolicyType);
+					  ?></td>
                       <td><?php echo Date("d/m/Y",strtotime($article->expiration_date)); ?></td>
                       <td><?php echo Date("d/m/Y",strtotime($article->effective_date));?></td>
                       <td><?php echo $article->policy_premium;?></td>

@@ -71,58 +71,30 @@ echo  $errorMsg;
                     <div class="form-group">
                       <div class="col-md-4">
                         <label>Policy Type <span>(Individual/Family Account)</span></label>
-                        <select id="example-selectAllJustVisible" name="policy_type[]" multiple="multiple">
-						
 						<?php
-						$policy_typeexp=[];
-					 	if(!empty($article->policy_type)){
+						 $policy_typeexp = [];
+					   	 if(!empty($article->policy_type)){
 							$policy_typeexp  = explode(",",$article->policy_type);
-						}			?>		
+						 }			
+						?>		
    
-                          <option value="Auto" <?php  if(in_array("Auto",$policy_typeexp)){
+						<select id="example-selectAllJustVisible" class="my-select" name="policy_type[]" multiple="multiple">
+						<?php
+                        foreach($selectListdata as $policyid => $policyType){				
+					    ?>
+						 <option value="<?php echo $policyid;?>" 
+						 <?php 
+						  if(in_array($policyid,$policy_typeexp)){
 						  echo 'selected';      
-						  }            ?>
-			 
-			 >Auto</option>
-                          <option value="Home Owner"<?php  if(in_array("Home Owner",$policy_typeexp)){
-						  echo 'selected';      
-						  }           ?>>Home Owner</option>
-                          <option value="Renter"
-						  <?php  if(in_array("Renter",$policy_typeexp)){
-						  echo 'selected';      
-						  }
-             ?>
-						  >Renter</option>
-                          <option value="Life"
-						  <?php  if(in_array("Life",$policy_typeexp)){
-						  echo 'selected';      
-						  }
-             ?>
-						  >Life</option>
-                          <option value="Boat"
-						    <?php  if(in_array("Boat",$policy_typeexp)){
-						  echo 'selected';      
-						  }
-             ?>
-						  >Boat</option>
-                          <option value="Bike"
-						  <?php  if(in_array("Bike",$policy_typeexp)){
-						  echo 'selected';      
-						  }
-             ?>
-						  
-						  
-						  >Bike</option>
-						  <option value="Other"   <?php 
-						  if(in_array("Other",$policy_typeexp)){
-						  echo 'selected';      
-						  } ?>>Other</option>
-                          <option value="Liability/Umbrella"
-						  
-						 	 >Liability/Umbrella</option>
-                          
-                        </select>
-                       </div>
+						  } ?>>
+						  <?php echo $policyType;?>
+						  </option>						 
+						 <?php 
+						 }
+						 ?>
+						 </select>
+                                            
+					  </div>
                       <div class="col-md-4">
                           <label>Insurance Carrier</label>
 						  <input type="hidden" value="<?php echo $article->id;?>" name="id" >
@@ -187,11 +159,26 @@ echo  $errorMsg;
                   </thead>
                   <tbody>
 				  
-<?php foreach ($articles as $article): ?>
+<?php foreach ($articles as $article):
+
+
+
+						 $policy_typeexp = [];
+					   	 if(!empty($article->policy_type)){
+							$policy_typeexp  = explode(",",$article->policy_type);
+						 }			
+	 ?>
     
                     <tr>
                       <td><?php echo $article->policy_number;?></td>
-                      <td><?php echo $article->policy_type;?></td>
+                      <td><?php 
+					  $allPolicyType=[];
+					  foreach($policy_typeexp as $id){
+					  
+					   $allPolicyType[]= (isset($selectListdata[$id]))?$selectListdata[$id]:'';
+					  }
+					  echo  implode(",",$allPolicyType);
+					  ?></td>
                       <td><?php echo Date("d/m/Y",strtotime($article->expiration_date)); ?></td>
                       <td><?php echo Date("d/m/Y",strtotime($article->effective_date));?></td>
                       <td><?php echo $article->policy_premium;?></td>
