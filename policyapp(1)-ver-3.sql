@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2018 at 08:04 AM
+-- Generation Time: Dec 28, 2018 at 05:06 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.0.15
 
@@ -117,9 +117,35 @@ CREATE TABLE `policies` (
 --
 
 INSERT INTO `policies` (`user_id`, `policy_type`, `carrier`, `policy_number`, `expiration_date`, `effective_date`, `policy_premium`, `policy_path`, `published`, `created`, `modified`, `id`) VALUES
-(1, 'Home Owner,Renter', 'carrie22', '777882', '2018-12-30', '2018-12-31', 90907782, '', 0, '2018-12-28 06:48:59', '2018-12-28 06:52:52', 1),
-(1, 'Home Owner,Renter', 'carrier3', '55555', '2018-12-29', '2018-12-02', 33333, '1545979764.jpg', 0, '2018-12-28 06:49:24', '2018-12-28 06:49:24', 2),
-(1, 'Auto', 'jaidev carrier', '7676723', '2018-12-31', '2018-12-01', 6277272, '1545979798.jpg', 0, '2018-12-28 06:49:58', '2018-12-28 06:49:58', 3);
+(1, '3', 'carrie22', '777882', '2018-12-30', '2018-12-31', 90907782, '', 0, '2018-12-28 06:48:59', '2018-12-28 15:53:17', 1),
+(1, '2,3', 'carrier3', '55555', '2018-12-29', '2018-12-02', 33333, '', 0, '2018-12-28 06:49:24', '2018-12-28 15:53:32', 2),
+(1, '1,4', 'jaidev carrier', '7676723', '2018-12-31', '2018-12-01', 6277272, '1546013018.jpg', 0, '2018-12-28 06:49:58', '2018-12-28 16:03:38', 3),
+(1, '2,4', 'catrr77', '822929', '2018-12-10', '2018-12-19', 9292992, '', 0, '2018-12-28 16:04:17', '2018-12-28 16:04:17', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `policy_types`
+--
+
+CREATE TABLE `policy_types` (
+  `id` int(11) NOT NULL,
+  `policy_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `policy_types`
+--
+
+INSERT INTO `policy_types` (`id`, `policy_name`) VALUES
+(1, 'Home Owner'),
+(2, 'Auto'),
+(3, 'Renter'),
+(4, 'Life'),
+(5, 'Boat'),
+(6, 'Bike'),
+(7, 'Liability/Umbrella'),
+(8, 'Other');
 
 -- --------------------------------------------------------
 
@@ -222,6 +248,12 @@ ALTER TABLE `policies`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `policy_types`
+--
+ALTER TABLE `policy_types`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tags`
 --
 ALTER TABLE `tags`
@@ -247,7 +279,12 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT for table `policies`
 --
 ALTER TABLE `policies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `policy_types`
+--
+ALTER TABLE `policy_types`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tags`
 --
