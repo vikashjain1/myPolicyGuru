@@ -60,7 +60,7 @@ echo  $errorMsg;
 	}	
 	?></span></h3>
             <div class="panel panel-default">
-              <div class="panel-heading">Some Title Related to Ragistration</div>
+			                  <div class="panel-heading" style="color:green;" ><?php echo  $this->Flash->render() ?></div>
               <div class="panel-body">
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email">Name:</label>

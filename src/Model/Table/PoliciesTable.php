@@ -10,4 +10,9 @@ class PoliciesTable extends Table
     {
         $this->addBehavior('Timestamp');
     }
+	
+	public function isOwnedBy($articleId, $userId)
+	{
+    return $this->exists(['id' => $articleId, 'user_id' => $userId]);
+	}
 }

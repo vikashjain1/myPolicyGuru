@@ -39,7 +39,7 @@ echo  $errorMsg;
 	}	
 	?></span></h3>
             <div class="panel panel-default">
-              <div class="panel-heading"></div>
+			                  <div class="panel-heading" style="color:green;" ><?php echo  $this->Flash->render() ?></div>
               <div class="panel-body">
 <?php    echo $this->Form->create('',['id'=>'UserLoginForm']);?>
               <div class="form-group">
