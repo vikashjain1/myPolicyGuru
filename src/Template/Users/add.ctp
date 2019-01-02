@@ -39,7 +39,8 @@
 				}
 				,
 				zip: {
-					required: true
+					required: true,
+					number:true
 				}
 				
 			},
@@ -59,7 +60,9 @@
 				address: "Please enter  address",
 				city: "Please enter  city",
 				state: "Please enter  state",
-				zip: "Please enter  zip"
+				zip: {required:"Please enter  zip",
+				number:"Please enter valid zip"
+				}
 			}
 		});
 
@@ -145,9 +148,8 @@ echo  $errorMsg;
               <div class="form-group">
                 <label class="control-label col-sm-3" for="zip">Zip:</label>
                 <div class="col-sm-9 col-md-9 col-lg-9">
-				                  <input  class="form-control" id="zip" name="zip" type="number" rangelength="[0,9]"  value="">
 
-                  <!--<input type="text" class="form-control" id="zip" name="zip" placeholder="">-->
+                  <input type="text" class="form-control" id="zip" title="Please enter a number with at least 3 and max 15 characters!" name="zip" placeholder="">
                 </div>
               </div>
                <div class="form-group">

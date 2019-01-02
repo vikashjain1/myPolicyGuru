@@ -31,8 +31,8 @@
 				}
 				,
 				zip: {
-					required: true
-					//number:true
+					required: true,
+					number:true
 				}
 				
 			},
@@ -44,7 +44,10 @@
 				address: "Please enter  address",
 				city: "Please enter  city",
 				state: "Please enter  state",
-				zip: "Please enter  zip"
+				zip: {
+						required:"Please enter  zip",
+						number:"Please enter valid zip"
+				}
 			}
 		});
 
@@ -128,7 +131,7 @@ echo  $errorMsg;
               <div class="form-group">
                 <label class="control-label col-sm-3" for="zip">Zip:</label>
                 <div class="col-sm-9 col-md-9 col-lg-9">
-                  <input  class="form-control" id="zip" name="zip" type="number" rangelength="[0,9]"  value="<?php  echo  $user->zip;?>">
+                  <input  class="form-control" id="zip" name="zip" type="text"  value="<?php  echo  $user->zip;?>">
                 </div>
               </div>
                <div class="form-group">
