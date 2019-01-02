@@ -32,6 +32,7 @@
 				,
 				zip: {
 					required: true
+					//number:true
 				}
 				
 			},
@@ -51,6 +52,11 @@
 
 		
 	});
+	
+	/*$.validator.addMethod("integer", function(value, element) {
+	return this.optional(element) || /^-?\d+$/.test(value);
+}, "A positive or negative non-decimal number please");
+*/
 	</script>
 <div class="col-md-10 rightAreaInner">
            <div class="signUpBox">
@@ -122,7 +128,7 @@ echo  $errorMsg;
               <div class="form-group">
                 <label class="control-label col-sm-3" for="zip">Zip:</label>
                 <div class="col-sm-9 col-md-9 col-lg-9">
-                  <input type="text" class="form-control" id="zip" name="zip" placeholder=""  value="<?php  echo  $user->zip;?>">
+                  <input  class="form-control" id="zip" name="zip" type="number" rangelength="[0,9]"  value="<?php  echo  $user->zip;?>">
                 </div>
               </div>
                <div class="form-group">

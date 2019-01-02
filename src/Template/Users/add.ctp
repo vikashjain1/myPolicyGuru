@@ -145,7 +145,9 @@ echo  $errorMsg;
               <div class="form-group">
                 <label class="control-label col-sm-3" for="zip">Zip:</label>
                 <div class="col-sm-9 col-md-9 col-lg-9">
-                  <input type="text" class="form-control" id="zip" name="zip" placeholder="">
+				                  <input  class="form-control" id="zip" name="zip" type="number" rangelength="[0,9]"  value="">
+
+                  <!--<input type="text" class="form-control" id="zip" name="zip" placeholder="">-->
                 </div>
               </div>
                <div class="form-group">
