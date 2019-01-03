@@ -9,8 +9,8 @@ class UsersController extends AppController{
     public function initialize()
     {	
 		parent::initialize();
-		Configure::write('debug', 0);
-        
+Configure::write('debug', 1);
+                
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
@@ -33,7 +33,7 @@ class UsersController extends AppController{
 				$this->Auth->setUser($user);
 				return $this->redirect(['action'=>'edit']);
 			}else{
-				$this->set('errorMsg','Invalid username or password, try again');
+				//$this->set('errorMsg','Invalid username or password, try again');
 			}
 			$this->Flash->error(__('Invalid username or password, try again.'));
 		}
@@ -63,8 +63,18 @@ class UsersController extends AppController{
             $this->Flash->success(__('Your account has been registered .'));
             return $this->redirect(['action' => 'index']);
 			}
-							$this->set('errorMsg','Unable to register your account');
+						//	$this->set('errorMsg','Unable to register your account');
+			$errdata='';
+			if(count($user->errors())>0){
+			
+			foreach($user->errors() as $ind =>$value){
+				$errdata .='<br/>';
+				$errdata .= implode(",",array_values($value));
 
+			}	
+							$this->set('errorMsg',$errdata);
+
+			}		
 			$this->Flash->error(__('Unable to register your account.'));
 		}
 		$this->set('user',$user);
@@ -75,13 +85,24 @@ class UsersController extends AppController{
 		$user = $this->Users->get($id);
 		if ($this->request->is(['post', 'put'])) {
 			$this->Users->patchEntity($user, $this->request->data);
+			//pr($user->errors());die;
 			if ($this->Users->save($user)) {
 				$this->Flash->success(__('Your profile data has been updated.'));
 				return $this->redirect(['action' => 'index']);
-			}							
-			$this->set('errorMsg','Unable to update your profile');
+			}
+			$errdata='';
+			if(count($user->errors())>0){
+			
+			foreach($user->errors() as $ind =>$value){
+				$errdata .='<br/>';
+				$errdata .= implode(",",array_values($value));
 
-			$this->Flash->error(__('Unable to update your profile.'));
+			}	
+							$this->set('errorMsg',$errdata);
+
+			}			
+
+			$this->Flash->error(__('Unable to update your profile .'));
 		}
 	
 		$this->set('user', $user);		

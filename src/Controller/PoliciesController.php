@@ -69,7 +69,7 @@ class PoliciesController extends AppController
 		$this->set('selectListdata', $selectListdata);
 
 
-// Data now looks like
+		// Data now looks like
 
         if ($this->request->is('post')) {
 			$postedData = $this->request->data;
@@ -101,27 +101,40 @@ class PoliciesController extends AppController
 					
 				}
 			}
-			if($policy_typeStatus===false || $fileuplodStatus===false){
-					$this->set('errorMsg','Unable to add your policy .');
-					$this->Flash->error(__('Unable to add your policy.'));
+			 if($fileuplodStatus===false){
+					//$this->set('errorMsg','File not uploaded .');
+					$this->Flash->error(__('File not uploaded'));
 
 			} else {
-				
+				//pr($postedData);die;
 				$article = $this->Policies->patchEntity($article, $postedData);
 				$article->user_id = $this->Auth->User('id');
+				//pr($article);die;
 					if ($this->Policies->save($article)) {
 					$this->Flash->success(__('Your policy details has been saved.'));
 					return $this->redirect(['action' => 'add']);
-				}			
+				}
+					
+						$errdata='';
+			if(count($article->errors())>0){
+			
+			foreach($article->errors() as $ind =>$value){
+				$errdata .='<br/>';//pr($value);
+				echo $errdata .= implode(",",array_values($value));
+
+			}	
+							$this->set('errorMsg',$errdata);//pr($article->errors());die;
+
+			}		
+
+						$this->Flash->error(__('Unable to add your policy.'));	
 			}			
 			
             // Hardcoding the user_id is temporary, and will be removed later
             // when we build authentication out.
             
 			
-						$this->set('errorMsg','Unable to add your policy .');
-
-						$this->Flash->error(__('Unable to add your policy.'));
+						
 			}
 			
 
@@ -179,8 +192,8 @@ class PoliciesController extends AppController
 			}
 			
 			if($policy_typeStatus===false || $fileuplodStatus===false){
-				$this->set('errorMsg','Unable to add your policy .');
-					$this->Flash->error(__('Unable to add your policy .'));
+				//$this->set('errorMsg','File not uploaded  .');
+					$this->Flash->error(__('File not uploaded  .'));
 
 			}else{
 				
@@ -191,7 +204,19 @@ class PoliciesController extends AppController
 					$this->Flash->success(__('Your policy details has been updated.'));
 					return $this->redirect(['action' => 'edit',$id]);
 				}
-							$this->set('errorMsg','Unable to edit your policy .');
+						$errdata='';
+			if(count($article->errors())>0){
+			
+			foreach($article->errors() as $ind =>$value){
+				$errdata .='<br/>';
+				$errdata .= implode(",",array_values($value));
+
+			}	
+							$this->set('errorMsg',$errdata);
+
+			}		
+										$this->Flash->error(__('Unable to edit your policy.'));
+
 
 			}	
 
@@ -202,7 +227,6 @@ class PoliciesController extends AppController
             
 			
 
-			$this->Flash->error(__('Unable to edit your policy.'));
 			}
 			
 				

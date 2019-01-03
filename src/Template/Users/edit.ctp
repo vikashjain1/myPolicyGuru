@@ -11,9 +11,8 @@
 		// validate signup form on keyup and submit
 		$("#UserForm").validate({
 			rules: {
-				name: "required",
-				
-				
+				name: "required"				
+				,
 				email: {
 					required: true,
 					email: true
@@ -38,15 +37,13 @@
 			},
 			messages: {
 				name: "Please enter your name",
-				
-				
 				email: "Please enter a valid email address",
 				address: "Please enter  address",
 				city: "Please enter  city",
 				state: "Please enter  state",
 				zip: {
 						required:"Please enter  zip",
-						number:"Please enter valid zip"
+						number:"Please enter number only for  zip"
 				}
 			}
 		});
@@ -66,10 +63,11 @@
 		   <h3>User Registration<span style="font-size:15px;text-align:right;width:100%;color:red;">
 <?php if(isset($errorMsg)){
 echo  $errorMsg;
+
 	}	
 	?></span></h3>
             <div class="panel panel-default">
-			                  <div class="panel-heading" style="color:green;" ><?php echo  $this->Flash->render() ?></div>
+			                  <div class="panel-heading" style="color:green;font-size:15px;" ><?php echo  $this->Flash->render() ?></div>
               <div class="panel-body">
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email">Name:</label>

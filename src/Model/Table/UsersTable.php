@@ -18,10 +18,10 @@ class UsersTable extends Table
 	public function validationDefault(Validator $validator){
 		 $validator->requirePresence('name','You must enter your name')
 					 ->add('name', [
-						/*'length' => [
+						'length' => [
 						'rule' => ['minLength', 6],
 						'message' => 'Name need to be at least 6 characters long',
-						]*/
+						]
 					])
 					->notEmpty('name','Please, enter your name !')
 					->notEmpty('password','Please, enter your password !')
@@ -31,6 +31,10 @@ class UsersTable extends Table
 						'message'=>"Password mismatch password confirm !"
 						]
 					])
+					->notEmpty('city','Please, enter your city  !')
+					->notEmpty('state','Please, enter your state  !')
+					->notEmpty('address','Please, enter your address  !')
+
 					->notEmpty('email','Please, enter your email  !')
 					->add('email', [
 					'email' => [
@@ -38,7 +42,7 @@ class UsersTable extends Table
 						'message'=>" Please, enter a valid email!"
 						]
 					])						
-					->numeric('zip','Please, enter  zip code !');		
+					->numeric('zip','Please, enter  valid zip code !');		
 					//->date('birthdate','Please, enter valid bith date !')	;
 
 					return $validator;																		

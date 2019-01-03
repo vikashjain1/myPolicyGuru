@@ -27,7 +27,7 @@
 				}
 				,
 				policy_premium: {
-					required: true
+					required: true,number:true
 
 				}
 				
@@ -39,7 +39,12 @@
 				address: "Please enter  address",
 				expiration_date: "Please enter  expiration date",
 				effective_date: "Please enter  effective date",
-				policy_premium: "Please enter  premium "
+				policy_premium:{
+
+				required:"Please enter  premium ",
+				number:"Please enter numbers only for  premium "
+				
+				}
 			}
 		});
 	});
@@ -66,7 +71,7 @@ echo  $errorMsg;
 	}	
 	?></span></h3>
               <div class="panel panel-default">
-			                  <div class="panel-heading" style="color:green;" ><?php echo  $this->Flash->render() ?></div>
+			                  <div class="panel-heading" style="color:green;font-size:15px;" ><?php echo  $this->Flash->render() ?></div>
 
                 <div class="panel-body">
                     <div class="form-group">

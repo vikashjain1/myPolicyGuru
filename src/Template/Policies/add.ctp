@@ -10,6 +10,7 @@
 	// validate the comment form when it is submitted
 
 		// validate signup form on keyup and submit
+		
 		$("#ArticleForm").validate({
 			rules: {
 				carrier: "required",			
@@ -26,19 +27,23 @@
 				}
 				,
 				policy_premium: {
-					required: true
+					required: true,number:true
 
 				}
+				
 				
 				
 			},
 			messages: {
 				carrier: "Please enter your carrier",								
 				policy_number: "Please enter a policy number",
-				address: "Please enter  address",
 				expiration_date: "Please enter  expiration date",
 				effective_date: "Please enter  effective date",
-				policy_premium: "Please enter  premium "
+				policy_premium:{
+				required:"Please enter  premium ",
+				number:"Please enter numbers only for  premium "
+				
+				}
 			}
 		});
 	});
@@ -63,7 +68,7 @@ echo  $errorMsg;
 	}	
 	?></span></h3>
               <div class="panel panel-default">
-                <div class="panel-heading" style="color:green;" ><?php echo  $this->Flash->render() ?></div>
+                <div class="panel-heading" style="color:green;font-size:16px;" ><?php echo  $this->Flash->render() ?></div>
                 <div class="panel-body">
                     <div class="form-group">
                       <div class="col-md-4">
@@ -71,10 +76,13 @@ echo  $errorMsg;
 	
                         <select id="example-selectAllJustVisible" class="my-select" name="policy_type[]" multiple="multiple">
 						<?php
+						$cnt=0;
 							foreach($selectListdata as $policyid => $policyType){				
+						
 						?>
-						 <option value="<?php echo $policyid;?>"><?php echo $policyType;?></option>						 
+						 <option value="<?php echo $policyid;?>" <?php if($cnt==0) echo 'selected';?>><?php echo $policyType;?></option>						 
 						 <?php 
+						  $cnt++;
 						  }
 						  ?>
 						 </select>

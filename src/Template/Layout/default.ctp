@@ -24,6 +24,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?php  echo 'Policy App';  ?>
     </title>
     <?= $this->Html->meta('icon') ?>
+
     <?= $this->Html->css('bootstrap.min') ?>
 
     <?= $this->Html->css('style') ?>
@@ -42,7 +43,26 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
    
 
 
-</head>
+</head><style>
+
+<?php if(isset($errorMsg)){
+?>
+
+div.message.error {
+    background-color: #C3232D;
+    color: #FFF;height:40px;padding:10px;
+}
+
+
+div.message.hidden {
+    height: 0;
+}
+<?php 
+
+	}
+	?>
+
+</style>
 <body> 
   <header>
   <nav class="navbar">
