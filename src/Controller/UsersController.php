@@ -13,7 +13,7 @@ class UsersController extends AppController{
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
-			$this->Auth->allow(['logout', 'edit']);
+			$this->Auth->allow(['logout', 'edit', 'dashboard']);
 	
 		}else{
 			$this->Auth->allow(['logout', 'add']);
@@ -32,9 +32,7 @@ class UsersController extends AppController{
 			$user = $this->Auth->identify();
 			if ($user) {
 				$this->Auth->setUser($user);
-				//$this->setAction('dashboard');
-				//return $this->redirect(['action'=>'dashboard']);
-				return $this->redirect(['action'=>'edit']);
+				return $this->redirect(['action'=>'dashboard']);
 			}
 			$this->Flash->error(__('Invalid username or password, try again.'));
 		}
