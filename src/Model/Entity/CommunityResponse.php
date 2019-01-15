@@ -1,13 +1,14 @@
 <?php
-// src/Model/Entity/PolicyType.php
+// src/Model/Entity/CommunityResponse.php
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
-class PolicyType extends Entity
+class CommunityResponse extends Entity
 {
     protected $_accessible = [
         '*' => true,
         'id' => false,
+        'slug' => false,
     ];
 }

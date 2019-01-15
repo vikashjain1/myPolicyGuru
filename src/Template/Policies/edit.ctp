@@ -56,15 +56,6 @@
 	
 <div class="col-md-10 rightAreaInner">
            <div class="updateProfileBox">
-              <div class="row">
-                <div class="col-md-12">
-                  <ul class="innerHeadButtons">
-                    <li><a href="#">Update Profile</a></li>
-                    <li><a href="#">Add Policies</a></li>
-                    <li><a href="#">Add Claims</a></li>
-                  </ul>
-                </div>
-              </div>
 				<h3>Edit Policy<span style="font-size:15px;text-align:right;width:100%;color:red;">
 <?php if(isset($errorMsg)){
 echo  $errorMsg;
@@ -114,8 +105,6 @@ echo  $errorMsg;
 
                     <div class="form-group">
                         <div class="col-md-4">
-                               </div>
-                        <div class="col-md-4">
                           <label>Effective Date</label>
                           <input name="effective_date" type="text" id="effective_date" value="<?php echo  $article->effective_date ;?>"  class="form-control">
                         </div>
@@ -123,19 +112,18 @@ echo  $errorMsg;
                           <label>Expiration Date</label>
                           <input name="expiration_date" type="text" id="expiration_date" value="<?php echo  $article->expiration_date ;?>"  class="form-control">
                         </div>
-
+						<div class="col-md-4">
+                          <label>Premium</label>
+                          <input name="policy_premium" value="<?php echo $article->policy_premium ;?>"  type="text" class="form-control">
+                        </div>
                       </div>
 
                       <div class="form-group">
                         <div class="col-md-4">
-                          <label>Premium</label>
-                          <input name="policy_premium" value="<?php echo $article->policy_premium ;?>"  type="text" class="form-control">
-                        </div>
-                        <div class="col-md-4">
                           <label>Upload File</label>
                           <input name="policy_path" type="file" class="form-control">
                         </div>
-
+                        <div class="col-md-4"></div>
                         <div class="col-md-4 text-right">
                          <div class="addPolicyBtn"><input type="submit" class="btn btn-primary" value="Update Policy"></div>
                         </div>

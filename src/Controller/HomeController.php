@@ -14,10 +14,16 @@
  */
 namespace App\Controller;
 
+
+
+
+use App\Controller\AppController;
 use Cake\Core\Configure;
+use Cake\ORM\TableRegistry;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
-
+use Cake\Event\Event;
+use Cake\Network\Email\Email;
 /**
  * Static content controller
  *
@@ -25,7 +31,7 @@ use Cake\View\Exception\MissingTemplateException;
  *
  * @link http://book.cakephp.org/3.0/en/controllers/pages-controller.html
  */
-class PagesController extends AppController
+class HomeController extends AppController
 {
 
     /**
@@ -35,10 +41,30 @@ class PagesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
-    public function display()
+	 
+	 public function initialize()
     {		
-	return $this->redirect(['action'=>'display','controller'=>'Home']);
 
-        
+        //parent::initialize();
+		//Configure::write('debug', 0);
+		parent::initialize();
+		$this->loadComponent('RequestHandler');
+        //$this->session = $this->request->session();
+        $this->loadComponent('Paginator');
+        $this->loadComponent('Flash'); // Include the FlashComponent
+    }
+	
+	public function beforeFilter(Event $event) {    
+$this->Auth->allow(['display']);
+    }
+	
+	
+    public function display()
+    {				//die('pages');
+		$this->set('homepage',true);
+		//$this->viewBuilder()->setLayout('default');
+
+    
+    
     }
 }

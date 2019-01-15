@@ -44,7 +44,7 @@ $( function() {
 			echo $this->Flash->render('auth');
 			?>
               <div class="form-group vertical-center">
-                <label class="control-label col-sm-4" for="Email">Email: <span class="labelComment">(We will send you an email to confirm the address)</span>
+                <label class="control-label col-sm-4" for="email">Email: <span class="labelComment">(We will send you an email to confirm the address)</span>
 				</label>
                 <div class="col-sm-9  col-md-9 col-lg-8">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">

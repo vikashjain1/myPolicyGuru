@@ -3,16 +3,13 @@
    <div class="updateProfileBox">
 	  <div class="row">
 		<div class="col-md-12">
-		  <ul class="innerHeadButtons">
-			<li><?php echo $this->Html->link('View Posts', array('controller' => 'communities', 'action' => 'view'));?></li>
-			<li><?php echo $this->Html->link('Your Posts', array('controller' => 'communities', 'action' => 'your_post'));?></li>
-			<li><?php echo $this->Html->link('Your Responses', array('controller' => 'communities', 'action' => 'your_responses'));?></li>
-			<li><?php echo $this->Html->link('Your Likes', array('controller' => 'communities', 'action' => 'your_likes'));?></li>
-			<li><?php echo $this->Html->link('Add Posts', array('controller' => 'communities', 'action' => 'post'));?></li>
-		  </ul>
+		   <?php 
+				echo $this->element('communityTop');
+			?>
+			
 		</div>
 	  </div>
-	<h3>View All Posts<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo  $errorMsg;} ?></span></h3>
+	<h3>My Posts<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo  $errorMsg;} ?></span></h3>
 	  <!--View All Posts table -->
 		  <div class="table-responsvie">
 			<table class="table table-bordered">
@@ -34,10 +31,21 @@
 			?>
 				<tr>
 				  <td><?php echo $sNo;?></td>
-				  <td><?php echo $communityPost->subject;?></td>
+				  <td><?php echo $this->Html->link($communityPost->subject, array('controller' => 'communities', 'action' => 'allresponse', $communityPost->id));?></td>
+
 				  <td><?php echo $communityPost->details;?></td>
-				  <td><?php echo '';?></td>
-				  <td></td>
+				  <td><?php 
+				  if(isset($communityPost['communities_likes']) && count($communityPost['communities_likes'])>0) 
+					echo  count($communityPost['communities_likes']) ;
+				  else 
+					echo '0';
+				  ?></td>
+				   <td><?php 
+				  if(isset($communityPost['communities_responses']) && count($communityPost['communities_responses'])>0) 
+					echo  count($communityPost['communities_responses']) ;
+				  else 
+					echo '0';
+				  ?></td>
 				  <td><?php echo $this->Html->link('Post Respons', array('controller' => 'communities', 'action' => 'response', $communityPost->id));?></td>
 				</tr>
 			<?php 

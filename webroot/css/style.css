@@ -117,5 +117,18 @@ ul.innerHeadButtons li + li { margin-left: 20px; }
 .footer ul li + li  { margin-left: 25px; }
 .footer ul li a { color: #fff; margin:0px 5px; line-height: 20px; font-size: 12px; text-transform: uppercase; font-weight: 600; text-decoration: none;}
 
-
-
+/*New Login Page*/
+.loginPageNew label { width: 30%; display: inline-block; }
+.loginPageNew .form-control { display: inline-block; float: right; width: 70%; margin-bottom: 15px; }
+.loginPageNew .formGroup { width: 100%; float: left; }
+.loginPageNew .loginButton { width: 100%; float: left; }
+.loginPageNew .btn-block+.btn-block { margin-top: 15px; }
+.loginPageNew .panel { margin-top: 25px; }
+.loginPageNew ul.agentInfo { margin-top: 10px; font-size: 13px; }
+.loginPageNew .leftArea { position: relative; height: 550px; width: 65%; left:15%; transform: translateX(-15%); }
+.loginPageNew .leftArea .formContainerNew { position: absolute; width: 100%; padding:15px; left:50%; top:50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%) background:#fff; margin-top: 70px;}
+.loginPageNew .rightArea { margin-top: 25px; float: right; padding-right: 8%; }
+.loginPageNew .rightArea .agentBox { float: right; }
+.loginPageNew .rightArea .agentBox .userBox { width: 200px; height: 200px; border:1px solid #ddd; margin-bottom: 25px;}
+.loginPageNew .rightArea .agentBox .btnBox { margin-bottom: 10px;}
+.loginPageNew .blogButtons a { display: block; padding:72px 15px; background: #ed7d31; color:#fff; text-align: center; font-weight: 600; margin-top: 25px;}

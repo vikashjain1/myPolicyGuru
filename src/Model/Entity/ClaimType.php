@@ -1,10 +1,10 @@
 <?php
-// src/Model/Entity/PolicyType.php
+// src/Model/Entity/ClaimType.php
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
-class PolicyType extends Entity
+class ClaimType extends Entity
 {
     protected $_accessible = [
         '*' => true,

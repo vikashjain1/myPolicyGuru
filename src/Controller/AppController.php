@@ -54,6 +54,7 @@ class AppController extends Controller
 			]
 		],
 		// login Url
+		// if unauthorized user go to an unallowed action he will be redirected to this url
 		
 		//'authError' => 'Did you really think you are allowed to see that?',
 		]);

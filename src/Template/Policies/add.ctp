@@ -53,15 +53,6 @@
 	</script>
 <div class="col-md-10 rightAreaInner">
            <div class="updateProfileBox">
-              <div class="row">
-                <div class="col-md-12">
-                  <ul class="innerHeadButtons">
-                    <li><a href="#">Update Profile</a></li>
-                    <li><a href="#">Add Policies</a></li>
-                    <li><a href="#">Add Claims</a></li>
-                  </ul>
-                </div>
-              </div>
 				<h3>Add Policy<span style="font-size:15px;text-align:right;width:100%;color:red;">
 <?php if(isset($errorMsg)){
 echo  $errorMsg;
@@ -99,8 +90,6 @@ echo  $errorMsg;
 
                     <div class="form-group">
                         <div class="col-md-4">
-                               </div>
-                        <div class="col-md-4">
                           <label>Effective Date</label>
                           <input name="effective_date"  id="effective_date" type="text" class="form-control">
                         </div>
@@ -108,19 +97,29 @@ echo  $errorMsg;
                           <label>Expiration Date</label>
                           <input name="expiration_date" id="expiration_date" type="text" class="form-control">
                         </div>
-
+						<div class="col-md-4">
+                          <label>Premium</label>
+                          <input name="policy_premium" type="text"   id="policy_premium" class="form-control">
+                        </div>
                       </div>
 
                       <div class="form-group">
                         <div class="col-md-4">
-                          <label>Premium</label>
-                          <input name="policy_premium" type="text"   id="policy_premium" class="form-control">
-                        </div>
-                        <div class="col-md-4">
                           <label>Upload File</label>
                           <input name="policy_path"  type="file" class="form-control">
                         </div>
+						
 
+						<div id="LifeDiv" class="col-md-4 policydependentFields">
+						  <label>Beneficiaries</label>
+						  <input name="Beneficiaries" type="text" class="form-control">
+						</div>
+						<div id="UmbrellaDiv" class="col-md-4 policydependentFields">
+						  <label>Coverage Amount</label>
+						  <input name="coverage_amount" type="text" class="form-control">
+						</div>
+
+						
                         <div class="col-md-4 text-right">
                          <div class="addPolicyBtn"><input type="submit" class="btn btn-primary" value="Add Policy"></div>
                         </div>
