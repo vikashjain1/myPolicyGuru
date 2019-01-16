@@ -105,7 +105,7 @@ class ClaimsController extends AppController
 				if(count($claim->errors())>0){
 					foreach($claim->errors() as $ind =>$value){
 						$errdata .='<br/>';//pr($value);
-						echo $errdata .= implode(",",array_values($value));
+						$errdata .= implode(",", array_values($value));
 					}	
 					$this->set('errorMsg',$errdata);//pr($claim->errors());die;
 				}		
@@ -184,7 +184,7 @@ class ClaimsController extends AppController
 				if(count($claim->errors())>0){
 					foreach($claim->errors() as $ind =>$value){
 						$errdata .='<br/>';
-						$errdata .= implode(",",array_values($value));
+						$errdata .= implode(",", array_values($value));
 					}
 					$this->set('errorMsg',$errdata);
 				}
