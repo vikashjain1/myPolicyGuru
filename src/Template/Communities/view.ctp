@@ -36,7 +36,7 @@
 				  <td><?php echo $sNo;?></td>
 				  				  <td>
 								
-								  <a href="#" class="modalClassAjax"  id="<?php echo $communityPost->id?>" > <?php echo $communityPost->subject.'==';?></a>
+								  <a href="#" class="modalClassAjax"  id="<?php echo $communityPost->id?>" > <?php echo $communityPost->subject;?></a>
 								  <?php 
 								  
 	/*							  
