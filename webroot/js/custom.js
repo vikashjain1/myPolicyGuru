@@ -21,9 +21,21 @@ $(document).ready(function(){
 
 	// Multi Select
 	$('#example-selectAllJustVisible').multiselect({
-            enableFiltering: true,
-            includeSelectAllOption: true,
-            selectAllJustVisible: false
-        });
+		enableFiltering: true,
+		includeSelectAllOption: true,
+		selectAllJustVisible: false
+	});
+	
+	$('#policy_type').multiselect({
+		enableFiltering: true,
+		includeSelectAllOption: true,
+		selectAllJustVisible: false
+	});
+	
+	$('#claim_type').multiselect({
+		enableFiltering: true,
+		includeSelectAllOption: true,
+		selectAllJustVisible: false
+	});
 
 });

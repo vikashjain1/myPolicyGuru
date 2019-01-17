@@ -14,8 +14,6 @@ class CommunityResponseTable extends Table
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
-				 $this->belongsTo('Communities');
-
     }
 	
 	public function isOwnedBy($articleId, $userId)

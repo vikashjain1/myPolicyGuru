@@ -1,15 +1,13 @@
 <?php
 // src/Controller/ClaimsController.php
-
 namespace App\Controller;
-
 use App\Controller\AppController;
 use Cake\Core\Configure;
 use Cake\ORM\TableRegistry;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
-use Cake\Network\Email\Email;
+//use Cake\Network\Email\Email;
 use App\Model\Table\ClaimTypesTable;
 use App\Model\Entity\ClaimType;
 
@@ -72,7 +70,7 @@ class ClaimsController extends AppController
 			}*/
 				
 			if(!empty($postedData['loss_date']))
-			$postedData['loss_date'] = Date("Y-m-d",strtotime($postedData['loss_date']));
+				$postedData['loss_date'] = Date("Y-m-d",strtotime($postedData['loss_date']));
 
 			if(isset($postedData['claim_file']['name']) && !empty($postedData['claim_file']['name'])){			
 				$filename =  basename($postedData['claim_file']['name']);
@@ -105,7 +103,7 @@ class ClaimsController extends AppController
 				if(count($claim->errors())>0){
 					foreach($claim->errors() as $ind =>$value){
 						$errdata .='<br/>';//pr($value);
-						echo $errdata .= implode(",",array_values($value));
+						$errdata .= implode(",", array_values($value));
 					}	
 					$this->set('errorMsg',$errdata);//pr($claim->errors());die;
 				}		
@@ -184,7 +182,7 @@ class ClaimsController extends AppController
 				if(count($claim->errors())>0){
 					foreach($claim->errors() as $ind =>$value){
 						$errdata .='<br/>';
-						$errdata .= implode(",",array_values($value));
+						$errdata .= implode(",", array_values($value));
 					}
 					$this->set('errorMsg',$errdata);
 				}

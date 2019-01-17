@@ -152,3 +152,33 @@ else {
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   </body>
 </html>
+<!-- The Modal -->
+<style>
+.modal a.close-modal{width: 17%;
+    height: 20%;}
+</style>
+<div class="modal" >
+  
+</div>
+<!--
+<div id="ex1" class="modal">
+  <p>Thanks for clicking. That felt good.</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>-->
+<script>
+$('.modalClassAjax').click(function(event) {
+  event.preventDefault();
+  var commId =$(this).attr('id');
+  var comUrl = '<?php echo $this->Url->build(["controller" => "Communities",  "action" => "allresponse"]);?>';
+  //this.blur(); // Manually remove focus from clicked link.
+  $.get(comUrl+'/'+commId
+  , function(html) {
+  var dataHtml = $('#ajax-content').html(html);  //alert($('#ajax-content').html());
+
+    $(dataHtml).appendTo('body').modal();
+	//$('#ajax-content').remove();
+  });
+});
+</script>
+
+<div id="ajax-content" style="display:none;"></div>

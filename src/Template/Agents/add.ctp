@@ -34,7 +34,7 @@ $( function() {
 </script>
 		<div class="col-md-12">
            <div class="signUpBox">
-		   <h3>User Registration</h3>
+		   <h3>Agent Registration</h3>
 		   <h3><span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo  $errorMsg;} ?></span></h3>
             <div class="panel panel-default">
               <div class="panel-heading" style="color:green;font-size:15px;" ><?php echo  $this->Flash->render() ?></div>
@@ -48,6 +48,7 @@ $( function() {
 				</label>
                 <div class="col-sm-9  col-md-9 col-lg-8">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+				  <input type="hidden" name="account_type" id="account_type" value="agent">
                 </div>
               </div>
               <div class="form-group">

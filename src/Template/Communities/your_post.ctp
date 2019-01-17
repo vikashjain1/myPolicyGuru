@@ -31,7 +31,11 @@
 			?>
 				<tr>
 				  <td><?php echo $sNo;?></td>
-				  <td><?php echo $this->Html->link($communityPost->subject, array('controller' => 'communities', 'action' => 'allresponse', $communityPost->id));?></td>
+				   <td>
+								
+								  <a href="#" class="modalClassAjax"  id="<?php echo $communityPost->id?>" > <?php echo $communityPost->subject;?></a>
+							
+				 </td>
 
 				  <td><?php echo $communityPost->details;?></td>
 				  <td><?php 

@@ -1,7 +1,12 @@
 <?php
 namespace App\Controller;
-use Cake\Core\Configure;
 use App\Controller\AppController;
+use Cake\Core\Configure;
+use Cake\ORM\TableRegistry;
+use Cake\Network\Exception\NotFoundException;
+use Cake\View\Exception\MissingTemplateException;
+use Cake\Event\Event;
+use App\Model\Entity\User;
 
 class AgentsController extends AppController{
 
@@ -13,13 +18,12 @@ class AgentsController extends AppController{
 		parent::initialize();
 		Configure::write('debug', 1);
                 
-		$this->loadComponent('Flash'); // Include the FlashComponent
+		//$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register and access logout action 
 		if($this->Auth->User('id')){
 			$this->Auth->allow(['logout', 'edit']);
-	
 		}else{
-			$this->Auth->allow(['logout', 'add']);
+			$this->Auth->allow(['logout', 'add', 'login']);
 		}
     }
 	
@@ -30,12 +34,14 @@ class AgentsController extends AppController{
 	
 	public function login()
 	{
+		$agent = $this->Users->newEntity();
 		if ($this->request->is('post')) {
+			//pr($this->request);die;
 			// Auth component identify if sent user data belongs to a user
 			$agent = $this->Auth->identify();
 			if ($agent) {
 				$this->Auth->setUser($agent);
-				return $this->redirect(['action'=>'edit']);
+				return $this->redirect(['action'=>'dashboard']);
 			}
 			$this->Flash->error(__('Invalid agentname or password, try again.'));
 		}
@@ -45,17 +51,6 @@ class AgentsController extends AppController{
 		$this->request->session()->destroy();
 		$this->Flash->success('You successfully have loged out');	
 		return $this->redirect(['action'=>'login']);
-	}
-
-	public function view($id)
-	{
-		$agent = $this->Agents->get($id);
-		$this->set('agent',$agent);
-	}
-	
-	public function index()
-	{
-		$this->set('agent',$this->Agents->find('all'));		
 	}
 	
 	public function add()

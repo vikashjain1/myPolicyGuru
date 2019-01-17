@@ -22,12 +22,13 @@ class ClaimsTable extends Table
 	
 	public function validationDefault(Validator $validator){
 		 $validator->requirePresence('claim_type','create')
-					 ->notEmpty('claim_type','You must select one claim')
-					->notEmpty('loss_date','Please, enter loss date!')
-					->notEmpty('policy_number','Please, enter policy number!')
-					->notEmpty('adjustor_name','Please, enter adjustor!')
-					->notEmpty('adjustor_phone_number','Please, enter adjustor phone number!')
-					->notEmpty('adjustor_email','Please, enter adjustor email!');
+					->notEmpty('claim_type','You must select one claim')
+					->notEmpty('claim_number','Please, enter Claim Number!')
+					->notEmpty('policy_number','Please, enter Policy Number!')
+					->notEmpty('loss_date','Please, enter Loss Date!')
+					->notEmpty('adjustor_name','Please, enter Adjustor!')
+					->notEmpty('adjustor_phone_number','Please, enter Adjustor Phone Number!')
+					->notEmpty('adjustor_email','Please, enter Adjustor Email!');
 					return $validator;																		
 	}
 }
