@@ -2,30 +2,75 @@
 <script>
 $(function() {
 
-$('#linkforLikeId').click(function(event) { 
+$(document).on("click", '.mylink', function(event) { 
     event.preventDefault(); 
+
 	var comId = $("#comId").val();
-	//alert(comId);
-	$.ajax({
-	  type: "GET",
-	  url: "/communities/addlike/"+comId,
-	  url: '<?php echo $this->Url->build([
+	var finalurl = '<?php echo $this->Url->build([
     "controller" => "Communities",
     "action" => "addlike",
-    $community->id,
-]);
-?>',
-	  //data: comId,
+    $community->id
+]);?>';	
+if($('#numRowsCommunitiesLikesTextID').val()>0)
+	{	
+	finalurl=finalurl+'/0';
+	}else{
+	finalurl=finalurl+'/1';
+	}
+	
+	$.ajax({
+	  type: "GET",
+	  url: finalurl,
 	  cache: false,
 	  success: function(data){
-	  alert('You Liked It');
-		 $("#resultarea").text(data);
-		 $("#linkforLikeId").remove();
+	  //alert(url);
+	 // alert('You Liked It'+data);
+	  $('#spanLikeId').html(data);
+		 $("#resultarea").text($('#numRowsCommunitiesLikesTextID').val());
+		 
+		// $("#linkforLikeId").remove();
 	  }
 	});
     return false; // for good measure
 });
+/*
+$('#linkforLikeId').on('click',function(event){
 
+    event.preventDefault(); 
+	var comId = $("#comId").val();
+	<?php  $likestatus=1 ;?>
+	var finalurl = '<?php echo $this->Url->build([
+    "controller" => "Communities",
+    "action" => "addlike",
+    $community->id
+]);?>';	
+if($('#numRowsCommunitiesLikesTextID').val()>0)
+	{
+	
+	finalurl=finalurl+'/0';
+
+	}else{
+	finalurl=finalurl+'/1';
+	}
+
+alert(finalurl+'--finalurl');
+	
+	$.ajax({
+	  type: "GET",
+	  url: finalurl,
+	  cache: false,
+	  success: function(data){
+	  //alert(url);
+	  alert('You Liked It'+data);
+	  $('#spanLikeId').html(data);
+		 $("#resultarea").text($('#numRowsCommunitiesLikesTextID').val());
+		 
+		// $("#linkforLikeId").remove();
+	  }
+	});
+    return false; // for good measure
+});
+*/
 	// validate CommunityResponse form on submit
 	$("#CommunityResponse").validate({
 		rules: {
@@ -56,18 +101,15 @@ $('#linkforLikeId').click(function(event) {
 			                <div class="panel-heading" style="color:green;font-size:15px;" ><?php echo  $this->Flash->render() ?></div>
 			                <div style="color:green;font-size:15px;text-align:right;" >
 							<!-- <a href="#" id="linkforLikeId">Like It </a> -->
-							<span style="color:green;text-align:right;" >
-		  
+							<span style="color:green;text-align:right;" id="spanLikeId" >
+		 <input type="hidden"  id= "numRowsCommunitiesLikesTextID" value="<?php echo  $numRowsLiked?>">
+ 
 					<?php
 		  
 						if($numRowsLiked>0)
-							echo "You Liked It";
-					else
-				  echo $this->Html->link('Like It', array('controller' => 'communities', 'action' => 'addlike', $community->id),
-				  
-				      ['id'=>'linkforLikeId']
-
-				  );?>
+ echo $this->Html->link('UnLike It', array('controller' => 'communities', 'action' => 'addlike', $community->id,0),['id'=>'linkforLikeId','class'=>"mylink"]);
+				  else
+				  echo $this->Html->link('Like It', array('controller' => 'communities', 'action' => 'addlike', $community->id,1), ['id'=>'linkforLikeId','class'=>"mylink"]);?>
 
 				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
 

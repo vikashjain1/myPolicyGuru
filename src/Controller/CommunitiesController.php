@@ -224,14 +224,15 @@ class CommunitiesController extends AppController
     }
 	
 	// add community post like 
-	 public function addlike($CommunityId)
+	 public function addlike($CommunityId,$status)
     {
-
-	$this->autoRender = false;
-
+		//echo $CommunityId ;die;
+		//echo $CommunityId.",===".$status;die;
+		$this->viewBuilder()->layout(false);
+	//$this->autoRender = false;
 		// Data now looks like
         $this->set('errorMsg','');
-		
+		$numRowsCommunitiesLikes =0;
 		if (!empty($CommunityId)) {
 			$numRowsCommunityId = $this->Communities->find()->where(['id'=>$CommunityId])->count();
 			if($numRowsCommunityId >0){
@@ -240,19 +241,31 @@ class CommunitiesController extends AppController
 
 			$article->user_id = $this->Auth->User('id');
 			$article->community_id = $CommunityId;
-		    $article->status = '1';
-
+			  $article->status = $status;
+			$getIdComm =   $CommunitiesLikesTable->find()->where(['community_id'=>$CommunityId,'user_id'=>$this->Auth->User('id')])->toArray();
+			
+			if(isset($getIdComm[0]->id) && !empty($getIdComm[0]->id))
+				$article->id =	$getIdComm[0]->id;
 			if ($CommunitiesLikesTable->save($article)) {
+				//if($status ==0)
+					$where =['status'=>1,'community_id'=>$CommunityId];
+				//else 
+					//$where =['status'=>0,'community_id'=>$CommunityId];
+					
 				// The $article entity contains the id now
 			   $id = $article->id;
-			   echo $numRowsCommunitiesLikes = $this->CommunitiesLikes->find()->where(['community_id'=>$CommunityId])->count();
+			   $numRowsCommunitiesLikes = $this->CommunitiesLikes->find()->where($where)->count();
+			 $this->set('numRowsCommunitiesLikes',$numRowsCommunitiesLikes);
 			
 				//  $this->Flash->success(__('Your had liked this post .'));
 			}
 
 			}
+			//echo $numRowsCommunitiesLikes;die;
+			 $this->set('communityId',$CommunityId);
+			// $this->set('numRowsCommunitiesLikes',$numRowsCommunitiesLikes);
 		}
-		exit;
+		//exit;
 }
 
 	public function response($id)
@@ -267,7 +280,7 @@ class CommunitiesController extends AppController
 		}//die;
 		
 		$community = $this->Communities->findById($id)->firstOrFail();
-		$numRowsLiked = $this->CommunitiesLikes->find()->where(['user_id'=>$this->Auth->User('id'),'community_id'=>$id])->count();
+		$numRowsLiked = $this->CommunitiesLikes->find()->where(['user_id'=>$this->Auth->User('id'),'community_id'=>$id,'status'=>1])->count();
 		$numRowsResponses = $this->CommunitiesResponses->find()->where(['user_id'=>$this->Auth->User('id'),'community_id'=>$id])->count();
 		$this->set('numRowsLiked',$numRowsLiked);
 		$this->set('numRowsResponses',$numRowsResponses);
