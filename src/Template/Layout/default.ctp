@@ -28,10 +28,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('calendarstyle') ?>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <?= $this->Html->css('responsive') ?>
-    <?= $this->Html->script(['jquery-3.3.1.min','bootstrap.min','bootstrap-multiselect','custom','jquery-ui','jquery.validate']); ?>
+	    <?= $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js']); ?>
+
+    <?= $this->Html->script(['bootstrap.min','bootstrap-multiselect','custom','jquery-ui','jquery.validate']); ?>
+    <?= $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js']); ?>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<?= $this->Html->meta('icon') ?>
     <?= $this->fetch('meta') ?>
+	
+    <?= $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css') ?>
 </head>
 
 <style>
@@ -49,7 +54,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 </style>
 
-<body> 
+<body <?php 
+  if(isset($homepage) &&  $homepage=== true){
+	  ?>
+class="loginBg"	  
+	  <?php
+	  
+  }?>> 
   <header>
   <nav class="navbar">
 	<div class="container-fluid">
@@ -133,7 +144,7 @@ else {
 	<li><a href="#">Blog</a></li>
 	<li><a href="#">Help</a></li>
 	<?php if (!$this->request->session()->read('Auth.User')) {?>
-	<li><?=$this->Html->Link(__('Agent Login'),['controller'=>'agents','action'=>'loginn']) ?></li>
+	<li><?=$this->Html->Link(__('Agent Login'),['controller'=>'agents','action'=>'login']) ?></li>
 	<?php } ?>
 </ul>
 </footer>
@@ -141,3 +152,33 @@ else {
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   </body>
 </html>
+<!-- The Modal -->
+<style>
+.modal a.close-modal{width: 17%;
+    height: 20%;}
+</style>
+<div class="modal" >
+  
+</div>
+<!--
+<div id="ex1" class="modal">
+  <p>Thanks for clicking. That felt good.</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>-->
+<script>
+$('.modalClassAjax').click(function(event) {
+  event.preventDefault();
+  var commId =$(this).attr('id');
+  var comUrl = '<?php echo $this->Url->build(["controller" => "Communities",  "action" => "allresponse"]);?>';
+  //this.blur(); // Manually remove focus from clicked link.
+  $.get(comUrl+'/'+commId
+  , function(html) {
+  var dataHtml = $('#ajax-content').html(html);  //alert($('#ajax-content').html());
+
+    $(dataHtml).appendTo('body').modal();
+	//$('#ajax-content').remove();
+  });
+});
+</script>
+
+<div id="ajax-content" style="display:none;"></div>

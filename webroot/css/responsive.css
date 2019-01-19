@@ -16,4 +16,13 @@
   .updateProfileBox , .signUpBox { margin-left: 0; }
   .leftMenuArea { position: static; }
   .rightAreaInner { padding-left: 0; }
+  .loginPageNew .leftArea .formContainerNew { position: static; transform: inherit; padding:0; margin-top: -25px; }
+  .loginPageNew .leftArea { width: 100%; height: auto !important; position: static; transform:inherit; min-height: 380px; }
+  .loginPageNew .rightArea { float: left; }
+  .loginPageNew .leftArea { left:0; }
+  .loginPageNew .rightArea { padding-right: 15px; width: 100%; }
+  .loginPageNew .rightArea .agentBox { width: 100%; float: left; }
+  .loginPageNew .btn-block {margin-bottom: 10px;}
+  .loginPageNew .rightArea .agentBox .userBox { display: block; margin:0 auto; margin-bottom: 15px; }
+  .loginPageNew .rightArea .agentBox .btnBox { display: block; margin:0 auto; margin-bottom: 5px; }
 }

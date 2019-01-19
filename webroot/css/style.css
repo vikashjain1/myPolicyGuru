@@ -117,5 +117,37 @@ ul.innerHeadButtons li + li { margin-left: 20px; }
 .footer ul li + li  { margin-left: 25px; }
 .footer ul li a { color: #fff; margin:0px 5px; line-height: 20px; font-size: 12px; text-transform: uppercase; font-weight: 600; text-decoration: none;}
 
+/*New Login Page*/
+.loginPageNew label { width: 30%; display: inline-block; }
+.loginPageNew .form-control { display: inline-block; float: right; width: 70%; margin-bottom: 15px; }
+.loginPageNew .formGroup { width: 100%; float: left; }
+.loginPageNew .loginButton { width: 100%; float: left; }
+.loginPageNew .btn-block+.btn-block { margin-top: 15px; }
+.loginPageNew .panel { margin-top: 25px; }
+.loginPageNew ul.agentInfo { margin-top: 10px; font-size: 13px; }
+.loginPageNew .leftArea { position: relative; height: 550px; width: 65%; left:15%; transform: translateX(-15%); }
+.loginPageNew .leftArea .formContainerNew { position: absolute; width: 100%; padding:15px; left:50%; top:50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%) background:#fff; margin-top: 70px;}
+.loginPageNew .rightArea { margin-top: 25px; float: right; padding-right: 8%; }
+.loginPageNew .rightArea .agentBox { float: right; }
+.loginPageNew .rightArea .agentBox .userBox { width: 200px; height: 200px; border:1px solid #ddd; margin-bottom: 25px;}
+.loginPageNew .rightArea .agentBox .btnBox { margin-bottom: 10px;}
+.loginPageNew .blogButtons a { display: block; padding:72px 15px; background: #ed7d31; color:#fff; text-align: center; font-weight: 600; margin-top: 25px;}
 
+/*Generic Classes*/
+.mb0 { margin-bottom: 0 !important; }
+.mr5  {margin-right: 5px !important;}
+.mt20 { margin-top:20px !important; }
+.mb20 { margin-bottom:20px !important; }
+.p0 { padding:0 !important; }
+.pl8 { padding-left: 8px !important; }
+.pr8 { padding-right: 8px !important; }
 
+/*update Profile*/
+.radioBtn label { display: inline-block; }
+.padding-controller {font-size: 13px; min-height: 323px;}
+.padding-controller .row + .row { margin-top: 10px; }
+.file-upload { position: relative; display: inline-block; }
+.file-upload__label { display: block; color: #0087da; font-weight: normal; border:1px dashed #ccc; min-width: 100px; text-align: center; padding:3px 5px;}
+.file-upload__input { position: absolute; left: 0; top: 0; right: 0; bottom: 0; width:100px;  height: 100%; opacity: 0;}
+.smallText { font-size: 10px; color:green; text-decoration: none; display: block; line-height: 12px; margin-top: 10px;}
+.radio-inline+.radio-inline { margin-left: 5px; }
