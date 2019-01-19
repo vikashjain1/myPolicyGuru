@@ -77,7 +77,7 @@ class CommunitiesController extends AppController
     ->find('list', [
         'keyField' => 'id',
         'valueField' => 'community_id'
-    ])
+    ])->where(['status'=>1])
         ->toArray();
 		$totResps=[];	
 
@@ -111,7 +111,7 @@ class CommunitiesController extends AppController
 	public function yourLikes()
 	{
 		$allPosts = $this->Paginator->paginate($this->CommunitiesLikes->find('all', [
-					'conditions' => ['CommunitiesLikes.user_id' => $this->Auth->User('id')]])->contain(['Communities']))->toArray();
+					'conditions' => ['CommunitiesLikes.user_id' => $this->Auth->User('id'),'CommunitiesLikes.status'=>1]])->contain(['Communities']))->toArray();
 					$myResponse = [];
 					$cntResp=[];
 					
@@ -126,7 +126,7 @@ class CommunitiesController extends AppController
     ->find('list', [
         'keyField' => 'id',
         'valueField' => 'community_id'
-    ])
+    ])->where(['status'=>1])
         ->toArray();
 		$totResps=[];	
 
