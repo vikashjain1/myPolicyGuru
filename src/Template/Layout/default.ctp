@@ -118,7 +118,7 @@ else {
 }
 ?>
   <div class="container-fluid <?php if($loginPageNewClassFlag == true) echo 'loginPageNew';?>">
-  <?php if($leftMenuFlag == true) {?>
+  <?php if($leftMenuFlag == true && $homepage!==true) {?>
   <div class="col-md-2 leftMenuArea">
 	<ul>
 		<li><?php echo $this->Html->link('Update Profile', array('controller' => 'users', 'action' => 'edit'));?></li>									
