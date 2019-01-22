@@ -60,7 +60,7 @@ class AppController extends Controller
 		]);
 		// Allow the display action so our pages controller still works and  user can visit index and view actions.
 		//$this->Auth->allow(['index','display','view']);
-		
+		$this->set('homepage',false);
     }
 
 

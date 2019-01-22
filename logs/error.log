@@ -11994,3 +11994,40 @@ Stack Trace:
 #1 {main}
 
 
+2019-01-22 13:07:42 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/home/display
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(896): Cake\View\HelperRegistry->__isset('Auth')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Template\Layout\default.ctp(102): Cake\View\View->__get('Auth')
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(1005): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(964): Cake\View\View->_evaluate('D:\\xampp\\htdocs...', Array)
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(635): Cake\View\View->_render('D:\\xampp\\htdocs...')
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2019-01-22 13:15:55 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/edit
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/users/dashboard
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(964): Cake\View\View->_evaluate('D:\\xampp\\htdocs...', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(635): Cake\View\View->_render('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+

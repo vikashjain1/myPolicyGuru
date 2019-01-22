@@ -13,6 +13,8 @@ class UsersTable extends Table
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
+						 $this->belongsTo('UserType');
+
     }
 	
 	public function validationDefault(Validator $validator){

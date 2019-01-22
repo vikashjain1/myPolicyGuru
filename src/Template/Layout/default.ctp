@@ -118,18 +118,9 @@ else {
 }
 ?>
   <div class="container-fluid <?php if($loginPageNewClassFlag == true) echo 'loginPageNew';?>">
-  <?php if($leftMenuFlag == true && $homepage!==true) {?>
-  <div class="col-md-2 leftMenuArea">
-	<ul>
-		<li><?php echo $this->Html->link('Update Profile', array('controller' => 'users', 'action' => 'edit'));?></li>									
-		<li><?php echo $this->Html->link('Add Policy', array('controller' => 'policies', 'action' => 'add'));?></li>
-		<li><a href="user_sumarry.php">User Summary</a></li>
-		<li><?php echo $this->Html->link('Claim Summaries', array('controller' => 'claims', 'action' => 'add'));?></li>
-		<li><a href="talk_to_an_expert.php">Talk to an Expert</a></li>
-		<li><?php echo $this->Html->link('Community Forum', array('controller' => 'communities', 'action' => 'view'));?></li>
-	</ul>
-	</div>
-  <?php } ?>
+  <?php if($leftMenuFlag == true &&  $homepage!==true) {
+	 echo  $this->element('leftmenu');
+	   } ?>
 	<?php echo $this->fetch('content') ?>
 	</div>
 </section>
