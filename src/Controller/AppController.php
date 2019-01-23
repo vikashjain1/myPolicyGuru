@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
 
 /**
  * Application Controller
@@ -27,7 +28,7 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
+	public $userCodes =[];
     /**
      * Initialization hook method.
      *
@@ -60,6 +61,15 @@ class AppController extends Controller
 		]);
 		// Allow the display action so our pages controller still works and  user can visit index and view actions.
 		//$this->Auth->allow(['index','display','view']);
+		
+		$UserType = TableRegistry::get('UserType');
+		
+		$selectUserTypeCodeListquery = $UserType->find('list',[		
+							'keyField' => 'id',
+							'valueField' => 'code'	
+		]);
+		$this->userCodes = $selectUserTypeCodeListquery->toArray();
+		$this->set('userCodes',$this->userCodes);
 		$this->set('homepage',false);
     }
 
