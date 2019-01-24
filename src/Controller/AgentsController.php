@@ -2,6 +2,8 @@
 namespace App\Controller;
 use Cake\Core\Configure;
 use App\Controller\AppController;
+use App\Model\Table\Users;
+
 
 class AgentsController extends AppController{
 
@@ -9,10 +11,17 @@ class AgentsController extends AppController{
     {	
 		parent::initialize();
 		Configure::write('debug', 1);
-                
+                				$this->loadModel('Users');
+
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
+			$type= $this->Auth->User('user_type_id');
+			if($this->userCodes[$type]!=_AGENT_CODE){
+				return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
+			}
+
+			//pr($type);die;
 			$this->Auth->allow(['logout', 'edit', 'dashboard']);
 	
 		}else{
@@ -23,8 +32,8 @@ class AgentsController extends AppController{
 	public function dashboard()
 	{
 		if($this->Auth->User()){
-			 $type= $this->Auth->User('user_type_id');
-			 pr($this->userCodes[$type]); //pr($type);die;
+			 
+			 
 		}
 		
 	}
@@ -44,7 +53,7 @@ class AgentsController extends AppController{
 	
 	public function logout(){
 		$this->request->session()->destroy();
-		$this->Flash->success('You successfully have loged out');	
+		$this->Flash->success('You successfully have logged out');	
 		return $this->redirect(['action'=>'login']);
 	}
 	
@@ -63,10 +72,13 @@ class AgentsController extends AppController{
 	{
 		$user = $this->Users->newEntity();
 		if($this->request->is('post')) {
+			
+			$AGENT_TYPE_ID  = array_search(_AGENT_CODE, $this->userCodes);
+			$this->request->data['user_type_id'] = $AGENT_TYPE_ID;pr($this->request->data);
 			$this->Users->patchEntity($user, $this->request->data);
 			if($this->Users->save($user)){
-				$this->Flash->success(__('Your account has been registered .'));
-				return $this->redirect(['action' => 'index']);
+				$this->Flash->success(__('Your account has been registered .'));				
+				return $this->redirect(['controller' => 'Agents', 'action' => 'login']);
 			}
 
 			$errdata='';

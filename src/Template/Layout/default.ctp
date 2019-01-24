@@ -86,8 +86,16 @@ class="loginBg"
 		  <li><a href="#">Talk to an Expert</a></li>
 		  <li><a href="#">Community Forum</a></li>
 		  
-		<?php if ($this->request->session()->read('Auth.User')){ ?>
-			<li><?=$this->Html->Link(__('Log out'),['controller'=>'users','action'=>'logout']) ?></li>
+		<?php if ($this->request->session()->read('Auth.User')){ 
+		$actionLogout = ['controller' => 'Users', 'action' => 'logout'];
+		$type = $this->request->session()->read('Auth.User.user_type_id');
+		if($userCodes[$type]==_AGENT_CODE){
+				$actionLogout = ['controller' => 'Agents', 'action' => 'logout'];
+			}
+			
+		
+		?>
+			<li><?=$this->Html->Link(__('Log out'),$actionLogout) ?></li>
 		<?php }else{  ?>
 			<li><?=$this->Html->Link(__('Login & Signup'),['controller'=>'users','action'=>'login']) ?></li>
 		<?php } ?>

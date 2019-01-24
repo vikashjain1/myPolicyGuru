@@ -40,7 +40,7 @@ $( function() {
               <div class="panel-heading" style="color:green;font-size:15px;" ><?php echo  $this->Flash->render() ?></div>
               <div class="panel-body">
 			<?php 
-			echo $this->Form->create($user ,['type' => 'file','id'=>'UserForm']);
+			echo $this->Form->create('' ,['type' => 'file','id'=>'UserForm']);//echo $this->Form->create('',['id'=>'UserLoginForm']);
 			echo $this->Flash->render('auth');
 			?>
               <div class="form-group vertical-center">

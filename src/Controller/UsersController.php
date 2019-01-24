@@ -9,10 +9,16 @@ class UsersController extends AppController{
     {	
 		parent::initialize();
 		Configure::write('debug', 1);
+				$this->loadModel('Users');
+
                 
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
+			$type= $this->Auth->User('user_type_id');
+			if($this->userCodes[$type]==_AGENT_CODE){
+				return $this->redirect(['controller' => 'Agents', 'action' => 'dashboard']);
+			}
 			$this->Auth->allow(['logout', 'edit', 'dashboard']);
 	
 		}else{
