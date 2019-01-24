@@ -33,7 +33,15 @@ class UsersController extends AppController{
 	
 	public function login()
 	{
-		if ($this->request->is('post')) {
+		if ($this->request->is('post')) { 
+				
+			$user_type_id =  $this->Users->find('all', [
+					'conditions' => ['email' => $this->request->data['email']]
+				])->first()->user_type_id;
+		   if($this->userCodes[$user_type_id]==_AGENT_CODE){
+				return $this->Flash->error(__('Invalid username or password, try again.'));
+			}
+			
 			// Auth component identify if sent user data belongs to a user
 			$user = $this->Auth->identify();
 			if ($user) {

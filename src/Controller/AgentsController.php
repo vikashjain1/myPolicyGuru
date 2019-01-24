@@ -41,6 +41,14 @@ class AgentsController extends AppController{
 	public function login()
 	{
 		if ($this->request->is('post')) {
+			$user_type_id =  $this->Users->find('all', [
+					'conditions' => ['email' => $this->request->data['email']]
+				])->first()->user_type_id;
+           // $userEmail = $this->Users->findByEmail($this->data['email'])->id;
+		   if($this->userCodes[$user_type_id]!=_AGENT_CODE){
+				return $this->Flash->error(__('Invalid username or password, try again.'));
+			}
+			
 			// Auth component identify if sent user data belongs to a user
 			$user = $this->Auth->identify();
 			if ($user) {
@@ -74,7 +82,7 @@ class AgentsController extends AppController{
 		if($this->request->is('post')) {
 			
 			$AGENT_TYPE_ID  = array_search(_AGENT_CODE, $this->userCodes);
-			$this->request->data['user_type_id'] = $AGENT_TYPE_ID;pr($this->request->data);
+			$this->request->data['user_type_id'] = $AGENT_TYPE_ID;
 			$this->Users->patchEntity($user, $this->request->data);
 			if($this->Users->save($user)){
 				$this->Flash->success(__('Your account has been registered .'));				

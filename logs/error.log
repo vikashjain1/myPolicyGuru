@@ -12031,3 +12031,49 @@ Stack Trace:
 #7 {main}
 
 
+2019-01-24 12:13:30 Error: [ParseError] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Use...', 'App')
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(91): Cake\Core\App::className('Users', 'Controller', 'Controller')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2019-01-24 12:19:17 Error: [Error] Call to a member function find() on null
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/users/login
+Stack Trace:
+#0 [internal function]: App\Controller\UsersController->login()
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2019-01-24 12:19:30 Error: [BadMethodCallException] Unknown finder method "first"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/users/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(962): Cake\ORM\Table->callFinder('first', Object(Cake\ORM\Query), Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\UsersController.php(39): Cake\ORM\Table->find('first', Array)
+#2 [internal function]: App\Controller\UsersController->login()
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
