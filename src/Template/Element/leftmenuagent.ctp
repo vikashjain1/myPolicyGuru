@@ -46,9 +46,9 @@
 									</li>
 					<?php  if ($this->request->session()->read('Auth.User')){ ?>
 					<li>
-					<?=$this->Html->Link(__('Log out'),['controller'=>'users','action'=>'logout']) ?>  </li>
+					<?=$this->Html->Link(__('Log out'),['controller'=>'agents','action'=>'logout']) ?>  </li>
 	<?php }else{  ?><li>
-		 <?=$this->Html->Link(__('Login'),['controller'=>'users','action'=>'login']) ?>  
+		 <?=$this->Html->Link(__('Login'),['controller'=>'agents','action'=>'login']) ?>  
 
 				</li>				<?php } ?>
 	</ul>

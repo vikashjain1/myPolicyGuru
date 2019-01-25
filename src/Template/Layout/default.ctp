@@ -88,8 +88,8 @@ class="loginBg"
 		  
 		<?php if ($this->request->session()->read('Auth.User')){ 
 		$actionLogout = ['controller' => 'Users', 'action' => 'logout'];
-		$type = $this->request->session()->read('Auth.User.user_type_id');
-		if($userCodes[$type]==_AGENT_CODE){
+		$user_type_code = $this->request->session()->read('Auth.User.user_type_code');
+		if($user_type_code==_AGENT_CODE){
 				$actionLogout = ['controller' => 'Agents', 'action' => 'logout'];
 			}
 			
