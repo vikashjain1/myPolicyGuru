@@ -60,7 +60,7 @@
 	</script>
 <div class="col-md-10 rightAreaInner">
            <div class="signUpBox">
-		   <h3>User Registration<span style="font-size:15px;text-align:right;width:100%;color:red;">
+		   <h3>Agent  Registration<span style="font-size:15px;text-align:right;width:100%;color:red;">
 <?php if(isset($errorMsg)){
 echo  $errorMsg;
 

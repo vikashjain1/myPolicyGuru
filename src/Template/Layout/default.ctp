@@ -127,6 +127,10 @@ else {
 ?>
   <div class="container-fluid <?php if($loginPageNewClassFlag == true) echo 'loginPageNew';?>">
   <?php if($leftMenuFlag == true &&  $homepage!==true) {
+	  
+	   if ($this->request->session()->read('Auth.User.user_type_code')==_AGENT_CODE){
+		    echo  $this->element('leftmenuagent');
+	   } else
 	 echo  $this->element('leftmenu');
 	   } ?>
 	<?php echo $this->fetch('content') ?>

@@ -17,7 +17,7 @@ class AgentsController extends AppController{
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
 			$type= $this->Auth->User('user_type_id');
-			if($this->userCodes[$type]!=_AGENT_CODE){
+			if($this->Auth->User('user_type_code')!=_AGENT_CODE){
 				return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
 			}
 
@@ -41,11 +41,11 @@ class AgentsController extends AppController{
 	public function login()
 	{
 		if ($this->request->is('post')) {
-			$user_type_id =  $this->Users->find('all', [
+			$user_type_code =  $this->Users->find('all', [
 					'conditions' => ['email' => $this->request->data['email']]
-				])->first()->user_type_id;
+				])->first()->user_type_code;
            // $userEmail = $this->Users->findByEmail($this->data['email'])->id;
-		   if($this->userCodes[$user_type_id]!=_AGENT_CODE){
+		   if($user_type_code!=_AGENT_CODE){
 				return $this->Flash->error(__('Invalid username or password, try again.'));
 			}
 			
@@ -83,6 +83,7 @@ class AgentsController extends AppController{
 			
 			$AGENT_TYPE_ID  = array_search(_AGENT_CODE, $this->userCodes);
 			$this->request->data['user_type_id'] = $AGENT_TYPE_ID;
+			$this->request->data['user_type_code'] = _AGENT_CODE;
 			$this->Users->patchEntity($user, $this->request->data);
 			if($this->Users->save($user)){
 				$this->Flash->success(__('Your account has been registered .'));				

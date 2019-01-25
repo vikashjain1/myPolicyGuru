@@ -2,7 +2,7 @@
 	 <!--form Buttons -->
 	 <div class="blogButtons">
 	   <div class="row">
-		 <div class="col-md-4"><a href="profile_step_one.php"><?php echo $this->Html->link('Update Profile', array('controller' => 'users', 'action' => 'edit')); ?></a></div>
+		 <div class="col-md-4"><a href="profile_step_one.php"><?php echo $this->Html->link('Update Agent Profile', array('controller' => 'agents', 'action' => 'edit')); ?></a></div>
 		 <div class="col-md-4"><a href="javascript:void(0);">Add/Update Policies</a></div>
 		 <div class="col-md-4"><a href="javascript:void(0);">Report a claim</a></div>
 	   </div>
