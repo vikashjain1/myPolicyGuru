@@ -115,7 +115,7 @@ alert(finalurl+'--finalurl');
 
               <div class="panel-body">
 			<?php echo $this->Form->create('', ['id'=>'CommunityResponse', 'url' => ['action' => 'addresponse']]);?>
-              <div class="form-group"><input type="text" id="comId" value="<?php echo $community->id;?>">
+              <div class="form-group"><input type="hidden" id="comId" value="<?php echo $community->id;?>">
                 <label class="control-label col-sm-3" for="email">Subject:</label>
                 <div class="col-sm-9 col-md-9 col-lg-9">
                   	<?php echo $community->subject;?>

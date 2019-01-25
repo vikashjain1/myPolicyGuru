@@ -42,7 +42,11 @@ class CommunitiesController extends AppController
 
     public function view()
 	{
-		$allPosts = $this->Paginator->paginate($this->Communities->find('all' )->contain(['CommunitiesLikes','CommunitiesResponses']));
+		$allPosts = $this->Paginator->paginate($this->Communities->find('all' )->contain(['CommunitiesLikes'=>function ($q) {
+    return $q
+        ->select(['CommunitiesLikes.status', 'CommunitiesLikes.id','CommunitiesLikes.community_id'])
+        ->where(['CommunitiesLikes.status' => 1]);
+},'CommunitiesResponses']));
 		//pr($allPosts);die;
         $this->set(compact('allPosts'));
 	}
@@ -50,7 +54,11 @@ class CommunitiesController extends AppController
 	public function yourPost()
 	{
 		$allPosts = $this->Paginator->paginate($this->Communities->find('all', [
-					'conditions' => ['Communities.user_id' => $this->Auth->User('id')]])->contain(['CommunitiesLikes','CommunitiesResponses']));
+					'conditions' => ['Communities.user_id' => $this->Auth->User('id')]])->contain(['CommunitiesLikes'=>function ($q) {
+    return $q
+        ->select(['CommunitiesLikes.status', 'CommunitiesLikes.id','CommunitiesLikes.community_id'])
+        ->where(['CommunitiesLikes.status' => 1]);
+},'CommunitiesResponses']));
         $this->set(compact('allPosts'));
 	}
 	

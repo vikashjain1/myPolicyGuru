@@ -38,7 +38,6 @@
 								
 								  <a href="#" class="modalClassAjax"  id="<?php echo $communityPost->id?>" > <?php echo $communityPost->subject;?></a>
 								  <?php 
-								  
 	/*							  
 								  echo $this->Html->link(
    $communityPost->subject,
@@ -59,6 +58,7 @@
 
 				  <td><?php echo $communityPost->details;?></td>
 				  <td><?php 
+				  //pr($communityPost);
 				  if(isset($communityPost['communities_likes']) && count($communityPost['communities_likes'])>0) 
 					echo  count($communityPost['communities_likes']) ;
 				  else 
