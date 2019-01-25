@@ -5,6 +5,10 @@ use Cake\ORM\Entity;
 
 class UserType extends Entity
 {
-     protected $_accessible = ['*' => true];
+     protected $_accessible = [
+	 
+	         'user_type_code' => true,
+
+	 '*' => false];
 	
 }

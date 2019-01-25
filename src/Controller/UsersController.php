@@ -15,7 +15,6 @@ class UsersController extends AppController{
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
-			$type= $this->Auth->User('user_type_id');
 			if($this->Auth->User('user_type_code')==_AGENT_CODE){
 				return $this->redirect(['controller' => 'Agents', 'action' => 'dashboard']);
 			}
@@ -35,10 +34,10 @@ class UsersController extends AppController{
 	{
 		if ($this->request->is('post')) { 
 				
-			$user_type_id =  $this->Users->find('all', [
+			$user_type_code =  $this->Users->find('all', [
 					'conditions' => ['email' => $this->request->data['email']]
-				])->first()->user_type_id;
-		   if($this->userCodes[$user_type_id]==_AGENT_CODE){
+				])->first()->user_type_code;
+		   if($user_type_code==_AGENT_CODE){
 				return $this->Flash->error(__('Invalid username or password, try again.'));
 			}
 			

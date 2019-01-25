@@ -11,19 +11,15 @@ class AgentsController extends AppController{
     {	
 		parent::initialize();
 		Configure::write('debug', 1);
-                				$this->loadModel('Users');
+         $this->loadModel('Users');
 
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
-			$type= $this->Auth->User('user_type_id');
 			if($this->Auth->User('user_type_code')!=_AGENT_CODE){
 				return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
 			}
-
-			//pr($type);die;
-			$this->Auth->allow(['logout', 'edit', 'dashboard']);
-	
+			$this->Auth->allow(['logout', 'edit', 'dashboard']);	
 		}else{
 			$this->Auth->allow(['logout', 'add','login']);
 		}
@@ -31,6 +27,8 @@ class AgentsController extends AppController{
 	
 	public function dashboard()
 	{
+		//$this->viewBuilder()->layout('home');
+
 		if($this->Auth->User()){
 			 
 			 
@@ -81,8 +79,6 @@ class AgentsController extends AppController{
 		$user = $this->Users->newEntity();
 		if($this->request->is('post')) {
 			
-			$AGENT_TYPE_ID  = array_search(_AGENT_CODE, $this->userCodes);
-			$this->request->data['user_type_id'] = $AGENT_TYPE_ID;
 			$this->request->data['user_type_code'] = _AGENT_CODE;
 			$this->Users->patchEntity($user, $this->request->data);
 			if($this->Users->save($user)){

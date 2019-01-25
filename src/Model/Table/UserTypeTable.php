@@ -13,8 +13,8 @@ class UserTypeTable extends Table
     public function initialize(array $config)
     {
 		    parent::initialize($config);
-			//$this->setTable('roles');
-			$this->setPrimaryKey('user_type_code');
+			$this->table('user_type');
+			$this->primaryKey('user_type_code');
 			$this->addBehavior('Timestamp');
 
     }
