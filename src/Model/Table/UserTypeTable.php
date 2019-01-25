@@ -12,7 +12,10 @@ class UserTypeTable extends Table
 {
     public function initialize(array $config)
     {
-        $this->addBehavior('Timestamp');
+		    parent::initialize($config);
+			//$this->setTable('roles');
+			$this->setPrimaryKey('user_type_code');
+			$this->addBehavior('Timestamp');
 
     }
 	
