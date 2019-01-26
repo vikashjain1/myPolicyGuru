@@ -14,24 +14,27 @@ class UsersTable extends Table
     {
         $this->addBehavior('Timestamp');
 						 $this->belongsTo('UserType');
+						 $this->hasMany('AgentsUsers');
 
     }
 	
 	public function validationDefault(Validator $validator){
-		 $validator->requirePresence('email','You must enter your email.')
+	 $validator->requirePresence('email','You must enter your email.')
 					->add('email', [
 					'email' => [
 						'rule' => ['email'],
 						'message'=>" Please, enter a valid email!"
 						]
 					])
-					->notEmpty('password','Please, enter your password !')
+			->notEmpty('password','Please, enter your password !')
 					->add('password', [
 					'compare' => [
 						'rule' => ['compareWith', 'cnfpassword'],
 						'message'=>"Password mismatch password confirm !"
 						]
-					]);
+					])
+					
+					;
 					return $validator;																		
 	}
 	/**

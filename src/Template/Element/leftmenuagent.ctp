@@ -16,7 +16,7 @@
 									</li>
 									
 									<li>			<?php echo	$this->Html->link('Add Customers   ', 
-									array('controller' => 'agents', 'action' => 'edit')); 
+									array('controller' => 'agents', 'action' => 'addUser')); 
 			?>
 									
 									
@@ -25,7 +25,7 @@
 									
 									
 									<li>			<?php echo	$this->Html->link('View Customers   ', 
-									array('controller' => 'agents', 'action' => 'edit')); 
+									array('controller' => 'agents', 'action' => 'viewUser')); 
 			?>
 									
 									

@@ -52,10 +52,11 @@ class HomeController extends AppController
         //$this->session = $this->request->session();
         $this->loadComponent('Paginator');
         $this->loadComponent('Flash'); // Include the FlashComponent
+		$this->viewBuilder()->layout('home');
     }
 	
 	public function beforeFilter(Event $event) {    
-$this->Auth->allow(['display']);
+		$this->Auth->allow(['display']);
     }
 	
 	

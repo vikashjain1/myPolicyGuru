@@ -44,7 +44,7 @@ return this.optional(element) || /^-?\d+$/.test(value);
 	
 <div class="col-md-10 rightAreaInner">
    <div class="updateProfileBox">
-	  <h3>Update Profile<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo $errorMsg;}	?></span></h3>
+	  <h3>Add New Customers <span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo $errorMsg;}	?></span></h3>
 
 	<?php 
 		echo $this->Form->create($user ,['type' => 'file','id'=>'UserForm']);
@@ -55,12 +55,12 @@ return this.optional(element) || /^-?\d+$/.test(value);
 		<div class="panel-body">
 			<div class="form-group">
 			  <div class="col-md-4">
-				<label> Name</label>
+				<label>Name</label>
                   <input type="text" class="form-control" id="name" name="name" placeholder="" value="<?php echo $user->name;?>">
 			   </div>
 			  <div class="col-md-4">
-				  <label>Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="" value="<?php echo $user->email;?>">
+				 <!-- <label>Email</label>
+                  <input type="text" class="form-control" id="email" name="email" placeholder="" value="<?php echo $user->email;?>">-->
 			  </div>
 			  <div class="col-md-4">
 				<label>Address</label>
@@ -82,13 +82,26 @@ return this.optional(element) || /^-?\d+$/.test(value);
                   <input  class="form-control" name="zip" id="zip" type="text" value="<?php echo $user->zip;?>">
 				</div>
 			</div>
+			<div class="form-group">
+				<div class="col-md-4">
+					<label>Email</label>
+                  <input type="text" class="form-control" name="email" id="email" placeholder="" value="">
+				</div>
+				<div class="col-md-4">
+				  <label>Password</label>
+                  <input type="text" class="form-control" id="password" name="password" placeholder="" value="">
+				</div><div class="col-md-4">
+				  <label>Confirm Password</label>
+                  <input type="text" class="form-control" id="cnfpassword" name="cnfpassword" placeholder="" value="">
+				</div>
+			</div>
 		</div>
 	  </div> <!--ends of from Panel -->
 	  
 
 	  <!--Exposure and life health -->
 	  <div class="row">
-		<div class="col-md-7 pr8">
+		<!--<div class="col-md-7 pr8">
 		  <div class="panel panel-default padding-controller">
 			<div class="panel-heading"><strong>Exposure Vault</strong></div>
 			<div class="panel-body">
@@ -279,14 +292,14 @@ return this.optional(element) || /^-?\d+$/.test(value);
 
 			</div>
 		  </div>
-		</div>
+		</div>-->
 	  </div>
 	  <!--Exposure and life health ends-->
 
 	  <!--bottom buttons -->
 	  <div class="row">
 		  <div class="col-md-12 text-right mt20 mb20">
-		  <button class="btn btn-primary mb0 mr5">Update Profile</button>
+		  <button class="btn btn-primary mb0 mr5">Add  Profile</button>
 		  <button class="btn btn-default">Back</button>
 		</div>
 	  </div>

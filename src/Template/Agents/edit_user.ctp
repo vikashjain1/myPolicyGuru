@@ -56,10 +56,11 @@ return this.optional(element) || /^-?\d+$/.test(value);
 			<div class="form-group">
 			  <div class="col-md-4">
 				<label> Name</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="" value="<?php echo $user->name;?>">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="" value="<?php echo $user->name;?>">				  <input type="hidden" value="<?php echo $user->id;?>" name="id" >
+
 			   </div>
 			  <div class="col-md-4">
-				  <label>Email</label>
+			  <label>Email</label>
                   <input type="text" class="form-control" id="email" name="email" placeholder="" value="<?php echo $user->email;?>">
 			  </div>
 			  <div class="col-md-4">
@@ -88,7 +89,7 @@ return this.optional(element) || /^-?\d+$/.test(value);
 
 	  <!--Exposure and life health -->
 	  <div class="row">
-		<div class="col-md-7 pr8">
+<!--		<div class="col-md-7 pr8">
 		  <div class="panel panel-default padding-controller">
 			<div class="panel-heading"><strong>Exposure Vault</strong></div>
 			<div class="panel-body">
@@ -280,6 +281,7 @@ return this.optional(element) || /^-?\d+$/.test(value);
 			</div>
 		  </div>
 		</div>
+		-->
 	  </div>
 	  <!--Exposure and life health ends-->
 

@@ -3,6 +3,7 @@ namespace App\Controller;
 use Cake\Core\Configure;
 use App\Controller\AppController;
 use App\Model\Table\Users;
+use App\Model\Table\AgentsUsers;
 
 
 class AgentsController extends AppController{
@@ -11,7 +12,8 @@ class AgentsController extends AppController{
     {	
 		parent::initialize();
 		Configure::write('debug', 1);
-         $this->loadModel('Users');
+        $this->loadModel('Users');
+        $this->loadModel('AgentsUsers');
 
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
@@ -19,7 +21,7 @@ class AgentsController extends AppController{
 			if($this->Auth->User('user_type_code')!=_AGENT_CODE){
 				return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
 			}
-			$this->Auth->allow(['logout', 'edit', 'dashboard']);	
+			$this->Auth->allow(['logout', 'edit', 'dashboard','editUser','addUser','viewUser']);	
 		}else{
 			$this->Auth->allow(['logout', 'add','login']);
 		}
@@ -74,16 +76,35 @@ class AgentsController extends AppController{
 		$this->set('user',$user);
 	}
 	
-	public function add()
+	public function viewUser()
+	{
+		$agent_id = $this->Auth->User('id');
+		$custData = $this->AgentsUsers->find('all',['conditions'=>['agent_id'=>$agent_id]])->contain(['Users'])->toArray();
+		//pr($custData);die;
+		//$user = $this->Users->find('all',['conditions'=>[]]);
+		$this->set('custData',$custData);
+	}
+	
+	public function addUser()
 	{
 		$user = $this->Users->newEntity();
+		$AgentsUsers = $this->AgentsUsers->newEntity();
 		if($this->request->is('post')) {
-			
-			$this->request->data['user_type_code'] = _AGENT_CODE;
+			//pr($this->request->data);die;
+			//$this->request->data['name']= $this->request->data['first_name'].''.$this->request->data['last_name'];
+			//$this->request-data['last_name'] = $this->request-data['first_name'] ='';
+			$this->request->data['user_type_code'] = _NORMAL_CODE;
 			$this->Users->patchEntity($user, $this->request->data);
-			if($this->Users->save($user)){
-				$this->Flash->success(__('Your account has been registered .'));				
-				return $this->redirect(['controller' => 'Agents', 'action' => 'login']);
+			$resultUser = $this->Users->save($user);
+			if($resultUser){
+				$user_id = $resultUser->id;
+				$agent_id = $this->Auth->User('id');
+				$newarr =['user_id'=>$user_id,'agent_id'=>$agent_id];
+				$this->AgentsUsers->patchEntity($AgentsUsers, $newarr);
+
+				$this->AgentsUsers->save($AgentsUsers);
+				$this->Flash->success(__('Customer has been added successfully!! .'));				
+				return $this->redirect(['controller' => 'Agents', 'action' => 'viewUser']);
 			}
 
 			$errdata='';
@@ -94,7 +115,7 @@ class AgentsController extends AppController{
 				}
 				$this->set('errorMsg',$errdata);
 			}		
-			$this->Flash->error(__('Unable to register your account.'));
+			$this->Flash->error(__('Unable to add  this account.'));
 		}
 		$this->set('user',$user);
 	}
@@ -122,6 +143,37 @@ class AgentsController extends AppController{
 			$this->Flash->error(__('Unable to update your profile .'));
 		}
 		$this->set('user', $user);
+	}
+	
+	
+	public function editUser($userId)
+	{
+		if($userId){
+
+		$user = $this->Users->get($userId);
+		//pr($user);die;
+		if ($this->request->is(['post', 'put'])) {
+			//$this->request->data['name']= $this->request->data['first_name'].''.$this->request->data['last_name'];
+			
+			$this->Users->patchEntity($user, $this->request->data);
+			//pr($user->errors());die;
+			if ($this->Users->save($user)) {
+				$this->Flash->success(__('Your profile data has been updated.'));
+				return $this->redirect(['action' => 'viewUser']);
+			}
+			$errdata='';
+			if(count($user->errors())>0){
+				foreach($user->errors() as $ind =>$value){
+					$errdata .='<br/>';
+					$errdata .= implode(",",array_values($value));
+
+				}	
+				$this->set('errorMsg',$errdata);
+			}			
+			$this->Flash->error(__('Unable to update customer profile .'));
+		}
+		$this->set('user', $user);
+		}
 	}
 	
 	public function delete($id)
