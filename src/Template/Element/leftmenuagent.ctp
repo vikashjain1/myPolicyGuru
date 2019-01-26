@@ -1,6 +1,11 @@
 <div class="col-md-2 leftMenuArea">
 	<ul>
-		<li><a href="#user_dashboard.php">User Dashboard</a></li>
+		<li>			<?php echo	$this->Html->link('User Dashboard ', 
+									array('controller' => 'agents', 'action' => 'dashboard')); 
+			?>
+									
+									
+									</li>
 		<li>			<?php echo	$this->Html->link('Update Profile ', 
 									array('controller' => 'agents', 'action' => 'edit')); 
 			?>

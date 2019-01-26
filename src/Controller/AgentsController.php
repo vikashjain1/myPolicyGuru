@@ -76,6 +76,31 @@ class AgentsController extends AppController{
 		$this->set('user',$user);
 	}
 	
+	public function add()
+	{
+		$user = $this->Users->newEntity();
+		if($this->request->is('post')) {
+			
+			$this->request->data['user_type_code'] = _AGENT_CODE;
+			$this->Users->patchEntity($user, $this->request->data);
+			if($this->Users->save($user)){
+				$this->Flash->success(__('Your account has been registered .'));				
+				return $this->redirect(['controller' => 'Agents', 'action' => 'login']);
+			}
+
+			$errdata='';
+			if(count($user->errors())>0){
+				foreach($user->errors() as $ind =>$value){
+					$errdata .='<br/>';
+					$errdata .= implode(",",array_values($value));
+				}
+				$this->set('errorMsg',$errdata);
+			}		
+			$this->Flash->error(__('Unable to register your account.'));
+		}
+		$this->set('user',$user);
+	}
+	
 	public function viewUser()
 	{
 		$agent_id = $this->Auth->User('id');
