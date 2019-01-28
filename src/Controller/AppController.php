@@ -29,6 +29,9 @@ use Cake\ORM\TableRegistry;
 class AppController extends Controller
 {
 	public $userCodes =[];
+	public $userActions =[];
+	public $loggedInUserAllowedActions =[];
+	public $currentAction ='';
     /**
      * Initialization hook method.
      *
@@ -71,11 +74,35 @@ class AppController extends Controller
 		$this->userCodes = $selectUserTypeCodeListquery->toArray();
 		$this->set('userCodes',$this->userCodes);
 		$this->set('homepage',false);
+		
+		$UserPermissions = TableRegistry::get('UserPermissions');
+		
+		$selectUserTypeCodeActionsControllers = $UserPermissions->find('all',['conditions'=>
+		['user_type_code'=>$this->Auth->User('user_type_code')]]
+		);
+		$userActionsData = $selectUserTypeCodeActionsControllers->toArray();
+		$cnt=0;
+		foreach($userActionsData as $val){
+			$this->userActions[$val->controller_name][$cnt]=$val->action_name;
+			
+			$cnt++;
+		}
+		$currentController 	 = $this->request->params['controller'].'Controller';
+		$this->currentAction = $this->request->params['action'];
+		
+		if (array_key_exists($currentController,$this->userActions))
+		{
+			if(in_array($this->currentAction,$this->userActions[$currentController]))
+				$this->loggedInUserAllowedActions = $this->userActions[$currentController];
+		}
+ // pr($this->loggedInUserAllowedActions);
+  // die;
     }
 
 
 	public function isAuthorized($user)
 	{
+		
 		//$this->Flash->error('You aren\'t allowed');
 		//return false;
 	}
@@ -84,6 +111,13 @@ class AppController extends Controller
 	{
 		$this->Auth->allow(['display']);
 		
+		
+	//	pr($this->request->params['controller']);
+		//echo $this->request->params['action'];
+
+		//$this->userActions = $selectUserTypeCodeActionsControllers->toArray();
+		//$this->set('userCodes',$this->userCodes);
+		//pr($this->userActions);die;
 	}
     /**
      * Before render callback.

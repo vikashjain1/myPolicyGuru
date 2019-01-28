@@ -24,7 +24,7 @@ class CommunitiesController extends AppController
 				 //TableRegistry::get('CommunitiesResponses');
 		$this->loadModel('CommunitiesResponses');
 		$this->loadModel('CommunitiesLikes');
- $this->loadComponent('RequestHandler');
+		$this->loadComponent('RequestHandler');
 
         //$this->viewBuilder()->helpers(['MyHelper']);
 
@@ -36,7 +36,8 @@ class CommunitiesController extends AppController
 		//parent::beforeFilter($event);
 		
 		if($this->Auth->User('id')){
-			$this->Auth->allow();
+			//$this->Auth->allow();
+			$this->Auth->allow($this->loggedInUserAllowedActions);	
 		}
     }
 

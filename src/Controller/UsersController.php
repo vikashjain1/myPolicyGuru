@@ -18,7 +18,8 @@ class UsersController extends AppController{
 			if($this->Auth->User('user_type_code')==_AGENT_CODE){
 				return $this->redirect(['controller' => 'Agents', 'action' => 'dashboard']);
 			}
-			$this->Auth->allow(['logout', 'edit', 'dashboard']);
+			$this->Auth->allow($this->loggedInUserAllowedActions);	
+			//$this->Auth->allow(['logout', 'edit', 'dashboard']);
 	
 		}else{
 			$this->Auth->allow(['logout', 'add']);

@@ -28,6 +28,7 @@ class PoliciesController extends AppController
 		//parent::beforeFilter($event);
 		if($this->Auth->User('id')){
 			$this->Auth->allow();
+			//$this->Auth->allow($this->loggedInUserAllowedActions);	
 		}
     }
 
