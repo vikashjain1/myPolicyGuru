@@ -61,11 +61,7 @@ class HomeController extends AppController
 	
 	
     public function display()
-    {				//die('pages');
-		$this->set('homepage',true);
-		//$this->viewBuilder()->setLayout('default');
-
-    
-    
+    {	$this->set('homepage',true);
+	
     }
 }

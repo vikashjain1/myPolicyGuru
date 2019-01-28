@@ -94,6 +94,13 @@ class AppController extends Controller
 		{
 			if(in_array($this->currentAction,$this->userActions[$currentController]))
 				$this->loggedInUserAllowedActions = $this->userActions[$currentController];
+			else{
+				$this->Flash->error('You cannot access that page');
+		
+				return $this->redirect(['controller' => 'Home', 'action' => 'display']);
+
+			}
+			
 		}
  // pr($this->loggedInUserAllowedActions);
   // die;

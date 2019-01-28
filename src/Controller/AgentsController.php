@@ -19,7 +19,7 @@ class AgentsController extends AppController{
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
 			if($this->Auth->User('user_type_code')!=_AGENT_CODE){
-				return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
+				//return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
 			}
 			$this->Auth->allow($this->loggedInUserAllowedActions);	
 		}else{
