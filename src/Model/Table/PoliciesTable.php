@@ -15,9 +15,9 @@ class PoliciesTable extends Table
         $this->addBehavior('Timestamp');
     }
 	
-	public function isOwnedBy($articleId, $userId)
+	public function isOwnedBy($policyId, $userId)
 	{
-		return $this->exists(['id' => $articleId, 'user_id' => $userId]);
+		return $this->exists(['id' => $policyId, 'user_id' => $userId]);
 	}
 	
 	//https://www.discussdesk.com/cakephp-3-data-validation.htm

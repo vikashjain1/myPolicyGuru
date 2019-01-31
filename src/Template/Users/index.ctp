@@ -9,15 +9,16 @@
         <th>Actions</th>
     </tr>
 
-
-    <?php foreach ($users as $user): ?>
+    <?php
+	//pr($users);die;
+ foreach ($users as $user): ?>
     <tr>
         <td><?= $user->id ?></td>
         <td>
             <?= $this->Html->link($user->username, ['action' => 'view', $user->id]) ?>
         </td>
         <td>
-            <?= $user->created->format(DATE_RFC850) ?>
+            <?php //$user->created->format(DATE_RFC850) ?>
         </td>
         <td>
             <?= $this->Form->postLink(

@@ -101,7 +101,7 @@ class UsersController extends AppController{
 			//pr($user->errors());die;
 			if ($this->Users->save($user)) {
 				$this->Flash->success(__('Your profile data has been updated.'));
-				return $this->redirect(['action' => 'index']);
+				return $this->redirect(['action' => 'edit']);
 			}
 			$errdata='';
 			if(count($user->errors())>0){

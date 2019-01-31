@@ -12,6 +12,8 @@
 	<h3>My Customers<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo  $errorMsg;} ?></span></h3>
 	  <!--View All Customers table -->
 		  <div class="table-responsvie">
+		   <div class="panel-heading" style="color:green;font-size:15px;" ><?php echo  $this->Flash->render() ?></div>
+		  
 			<table class="table table-bordered">
 			  <thead>
 				<tr>
@@ -34,7 +36,7 @@
 			?>
 				<tr>
 				  <td><?php echo $sNo;?></td>
-				  <td>			   <?php echo $data['user']->name;?></td>
+				  <td>			   <?php echo ucfirst($data['user']->first_name).' '. ucfirst($data['user']->last_name);?></td>
 				  <td><?php echo $data['user']->email;?></td>
 				  <td><?php echo $data['user']->city;?></td>
 				  				  <td><?php echo $data['user']->zip;?></td>

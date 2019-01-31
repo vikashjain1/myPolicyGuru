@@ -3,7 +3,8 @@ $( function() {
 	// validate signup form on keyup and submit
 	$("#UserForm").validate({
 		rules: {
-			name: "required",
+			first_name: "required",
+			last_name: "required",
 			email: {
 				required: true,
 				email: true
@@ -23,7 +24,8 @@ $( function() {
 			}
 		},
 		messages: {
-			name: "Please enter your name",
+			first_name: "Please enter your first  name",
+			last_name: "Please enter your last  name",
 			email: "Please enter a valid email address",
 			address: "Please enter  address",
 			city: "Please enter  city",
@@ -55,12 +57,12 @@ return this.optional(element) || /^-?\d+$/.test(value);
 		<div class="panel-body">
 			<div class="form-group">
 			  <div class="col-md-4">
-				<label>Name</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="" value="<?php echo $user->name;?>">
+				<label>First Name</label>
+                  <input type="text" class="form-control" id="first_name" name="first_name" placeholder="" value="<?php echo $user->first_name;?>">
 			   </div>
 			  <div class="col-md-4">
-				 <!-- <label>Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="" value="<?php echo $user->email;?>">-->
+				  <label>Last Name</label>
+                  <input type="text" class="form-control" id="last_name" name="last_name" placeholder="" value="<?php echo $user->last_name;?>">
 			  </div>
 			  <div class="col-md-4">
 				<label>Address</label>
