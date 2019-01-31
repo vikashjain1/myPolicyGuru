@@ -9,11 +9,17 @@ class UsersController extends AppController{
     {	
 		parent::initialize();
 		Configure::write('debug', 1);
+				$this->loadModel('Users');
+
                 
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
 		if($this->Auth->User('id')){
-			$this->Auth->allow(['logout', 'edit', 'dashboard']);
+			if($this->Auth->User('user_type_code')==_AGENT_CODE){
+				//return $this->redirect(['controller' => 'Agents', 'action' => 'dashboard']);
+			}
+			$this->Auth->allow($this->loggedInUserAllowedActions);	
+			//$this->Auth->allow(['logout', 'edit', 'dashboard']);
 	
 		}else{
 			$this->Auth->allow(['logout', 'add']);
@@ -27,7 +33,15 @@ class UsersController extends AppController{
 	
 	public function login()
 	{
-		if ($this->request->is('post')) {
+		if ($this->request->is('post')) { 
+				
+			$user_type_code =  $this->Users->find('all', [
+					'conditions' => ['email' => $this->request->data['email']]
+				])->first()->user_type_code;
+		   if($user_type_code==_AGENT_CODE){
+				return $this->Flash->error(__('Invalid username or password, try again.'));
+			}
+			
 			// Auth component identify if sent user data belongs to a user
 			$user = $this->Auth->identify();
 			if ($user) {

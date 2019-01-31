@@ -11994,3 +11994,799 @@ Stack Trace:
 #1 {main}
 
 
+2019-01-22 13:07:42 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/home/display
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(896): Cake\View\HelperRegistry->__isset('Auth')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Template\Layout\default.ctp(102): Cake\View\View->__get('Auth')
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(1005): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(964): Cake\View\View->_evaluate('D:\\xampp\\htdocs...', Array)
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(635): Cake\View\View->_render('D:\\xampp\\htdocs...')
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2019-01-22 13:15:55 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/edit
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/users/dashboard
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(964): Cake\View\View->_evaluate('D:\\xampp\\htdocs...', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(635): Cake\View\View->_render('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2019-01-24 12:13:30 Error: [ParseError] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Use...', 'App')
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(91): Cake\Core\App::className('Users', 'Controller', 'Controller')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2019-01-24 12:19:17 Error: [Error] Call to a member function find() on null
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/users/login
+Stack Trace:
+#0 [internal function]: App\Controller\UsersController->login()
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2019-01-24 12:19:30 Error: [BadMethodCallException] Unknown finder method "first"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/users/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/users/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(962): Cake\ORM\Table->callFinder('first', Object(Cake\ORM\Query), Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\UsersController.php(39): Cake\ORM\Table->find('first', Array)
+#2 [internal function]: App\Controller\UsersController->login()
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2019-01-25 07:51:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:51:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:51:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:51:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:51:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:51:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:51:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:52:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:52:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:52:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:52:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:52:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:52:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:53:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:57:37 Error: [TypeError] Argument 1 passed to App\Controller\CommunitiesController::App\Controller\{closure}() must be an instance of App\Controller\Query, instance of Cake\ORM\Query given, called in D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Association\SelectableAssociationTrait.php on line 120
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/communities/view
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/communities/your-post
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Association\SelectableAssociationTrait.php(120): App\Controller\CommunitiesController->App\Controller\{closure}(Object(Cake\ORM\Query))
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Association\SelectableAssociationTrait.php(48): Cake\ORM\Association\HasMany->_buildQuery(Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(590): Cake\ORM\Association\HasMany->eagerLoader(Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Query.php(954): Cake\ORM\EagerLoader->loadExternal(Object(Cake\ORM\Query), Object(Cake\Database\Statement\BufferedStatement))
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Query.php(902): Cake\ORM\Query->_all()
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(171): Cake\ORM\Query->all()
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\CommunitiesController.php(49): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\CommunitiesTable))
+#8 [internal function]: App\Controller\CommunitiesController->view()
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CommunitiesController))
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2019-01-25 07:58:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:59:00 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:59:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 07:59:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:02:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:02:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:02:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:05:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 08:06:00 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-01-25 14:38:43 Error: [BadMethodCallException] Unknown method "setPrimaryKey"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/agents/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Model\Table\UserTypeTable.php(17): Cake\ORM\Table->__call('setPrimaryKey', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(291): App\Model\Table\UserTypeTable->initialize(Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(210): Cake\ORM\Table->__construct(Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(177): Cake\ORM\Locator\TableLocator->_create(Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(110): Cake\ORM\Locator\TableLocator->get('UserType', Array)
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AppController.php(65): Cake\ORM\TableRegistry::get('UserType')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AgentsController.php(12): App\Controller\AppController->initialize()
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(262): App\Controller\AgentsController->initialize()
+#8 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(101): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#16 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2019-01-25 14:39:37 Error: [BadMethodCallException] Unknown method "setTable"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/agents/login
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Model\Table\UserTypeTable.php(16): Cake\ORM\Table->__call('setTable', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(291): App\Model\Table\UserTypeTable->initialize(Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(210): Cake\ORM\Table->__construct(Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(177): Cake\ORM\Locator\TableLocator->_create(Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(110): Cake\ORM\Locator\TableLocator->get('UserType', Array)
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AppController.php(65): Cake\ORM\TableRegistry::get('UserType')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AgentsController.php(12): App\Controller\AppController->initialize()
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(262): App\Controller\AgentsController->initialize()
+#8 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(101): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#16 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2019-01-25 14:41:26 Error: [BadMethodCallException] Unknown method "setPrimaryKey"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/agents/dashboard
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Model\Table\UserTypeTable.php(17): Cake\ORM\Table->__call('setPrimaryKey', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(291): App\Model\Table\UserTypeTable->initialize(Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(210): Cake\ORM\Table->__construct(Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(177): Cake\ORM\Locator\TableLocator->_create(Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(110): Cake\ORM\Locator\TableLocator->get('UserType', Array)
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AppController.php(65): Cake\ORM\TableRegistry::get('UserType')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AgentsController.php(12): App\Controller\AppController->initialize()
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(262): App\Controller\AgentsController->initialize()
+#8 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(101): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#16 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2019-01-25 14:41:41 Error: [BadMethodCallException] Unknown method "setTable"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/agents/dashboard
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Model\Table\UserTypeTable.php(16): Cake\ORM\Table->__call('setTable', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(291): App\Model\Table\UserTypeTable->initialize(Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(210): Cake\ORM\Table->__construct(Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(177): Cake\ORM\Locator\TableLocator->_create(Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(110): Cake\ORM\Locator\TableLocator->get('UserType', Array)
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AppController.php(65): Cake\ORM\TableRegistry::get('UserType')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AgentsController.php(12): App\Controller\AppController->initialize()
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(262): App\Controller\AgentsController->initialize()
+#8 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(101): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#16 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2019-01-25 14:46:21 Error: [BadMethodCallException] Unknown method "setTable"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/agents/dashboard
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Model\Table\UserTypeTable.php(16): Cake\ORM\Table->__call('setTable', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(291): App\Model\Table\UserTypeTable->initialize(Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(210): Cake\ORM\Table->__construct(Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(177): Cake\ORM\Locator\TableLocator->_create(Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(110): Cake\ORM\Locator\TableLocator->get('UserType', Array)
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AppController.php(65): Cake\ORM\TableRegistry::get('UserType')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AgentsController.php(12): App\Controller\AppController->initialize()
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(262): App\Controller\AgentsController->initialize()
+#8 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(101): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#16 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2019-01-25 14:48:17 Error: [BadMethodCallException] Unknown method "setPrimaryKey"
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/agents/dashboard
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Model\Table\UserTypeTable.php(17): Cake\ORM\Table->__call('setPrimaryKey', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Table.php(291): App\Model\Table\UserTypeTable->initialize(Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(210): Cake\ORM\Table->__construct(Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(177): Cake\ORM\Locator\TableLocator->_create(Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\ORM\TableRegistry.php(110): Cake\ORM\Locator\TableLocator->get('UserType', Array)
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AppController.php(65): Cake\ORM\TableRegistry::get('UserType')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Controller\AgentsController.php(12): App\Controller\AppController->initialize()
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(262): App\Controller\AgentsController->initialize()
+#8 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(101): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Agents')
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#16 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2019-01-26 15:16:17 Error: [Cake\Controller\Exception\MissingActionException] Action AgentsController::add() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AgentsController',
+  'action' => 'add',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/agents/add
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/agents/login
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AgentsController))
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+

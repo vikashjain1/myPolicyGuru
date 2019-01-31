@@ -43,8 +43,15 @@
 			<?php 
 			$sNo++;
 			endforeach;
+			if($sNo==1){
 			?>
-			
+			<tr>
+				  <td colspan="6" style="text-align:center;">No Records Found !!</td>
+				 
+				</tr>
+			<?php
+			}
+			?>
 			  </tbody>
 			</table>
 		  </div>

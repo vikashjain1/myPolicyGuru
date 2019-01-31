@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
 
 /**
  * Application Controller
@@ -27,7 +28,10 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
+	public $userCodes =[];
+	public $userActions =[];
+	public $loggedInUserAllowedActions =[];
+	public $currentAction ='';
     /**
      * Initialization hook method.
      *
@@ -61,11 +65,51 @@ class AppController extends Controller
 		// Allow the display action so our pages controller still works and  user can visit index and view actions.
 		//$this->Auth->allow(['index','display','view']);
 		
+		$UserType = TableRegistry::get('UserType');
+		
+		$selectUserTypeCodeListquery = $UserType->find('list',[		
+							'keyField' => 'id',
+							'valueField' => 'code'	
+		]);
+		$this->userCodes = $selectUserTypeCodeListquery->toArray();
+		$this->set('userCodes',$this->userCodes);
+		$this->set('homepage',false);
+		
+		$UserPermissions = TableRegistry::get('UserPermissions');
+		
+		$selectUserTypeCodeActionsControllers = $UserPermissions->find('all',['conditions'=>
+		['user_type_code'=>$this->Auth->User('user_type_code')]]
+		);
+		$userActionsData = $selectUserTypeCodeActionsControllers->toArray();
+		$cnt=0;
+		foreach($userActionsData as $val){
+			$this->userActions[$val->controller_name][$cnt]=$val->action_name;
+			
+			$cnt++;
+		}
+		$currentController 	 = $this->request->params['controller'].'Controller';
+		$this->currentAction = $this->request->params['action'];
+		
+		if (array_key_exists($currentController,$this->userActions))
+		{
+			if(in_array($this->currentAction,$this->userActions[$currentController]))
+				$this->loggedInUserAllowedActions = $this->userActions[$currentController];
+			else{
+				$this->Flash->error('You cannot access that page');
+		
+				return $this->redirect(['controller' => 'Home', 'action' => 'display']);
+
+			}
+			
+		}
+ // pr($this->loggedInUserAllowedActions);
+  // die;
     }
 
 
 	public function isAuthorized($user)
 	{
+		
 		//$this->Flash->error('You aren\'t allowed');
 		//return false;
 	}
@@ -73,6 +117,14 @@ class AppController extends Controller
 	public function beforeFilter(Event $event)
 	{
 		$this->Auth->allow(['display']);
+		
+		
+	//	pr($this->request->params['controller']);
+		//echo $this->request->params['action'];
+
+		//$this->userActions = $selectUserTypeCodeActionsControllers->toArray();
+		//$this->set('userCodes',$this->userCodes);
+		//pr($this->userActions);die;
 	}
     /**
      * Before render callback.

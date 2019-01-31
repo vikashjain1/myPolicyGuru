@@ -13,7 +13,6 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,72 +53,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 </style>
 
-<body> 
-  <header><?php  
+<body class="loginBg"> 
+  <header>	<?php  
 	echo  $this->element('header');
 ?>
+
 </header>    
 
 <section>
-<?php
-if($this->request->params['controller'] == "Users" && ($this->request->params['action'] == "login" || $this->request->params['action'] == "dashboard")){
-	$loginPageNewClassFlag = true;
-	$leftMenuFlag = false;
-}
-elseif($this->request->session()->read('Auth.User') && $this->request->params['action'] != "login" && $this->request->params['action'] != "dashboard"){
-	$loginPageNewClassFlag = false;
-	$leftMenuFlag = true;
-}
-else {
-	$loginPageNewClassFlag = false;
-	$leftMenuFlag = false;
-}
-?>
-  <div class="container-fluid <?php if($loginPageNewClassFlag == true) echo 'loginPageNew';?>">
-  <?php if($leftMenuFlag == true ) {
-	  
-	   if ($this->request->session()->read('Auth.User.user_type_code')==_AGENT_CODE){
-		    echo  $this->element('leftmenuagent');
-	   } else
-	 echo  $this->element('leftmenu');
-	   } ?>
+  <div class="container-fluid "> 
 	<?php echo $this->fetch('content') ?>
-	</div>
+  </div>
 </section>
 <?php  
-echo  $this->element('footer');
+	echo  $this->element('footer');
 ?>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   </body>
 </html>
-<!-- The Modal -->
-<style>
-.modal a.close-modal{width: 17%;
-    height: 20%;}
-</style>
-<div class="modal" >
-  
-</div>
-<!--
-<div id="ex1" class="modal">
-  <p>Thanks for clicking. That felt good.</p>
-  <a href="#" rel="modal:close">Close</a>
-</div>-->
-<script>
-$('.modalClassAjax').click(function(event) {
-  event.preventDefault();
-  var commId =$(this).attr('id');
-  var comUrl = '<?php echo $this->Url->build(["controller" => "Communities",  "action" => "allresponse"]);?>';
-  //this.blur(); // Manually remove focus from clicked link.
-  $.get(comUrl+'/'+commId
-  , function(html) {
-  var dataHtml = $('#ajax-content').html(html);  //alert($('#ajax-content').html());
-
-    $(dataHtml).appendTo('body').modal();
-	//$('#ajax-content').remove();
-  });
-});
-</script>
-
-<div id="ajax-content" style="display:none;"></div>

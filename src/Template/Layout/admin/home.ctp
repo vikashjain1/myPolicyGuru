@@ -18,25 +18,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!DOCTYPE html>
 <html>
 <head>
-    <?php  echo $this->Html->charset() ?>
+    <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php  echo 'My Policy Guru';  ?></title>
-    <?php  echo $this->Html->meta('icon') ?>
-    <?php  echo $this->Html->css('bootstrap.min') ?>
-    <?php  echo $this->Html->css('style') ?>
-	<?php  echo $this->Html->css('style_new') ?>
-    <?php  echo $this->Html->css('calendarstyle') ?>
+    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->css('bootstrap.min') ?>
+    <?= $this->Html->css('style') ?>
+	<?= $this->Html->css('style_new') ?>
+    <?= $this->Html->css('calendarstyle') ?>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <?php  echo $this->Html->css('responsive') ?>
-	    <?php  echo $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js']); ?>
+    <?= $this->Html->css('responsive') ?>
+	    <?= $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js']); ?>
 
-    <?php  echo $this->Html->script(['bootstrap.min','bootstrap-multiselect','custom','jquery-ui','jquery.validate']); ?>
-    <?php  echo $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js']); ?>
+    <?= $this->Html->script(['bootstrap.min','bootstrap-multiselect','custom','jquery-ui','jquery.validate']); ?>
+    <?= $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js']); ?>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<?php  echo $this->Html->meta('icon') ?>
-    <?php  echo $this->fetch('meta') ?>
+	<?= $this->Html->meta('icon') ?>
+    <?= $this->fetch('meta') ?>
 	
-    <?php  echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css') ?>
+    <?= $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css') ?>
 </head>
 
 <style>
@@ -54,14 +54,51 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 </style>
 
-<body> 
-  <header><?php  
-	echo  $this->element('header');
-?>
+<body 
+class="loginBg"	    > 
+  <header>
+  <nav class="navbar">
+	<div class="container-fluid">
+	<div class="navbar-header" >
+	</div>
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>                        
+		</button>
+		<!--<?php 
+		//$logoImage = $this->Html->image('logo.jpg', array('alt' => 'My Policy Guru', 'border' => '0'));
+		//echo $this->Html->Link($this->Html->image('logo.jpg', array('alt' => 'My Policy Guru', 'border' => '0')), array('controller'=>'users','action'=>'login'), array('class' => 'navbar-brand'));
+		?>-->
+		<!--<?php //echo $this->Html->image('logo.jpg', array('alt' => 'My Policy Guru', 'border' => '0'));?>-->
+		<?php echo $this->Html->image('logo.jpg', array('alt' => 'My Policy Guru', 'border' => '0', 'url' => array('controller'=>'users','action'=>'login'), array('class' => 'navbar-brand')));?>
+
+	  </div>
+	  <div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav navbar-right">
+		  <li><a href="#">How it Works</a></li>
+		  <li><a href="#">Talk to an Expert</a></li>
+		  <li><a href="#">Community Forum</a></li>
+		  
+		<?php if ($this->request->session()->read('Auth.User')){ ?>
+			<li><?=$this->Html->Link(__('Log out'),['controller'=>'users','action'=>'logout']) ?></li>
+		<?php }else{  ?>
+			<li><?=$this->Html->Link(__('Login & Signup'),['controller'=>'users','action'=>'login']) ?></li>
+		<?php } ?>
+		</ul>
+	  </div>
+	</div>
+  </nav> <!--header nav -->
 </header>    
 
 <section>
 <?php
+/*
+echo '--------------->'.$this->request->session()->read('Auth.User');
+echo '--------------->'.$this->request->params['controller'];
+echo '--------------->'.$this->request->params['action'];*/
+
 if($this->request->params['controller'] == "Users" && ($this->request->params['action'] == "login" || $this->request->params['action'] == "dashboard")){
 	$loginPageNewClassFlag = true;
 	$leftMenuFlag = false;
@@ -75,14 +112,7 @@ else {
 	$leftMenuFlag = false;
 }
 ?>
-  <div class="container-fluid <?php if($loginPageNewClassFlag == true) echo 'loginPageNew';?>">
-  <?php if($leftMenuFlag == true ) {
-	  
-	   if ($this->request->session()->read('Auth.User.user_type_code')==_AGENT_CODE){
-		    echo  $this->element('leftmenuagent');
-	   } else
-	 echo  $this->element('leftmenu');
-	   } ?>
+  <div class="container-fluid  > 
 	<?php echo $this->fetch('content') ?>
 	</div>
 </section>

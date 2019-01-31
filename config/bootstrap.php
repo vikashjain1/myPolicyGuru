@@ -221,3 +221,4 @@ Type::build('date')
     ->useImmutable();
 Type::build('datetime')
     ->useImmutable();
+require_once 'constant.php';

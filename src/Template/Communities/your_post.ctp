@@ -38,7 +38,7 @@
 				 </td>
 
 				  <td><?php echo $communityPost->details;?></td>
-				  <td><?php 
+				  <td><?php //pr($communityPost);
 				  if(isset($communityPost['communities_likes']) && count($communityPost['communities_likes'])>0) 
 					echo  count($communityPost['communities_likes']) ;
 				  else 
