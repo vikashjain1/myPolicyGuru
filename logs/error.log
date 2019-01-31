@@ -12790,3 +12790,17 @@ Stack Trace:
 #3 {main}
 
 
+2019-01-31 11:17:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Claims could not be found.
+Exception Attributes: array (
+  'class' => 'Claims',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/claims/add
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/policies/add
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
