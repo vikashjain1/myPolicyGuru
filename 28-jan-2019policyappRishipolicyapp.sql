@@ -325,7 +325,11 @@ INSERT INTO `user_permissions` (`id`, `controller_name`, `action_name`, `user_ty
 (24, 'PoliciesController', 'index', 'NORMAL'),
 (25, 'PoliciesController', 'download', 'NORMAL'),
 (26, 'PoliciesController', 'view', 'NORMAL'),
-(27, 'PoliciesController', 'add', 'NORMAL');
+(27, 'PoliciesController', 'add', 'NORMAL'),
+(31, 'ClaimsController', 'view', 'NORMAL'),
+(32, 'ClaimsController', 'add', 'NORMAL'),
+(33, 'ClaimsController', 'edit', 'NORMAL'),
+(34, 'ClaimsController', 'download', 'NORMAL');
 
 -- --------------------------------------------------------
 
