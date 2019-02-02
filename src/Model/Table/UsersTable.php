@@ -19,8 +19,7 @@ class UsersTable extends Table
     }
 	
 	public function validationDefault(Validator $validator){
-	 $validator->requirePresence('email','You must enter your email.')
-					->add('email', [
+	 $validator->notEmpty('email','Please, enter your email !')->add('email', [
 					'email' => [
 						'rule' => ['email'],
 						'message'=>" Please, enter a valid email!"

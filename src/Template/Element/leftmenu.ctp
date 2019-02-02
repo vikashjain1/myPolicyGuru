@@ -2,7 +2,7 @@
 	<ul>
 		<li><?php echo $this->Html->link('User Dashboard', array('controller' => 'users', 'action' => 'dashboard')); ?></li>
 		<li><?php echo $this->Html->link('Update Profile', array('controller' => 'users', 'action' => 'edit')); ?></li>
-		<li><?php echo $this->Html->link('Manage Password', array('controller' => 'users', 'action' => 'edit')); ?></li>
+		<li><?php echo $this->Html->link('Manage Password', array('controller' => 'users', 'action' => 'changepwd')); ?></li>
 		<li><?php echo $this->Html->link('Manage Policies', array('controller' => 'policies', 'action' => 'add')); ?></li>
 		<li><a href="#user_sumarry.php">User Summary</a></li>
 		<li><?php echo $this->Html->link('Manage Claims', array('controller' => 'claims', 'action' => 'add'));?></li>
