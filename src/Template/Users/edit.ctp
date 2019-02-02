@@ -46,7 +46,8 @@ return this.optional(element) || /^-?\d+$/.test(value);
 	
 <div class="col-md-10 rightAreaInner">
    <div class="updateProfileBox">
-	  <h3>Update Profile<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo $errorMsg;}	?></span></h3>
+		<div class="col-md-12"><?php echo $this->element('manageAccountTop');?></div>
+	  <h3>Manage Account -> Update Profile<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo $errorMsg;}?></span></h3>
 
 	<?php 
 		echo $this->Form->create($user ,['type' => 'file','id'=>'UserForm']);
