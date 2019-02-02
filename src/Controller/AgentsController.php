@@ -100,6 +100,45 @@ class AgentsController extends AppController{
 		$this->set('user',$user);
 	}
 	
+	public function changepwd()
+	{
+		$id = $this->Auth->User('id');
+		$user = $this->Users->get($id);
+		if ($this->request->is(['post', 'put'])) {
+			
+			if (($this->request->data['oldpassword']) && !empty($this->request->data['newpwd'])){
+			
+			if((new DefaultPasswordHasher)->check($this->request->data['oldpassword'],$user['password'])){
+				$this->request->data['password']= $this->request->data['newpwd'];
+				$this->Users->patchEntity($user, $this->request->data);
+			
+				if ($this->Users->save($user)) {
+					$this->Flash->success(__('Your password  has been updated.'));
+					return $this->redirect(['action' => 'changepwd']);
+				}
+			$errdata='';
+			if(count($user->errors())>0){
+				foreach($user->errors() as $ind =>$value){
+					$errdata .='<br/>';
+					$errdata .= implode(",",array_values($value));
+
+				}	
+				$this->set('errorMsg',$errdata);
+			}			
+			$this->Flash->error(__('Unable to update your password .'));
+			}		
+		else{
+								//$this->Flash->error(__('Invalid old password .'));
+								$this->set('errorMsg','Invalid old password ');
+			
+
+			}
+					$this->set('user', $user);
+
+         
+		}
+	}}
+	
 	public function viewUser()
 	{
 		$custData = $this->AgentsUsers->find('all',['conditions'=>['agent_id'=>$this->authUserId]])->contain(['Users'])->toArray();

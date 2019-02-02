@@ -44,7 +44,7 @@ $( function() {
 			echo $this->Flash->render('auth');
 			?>
               <div class="form-group vertical-center">
-                <label class="control-label col-sm-4" for="newpwd">newpwd: <span class="labelComment"></span>
+                <label class="control-label col-sm-4" for="newpwd">New Password : <span class="labelComment"></span>
 				</label>
                 <div class="col-sm-9  col-md-9 col-lg-8">
                   <input type="newpwd" class="form-control" name="newpwd" id="newpwd" placeholder="Enter new password">
@@ -65,7 +65,7 @@ $( function() {
              
                <div class="form-group">
 				<div class="col-md-12 text-right">
-                  <button type="submit" class="btn btn-primary">change pwd</button>
+                  <button type="submit" class="btn btn-primary">Update</button>
                 </div>
               </div>
             <?php echo $this->Form->end();?>

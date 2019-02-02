@@ -40,10 +40,19 @@ class PoliciesController extends AppController
         $this->set(compact('articles'));
     }
 
-    public function view($slug)
+    public function list()
     {
-        $article = $this->Policies->findBySlug($slug)->firstOrFail();
-        $this->set(compact('article'));
+		$PolicyTypes = TableRegistry::get('PolicyTypes');
+		$selectListquery = $PolicyTypes->find('list',[		
+							'keyField' => 'id',
+							'valueField' => 'policy_name'	
+		]);
+		$selectListdata = $selectListquery->toArray();
+		$this->set('selectListdata', $selectListdata);
+		
+		$articles = $this->Paginator->paginate($this->Policies->find('all', [
+					'conditions' => ['Policies.user_id' => $this->Auth->User('id')]]));
+        $this->set(compact('articles'));
     }
 
     public function add()
@@ -65,24 +74,7 @@ class PoliciesController extends AppController
         if ($this->request->is('post')) {
 			$postedData = $this->request->data;
 			if(isset($postedData['policy_type']) && count($postedData['policy_type'])>0){
-				
-				//Handling policy dependent data starts here.
-				if(in_array('4', $postedData['policy_type']) && in_array('7', $postedData['policy_type'])){
-					//Do nothing
-				}
-				else if (in_array('4', $postedData['policy_type']) && !in_array('7', $postedData['policy_type'])){
-					$postedData['coverage_amount'] = '';
-				}
-				else if (!in_array('4', $postedData['policy_type']) && in_array('7', $postedData['policy_type'])){
-					$postedData['beneficiaries'] = '';
-				}
-				else {
-					$postedData['beneficiaries'] = '';
-					$postedData['coverage_amount'] = '';
-				}
-				//Handling policy dependent data ends here.
-				
-				$postedData['policy_type'] = implode(",",$postedData['policy_type']);				
+				//Do nothing				
 			} else {
 				$policy_typeStatus = false;	
 			}
@@ -164,24 +156,7 @@ class PoliciesController extends AppController
 		}	
 		if ($this->request->is(['post', 'put'])) {
 			if(isset($postedData['policy_type']) && count($postedData['policy_type'])>0){
-				
-				//Handling policy dependent data starts here.
-				if(in_array('4', $postedData['policy_type']) && in_array('7', $postedData['policy_type'])){
-					//Do nothing
-				}
-				else if (in_array('4', $postedData['policy_type']) && !in_array('7', $postedData['policy_type'])){
-					$postedData['coverage_amount'] = '';
-				}
-				else if (!in_array('4', $postedData['policy_type']) && in_array('7', $postedData['policy_type'])){
-					$postedData['beneficiaries'] = '';
-				}
-				else {
-					$postedData['beneficiaries'] = '';
-					$postedData['coverage_amount'] = '';
-				}
-				//Handling policy dependent data ends here.
-				
-				$postedData['policy_type'] = implode(",",$postedData['policy_type']);
+				//Do nothing
 			}else{
 				$policy_typeStatus= false;
 			}	

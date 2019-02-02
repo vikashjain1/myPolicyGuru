@@ -136,7 +136,7 @@ class UsersController extends AppController{
 				$this->Users->patchEntity($user, $this->request->data);
 			
 				if ($this->Users->save($user)) {
-					$this->Flash->success(__('Your password data has been updated.'));
+					$this->Flash->success(__('Your password  has been updated.'));
 					return $this->redirect(['action' => 'changepwd']);
 				}
 			$errdata='';
