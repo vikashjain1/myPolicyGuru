@@ -55,7 +55,6 @@ $( function() {
 					}
 					?>
 			  </div>
-			  
 			  <div class="col-md-4">
 				<label>Policy Number</label>
 				<input type="text" name="policy_number" value="<?php echo $policy->policy_number;?>"  class="form-control">
@@ -101,53 +100,54 @@ $( function() {
 	  <!--claim table -->
 	  <div class="table-responsvie">
 		
-		<div class="form-group">
-			<div class="col-md-4">
-			  <label>Column 1</label>
-			  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
-			  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
-			</div>
-			<div class="col-md-4">
-			  <label>Column 2</label>
-			  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
-			</div>
-			<div class="col-md-4">
-			  <label>Column 3</label>
-			  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
-			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading" style="color:blue;font-size:18px;" >Add Vehicle 1</div>
+			<div class="form-group">
+				<div class="col-md-4">
+				  <label>Column 1</label>
+				  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
+				  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
+				</div>
+				<div class="col-md-4">
+				  <label>Column 2</label>
+				  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
+				</div>
+				<div class="col-md-4">
+				  <label>Column 3</label>
+				  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
+				</div>
+			 </div>
+			<div class="form-group">
+				<div class="col-md-4">
+				  <label>Column 1</label>
+				  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
+				  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
+				</div>
+				<div class="col-md-4">
+				  <label>Column 2</label>
+				  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
+				</div>
+				<div class="col-md-4">
+				  <label>Column 3</label>
+				  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
+				</div>
+			 </div>
+			 <div class="form-group">
+				<div class="col-md-4">
+				  <label>Column 1</label>
+				  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
+				  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
+				</div>
+				<div class="col-md-4">
+				  <label>Column 2</label>
+				  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
+				</div>
+				<div class="col-md-4">
+				  <label>Column 3</label>
+				  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
+				</div>
+			 </div>
 		 </div>
-		<div class="form-group">
-			<div class="col-md-4">
-			  <label>Column 1</label>
-			  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
-			  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
-			</div>
-			<div class="col-md-4">
-			  <label>Column 2</label>
-			  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
-			</div>
-			<div class="col-md-4">
-			  <label>Column 3</label>
-			  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
-			</div>
-		 </div>
-		 <div class="form-group">
-			<div class="col-md-4">
-			  <label>Column 1</label>
-			  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
-			  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
-			</div>
-			<div class="col-md-4">
-			  <label>Column 2</label>
-			  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
-			</div>
-			<div class="col-md-4">
-			  <label>Column 3</label>
-			  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
-			</div>
-		 </div>
-		 
-		 
 		 
 	  </div>
 	  <!--claim table ends -->
