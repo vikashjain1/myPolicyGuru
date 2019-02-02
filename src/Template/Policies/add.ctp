@@ -37,7 +37,7 @@
 </script>
 <div class="col-md-10 rightAreaInner">
    <div class="updateProfileBox">
-	<h3>Add Policy<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){echo $errorMsg;}?></span></h3>
+	<h3>Mamage Policies -> Add Policy<span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){echo $errorMsg;}?></span></h3>
 	
 	<?php echo $this->Form->create($article ,['type' => 'file','id'=>'PolicyForm']);?>
 	  
@@ -48,11 +48,10 @@
 			  <div class="col-md-4">
 				<label>Policy Type <span>(Individual/Family Account)</span></label>
 
-				<select id="policy_type" class="my-select" name="policy_type[]" multiple="multiple">
+				<select id="policy_type" class="my-select" name="policy_type">
 				<?php
 				$cnt=0;
-					foreach($selectListdata as $policyid => $policyType){			
-				
+				foreach($selectListdata as $policyid => $policyType){			
 				?>
 				 <option value="<?php echo $policyid;?>" <?php if($cnt==0) echo 'selected';?>><?php echo $policyType;?></option>						 
 				 <?php 
