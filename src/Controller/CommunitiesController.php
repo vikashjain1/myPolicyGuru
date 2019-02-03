@@ -197,8 +197,6 @@ class CommunitiesController extends AppController
 	public function addresponse()
     {
 		$this->set('errorMsg','');
-		 $this->loadModel('CommunitiesResponses');
-        //$CommunitiesResponses = 
 		$CommunitiesResponses = $this->CommunitiesResponses->newEntity();
 		// Data now looks like
         if ($this->request->is('post')) {

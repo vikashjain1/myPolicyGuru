@@ -9,8 +9,6 @@ use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
 use Cake\Network\Email\Email;
-use App\Model\Table\PolicyTypesTable;
-use App\Model\Entity\PolicyType;
 
 class PoliciesController extends AppController
 {
@@ -22,14 +20,16 @@ class PoliciesController extends AppController
         $this->session = $this->request->session();
         $this->loadComponent('Paginator');
         $this->loadComponent('Flash'); // Include the FlashComponent
-		$this->loadModel('CommunitiesLikes');
+		$this->loadModel('PoliciesAuto');
+		$this->loadModel('PolicyTypes');		$this->loadComponent('RequestHandler');
+
     }
 	
 	public function beforeFilter(Event $event) {
 		//parent::beforeFilter($event);
-		if($this->Auth->User('id')){
-			$this->Auth->allow();
-			//$this->Auth->allow($this->loggedInUserAllowedActions);	
+		if($this->authUserId){
+			//$this->Auth->allow(['edit','addtest']);
+			$this->Auth->allow($this->loggedInUserAllowedActions);	
 		}
     }
 
@@ -42,8 +42,7 @@ class PoliciesController extends AppController
 
     public function list()
     {
-		$PolicyTypes = TableRegistry::get('PolicyTypes');
-		$selectListquery = $PolicyTypes->find('list',[		
+		$selectListquery = $this->PolicyTypes->find('list',[		
 							'keyField' => 'id',
 							'valueField' => 'policy_name'	
 		]);
@@ -51,7 +50,7 @@ class PoliciesController extends AppController
 		$this->set('selectListdata', $selectListdata);
 		
 		$articles = $this->Paginator->paginate($this->Policies->find('all', [
-					'conditions' => ['Policies.user_id' => $this->Auth->User('id')]]));
+					'conditions' => ['Policies.user_id' => $this->authUserId]]));
         $this->set(compact('articles'));
     }
 
@@ -59,11 +58,10 @@ class PoliciesController extends AppController
     {
 		$this->set('errorMsg','');
         $article = $this->Policies->newEntity();
-		$PolicyTypes = TableRegistry::get('PolicyTypes');
 		
 		$fileuplodStatus=true;
 		$policy_typeStatus=true;
-		$selectListquery = $PolicyTypes->find('list',[		
+		$selectListquery = $this->PolicyTypes->find('list',[		
 							'keyField' => 'id',
 							'valueField' => 'policy_name'	
 		]);
@@ -73,11 +71,6 @@ class PoliciesController extends AppController
 		// Data now looks like
         if ($this->request->is('post')) {
 			$postedData = $this->request->data;
-			if(isset($postedData['policy_type']) && count($postedData['policy_type'])>0){
-				//Do nothing				
-			} else {
-				$policy_typeStatus = false;	
-			}
 				
 			if(!empty($postedData['expiration_date']))
 				$postedData['expiration_date'] = Date("Y-m-d",strtotime($postedData['expiration_date']));
@@ -98,15 +91,44 @@ class PoliciesController extends AppController
 					$fileuplodStatus= false;	
 				}
 			}
-			if($policy_typeStatus===false || $fileuplodStatus===false){
+			if($fileuplodStatus===false){
 				//$this->set('errorMsg','File not uploaded .');
 				$this->Flash->error(__('File not uploaded'));
 			} else {
 				//pr($postedData);die;
 				$article = $this->Policies->patchEntity($article, $postedData);
-				$article->user_id = $this->Auth->User('id');
-				//pr($article);die;
+				$article->user_id = $this->authUserId;
+				$policyData= $this->Policies->save($article);
 				if ($this->Policies->save($article)) {
+					
+					///
+					$policyId = $policyData->id;
+					//$deletePoliciesAuto = $this->PoliciesAuto->deleteAll(['policy_id'=>$policyId ]);
+					if(isset($postedData['id']))
+					unset($postedData['id']);
+					for($i=0;$i<count($postedData['covered_items']);$i++ ){
+						$newarr =['policy_id'=>$policyId,
+						'make'=>$postedData['make'][$i],
+						'covered_items'=>$postedData['covered_items'][$i],
+						'model'=>$postedData['model'][$i],
+						'license_plate'=>$postedData['license_plate'][$i],
+						'full_cost_replace'=>$postedData['full_cost_replace'][$i],
+						'vin'=>$postedData['vin'][$i],
+						'comp_deduct'=>$postedData['comp_deduct'][$i],
+						'medical_pip'=>$postedData['medical_pip'][$i],
+						'liability_limit'=>$postedData['liability_limit'][$i],
+						'motor_limits'=>$postedData['motor_limits'][$i],
+						'tow_limits'=>$postedData['tow_limits'][$i],
+						'gap_or_lease'=>$postedData['gap_or_lease'][$i]
+						
+						
+						];
+						$PoliciesAuto = $this->PoliciesAuto->newEntity();
+						$PoliciesAuto= $this->PoliciesAuto->patchEntity($PoliciesAuto, $newarr);
+						$this->PoliciesAuto->save($PoliciesAuto);
+					}
+					
+					///
 					$this->Flash->success(__('Your policy details has been saved.'));
 					return $this->redirect(['action' => 'add']);
 				}
@@ -123,18 +145,19 @@ class PoliciesController extends AppController
 		}
         $this->set('article', $article);
 		$articles = $this->Paginator->paginate($this->Policies->find('all', [
-					'conditions' => ['Policies.user_id' => $this->Auth->User('id')]]));
+					'conditions' => ['Policies.user_id' => $this->authUserId]]));
         $this->set(compact('articles'));
     }
 	
 	public function edit($id)
 	{
 		$postedData = $this->request->data;
+		//pr($postedData );die;
 		$fileuplodStatus=true;
 		$policy_typeStatus=true;
-		$PolicyTypes = TableRegistry::get('PolicyTypes');
+		//$PolicyTypes = TableRegistry::get('PolicyTypes');
 
-		$selectListquery = $PolicyTypes->find('list',[		
+		$selectListquery = $this->PolicyTypes->find('list',[		
 						'keyField' => 'id',
 						'valueField' => 'policy_name'	
 		]);
@@ -145,21 +168,17 @@ class PoliciesController extends AppController
 			$id= $postedData['id'];
 		}//die;
 		
-		$policy = $this->Policies->findById($id)->firstOrFail();
-		
+		$policy = $this->Policies->findById($id)->contain('PoliciesAuto')->firstorfail();
+		//pr($policy);die;
 		//$topicId = (int)$this->request->params['pass'][0];
 		// check if the topic is owned by the user 
-		if ($this->Policies->isOwnedBy($id, $this->Auth->User('id'))) {
+		if ($this->Policies->isOwnedBy($id, $this->authUserId)) {
 		//return true;
 		}else{
-		return false;	
+		//return false;	
 		}	
 		if ($this->request->is(['post', 'put'])) {
-			if(isset($postedData['policy_type']) && count($postedData['policy_type'])>0){
-				//Do nothing
-			}else{
-				$policy_typeStatus= false;
-			}	
+				
 
 			if(!empty($postedData['expiration_date']))
 				$postedData['expiration_date'] = Date("Y-m-d",strtotime($postedData['expiration_date']));
@@ -181,19 +200,43 @@ class PoliciesController extends AppController
 				}
 			}
 			
-			if($policy_typeStatus===false){
-				$this->Flash->error(__('Policy Type cannot left blank.'));
-			}
-			elseif($fileuplodStatus===false){
+			if($fileuplodStatus===false){
 				//$this->set('errorMsg','File not uploaded  .');
 				$this->Flash->error(__('File not uploaded  .'));
 			}
 			else{
+				
 				$policy = $this->Policies->patchEntity($policy, $postedData);
-				$policy->user_id = $this->Auth->User('id');
-				if ($this->Policies->save($policy)) {
+				$policy->user_id = $this->authUserId;
+				$policyData = $this->Policies->save($policy);
+				if ($policyData) {
+					$policyId = $policyData->id;
+					$deletePoliciesAuto = $this->PoliciesAuto->deleteAll(['policy_id'=>$policyId ]);
+					unset($postedData['id']);
+					for($i=0;$i<count($postedData['covered_items']);$i++ ){
+						$newarr =['policy_id'=>$policyId,
+						'make'=>$postedData['make'][$i],
+						'covered_items'=>$postedData['covered_items'][$i],
+						'model'=>$postedData['model'][$i],
+						'license_plate'=>$postedData['license_plate'][$i],
+						'full_cost_replace'=>$postedData['full_cost_replace'][$i],
+						'vin'=>$postedData['vin'][$i],
+						'comp_deduct'=>$postedData['comp_deduct'][$i],
+						'medical_pip'=>$postedData['medical_pip'][$i],
+						'liability_limit'=>$postedData['liability_limit'][$i],
+						'motor_limits'=>$postedData['motor_limits'][$i],
+						'tow_limits'=>$postedData['tow_limits'][$i],
+						'gap_or_lease'=>$postedData['gap_or_lease'][$i]
+						
+						
+						];
+						$PoliciesAuto = $this->PoliciesAuto->newEntity();
+						$PoliciesAuto= $this->PoliciesAuto->patchEntity($PoliciesAuto, $newarr);
+						$this->PoliciesAuto->save($PoliciesAuto);
+					}
+
 					$this->Flash->success(__('Your policy details has been updated.'));
-					return $this->redirect(['action' => 'edit',$id]);
+					return $this->redirect(['action' => 'edit',$policyId]);
 				}
 				$errdata='';
 				if(count($policy->errors())>0){
@@ -208,7 +251,7 @@ class PoliciesController extends AppController
 		}										
 		$this->set('policy', $policy);
 		$policies = $this->Paginator->paginate($this->Policies->find('all', [
-					'conditions' => ['Policies.user_id' => $this->Auth->User('id')]]));
+					'conditions' => ['Policies.user_id' => $this->authUserId]]));
         $this->set(compact('policies'));
 	}
 
@@ -228,5 +271,22 @@ class PoliciesController extends AppController
 			readfile($destPath.DS.$filename); //showing the path to the server where the file is to be download
 			exit;
 		}
+	}
+	
+	
+	public function addautovehicles($cnt){
+	$this->viewBuilder()->layout(false);
+		$this->set('elemId',$cnt);		
+        //echo 'done';
+		//die('hua');
+		
+	}
+	public function addtest($cnt)
+	{	
+		//Configure::write('debug', 0);
+		$this->viewBuilder()->layout(false);
+		$this->set('elemId',$cnt);		
+        //echo 'done';
+		//die('hua');
 	}
 }

@@ -114,6 +114,27 @@ $('.modalClassAjax').click(function(event) {
 	//$('#ajax-content').remove();
   });
 });
+var cnt =1;
+$(document).on("click", "#addMore", function(event) { 
+
+var finalurl = '<?php echo $this->Url->build([
+    "controller" => "Policies",
+    "action" => "addautovehicles",
+]);?>';	
+    event.preventDefault(); 
+	if($('#totalrowsAutoId').val()>0){
+		cnt =$('#totalrowsAutoId').val();
+	}
+	cnt++;
+	//alert(cnt++);   
+	//var finalurl = 'http://localhost/policyapp2/vikashversion2/myPolicyGuru/policies/addtest/3';
+
+		 $.get(finalurl+"/"+cnt, function(html) {
+			 $('#cloneDivId').append(html);
+			alert(html);
+		 });
+ 
+});
 </script>
 
 <div id="ajax-content" style="display:none;"></div>

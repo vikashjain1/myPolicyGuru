@@ -32,11 +32,12 @@ $( function() {
 			}
 		}
 	});
-});    
+});
+  
 </script>	
 <div class="col-md-10 rightAreaInner">
    <div class="updateProfileBox">
-	<h3>Mamage Policies -> Edit Policy: <?php echo $policy->policy_number;?><span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo  $errorMsg;}?></span></h3>
+	<h3>Manage Policies -> Edit Policy: <?php echo $policy->policy_number;?><span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo  $errorMsg;}?></span></h3>
 	
 	<?php echo $this->Form->create($policy ,['type' => 'file','id'=>'PolicyForm']);?>
 	  <div class="panel panel-default">
@@ -91,66 +92,27 @@ $( function() {
 				</div>
 				<div class="col-md-4 text-right">
 				 <div class="addPolicyBtn"><input type="submit" class="btn btn-primary" value="Update Policy"></div>
+				
+				<a href="#" id="addMore" >Add More</a>
 				</div>
 			  </div>
 		</div>
 	  </div> <!--ends of from Panel -->
-	  <?php echo $this->Form->end();?>
 
 	  <!--claim table -->
-	  <div class="table-responsvie">
+	  <div class="table-responsvie" id="cloneDivId">
 		
-		<div class="panel panel-default">
-			<div class="panel-heading" style="color:blue;font-size:18px;" >Add Vehicle 1</div>
-			<div class="form-group">
-				<div class="col-md-4">
-				  <label>Column 1</label>
-				  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
-				  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
-				</div>
-				<div class="col-md-4">
-				  <label>Column 2</label>
-				  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
-				</div>
-				<div class="col-md-4">
-				  <label>Column 3</label>
-				  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
-				</div>
-			 </div>
-			<div class="form-group">
-				<div class="col-md-4">
-				  <label>Column 1</label>
-				  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
-				  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
-				</div>
-				<div class="col-md-4">
-				  <label>Column 2</label>
-				  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
-				</div>
-				<div class="col-md-4">
-				  <label>Column 3</label>
-				  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
-				</div>
-			 </div>
-			 <div class="form-group">
-				<div class="col-md-4">
-				  <label>Column 1</label>
-				  <input type="hidden" value="<?php echo $policy->id;?>" name="id" >
-				  <input type="text" name="carrier" value="<?php echo  $policy->carrier ;?>" class="form-control">
-				</div>
-				<div class="col-md-4">
-				  <label>Column 2</label>
-				  <input name="effective_date" type="text" id="effective_date" value="<?php echo $policy->effective_date ;?>"  class="form-control">
-				</div>
-				<div class="col-md-4">
-				  <label>Column 3</label>
-				  <input name="expiration_date" type="text" id="expiration_date" value="<?php echo $policy->expiration_date ;?>" class="form-control">
-				</div>
+		<div class="panel panel-default"  >
+			
+					<?php echo  $this->element('addAutoDetails',['data'=>$policy['policies_auto']]);?>		
 			 </div>
 		 </div>
 		 
 	  </div>
 	  <!--claim table ends -->
+	  
+	  <?php echo $this->Form->end();?>
 
    </div>
  </div>
+ 

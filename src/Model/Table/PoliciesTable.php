@@ -13,6 +13,8 @@ class PoliciesTable extends Table
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
+		$this->hasMany('PoliciesAuto');
+
     }
 	
 	public function isOwnedBy($policyId, $userId)
