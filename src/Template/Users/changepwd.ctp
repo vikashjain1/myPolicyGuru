@@ -34,6 +34,7 @@ $( function() {
 </script>
 		<div class="col-md-12">
            <div class="signUpBox">
+		   <div class="col-md-12"><?php echo $this->element('manageAccountTop');?></div>
 		   <h3>Manage Account -> Change Password</h3>
 		   <h3><span style="font-size:15px;text-align:right;width:100%;color:red;"><?php if(isset($errorMsg)){ echo  $errorMsg;} ?></span></h3>
             <div class="panel panel-default">
