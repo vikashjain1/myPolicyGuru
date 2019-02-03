@@ -18,6 +18,14 @@ use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
 
+
+
+use Cake\Core\Configure;
+use Cake\Network\Exception\NotFoundException;
+use Cake\View\Exception\MissingTemplateException;
+use Cake\Network\Email\Email;
+use App\Model\Table\UserTypeTable;
+//use App\Model\Entity\UserType;
 /**
  * Application Controller
  *
@@ -32,6 +40,8 @@ class AppController extends Controller
 	public $userActions =[];
 	public $loggedInUserAllowedActions =[];
 	public $currentAction ='';
+	public $authUserId ='';
+
     /**
      * Initialization hook method.
      *
@@ -44,6 +54,8 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
+				$this->loadModel('UserType');
+
         //$this->loadComponent('RequestHandler');
 		$this->loadComponent('Flash');
 		$this->loadComponent('Auth', [
@@ -65,20 +77,22 @@ class AppController extends Controller
 		// Allow the display action so our pages controller still works and  user can visit index and view actions.
 		//$this->Auth->allow(['index','display','view']);
 		
-		$UserType = TableRegistry::get('UserType');
-		
-		$selectUserTypeCodeListquery = $UserType->find('list',[		
+		//$UserType = TableRegistry::get('UserType');
+		$this->authUserId = $this->Auth->User('id');
+
+		$selectUserTypeCodeListquery = $this->UserType->find('list',[		
 							'keyField' => 'id',
 							'valueField' => 'code'	
 		]);
 		$this->userCodes = $selectUserTypeCodeListquery->toArray();
 		$this->set('userCodes',$this->userCodes);
-		$this->set('homepage',false);
 		
 		$UserPermissions = TableRegistry::get('UserPermissions');
 		
-		$selectUserTypeCodeActionsControllers = $UserPermissions->find('all',['conditions'=>
-		['user_type_code'=>$this->Auth->User('user_type_code')]]
+		$selectUserTypeCodeActionsControllers = $UserPermissions->find('all',
+		['conditions'=>
+			['user_type_code'=>$this->Auth->User('user_type_code'),'status'=>_AUTHORIZE_ACTION]
+		]
 		);
 		$userActionsData = $selectUserTypeCodeActionsControllers->toArray();
 		$cnt=0;

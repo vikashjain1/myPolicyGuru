@@ -2,7 +2,7 @@
 // src/Model/Table/ArticlesTable.php
 namespace App\Model\Table;
 
-use App\Model\Entity\User;
+use App\Model\Entity\UserType;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;

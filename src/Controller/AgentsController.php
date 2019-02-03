@@ -7,7 +7,6 @@ use App\Model\Table\AgentsUsers;
 
 
 class AgentsController extends AppController{
-
     public function initialize()
     {	
 		parent::initialize();
@@ -17,7 +16,7 @@ class AgentsController extends AppController{
 
 		$this->loadComponent('Flash'); // Include the FlashComponent
 		// Auth component allow visitors to access add action to register  and access logout action 
-		if($this->Auth->User('id')){
+		if($this->authUserId){
 			if($this->Auth->User('user_type_code')!=_AGENT_CODE){
 				//return $this->redirect(['controller' => 'Users', 'action' => 'dashboard']);
 			}
@@ -101,10 +100,48 @@ class AgentsController extends AppController{
 		$this->set('user',$user);
 	}
 	
+	public function changepwd()
+	{
+		$id = $this->Auth->User('id');
+		$user = $this->Users->get($id);
+		if ($this->request->is(['post', 'put'])) {
+			
+			if (($this->request->data['oldpassword']) && !empty($this->request->data['newpwd'])){
+			
+			if((new DefaultPasswordHasher)->check($this->request->data['oldpassword'],$user['password'])){
+				$this->request->data['password']= $this->request->data['newpwd'];
+				$this->Users->patchEntity($user, $this->request->data);
+			
+				if ($this->Users->save($user)) {
+					$this->Flash->success(__('Your password  has been updated.'));
+					return $this->redirect(['action' => 'changepwd']);
+				}
+			$errdata='';
+			if(count($user->errors())>0){
+				foreach($user->errors() as $ind =>$value){
+					$errdata .='<br/>';
+					$errdata .= implode(",",array_values($value));
+
+				}	
+				$this->set('errorMsg',$errdata);
+			}			
+			$this->Flash->error(__('Unable to update your password .'));
+			}		
+		else{
+								//$this->Flash->error(__('Invalid old password .'));
+								$this->set('errorMsg','Invalid old password ');
+			
+
+			}
+					$this->set('user', $user);
+
+         
+		}
+	}}
+	
 	public function viewUser()
 	{
-		$agent_id = $this->Auth->User('id');
-		$custData = $this->AgentsUsers->find('all',['conditions'=>['agent_id'=>$agent_id]])->contain(['Users'])->toArray();
+		$custData = $this->AgentsUsers->find('all',['conditions'=>['agent_id'=>$this->authUserId]])->contain(['Users'])->toArray();
 		//pr($custData);die;
 		//$user = $this->Users->find('all',['conditions'=>[]]);
 		$this->set('custData',$custData);
@@ -123,8 +160,7 @@ class AgentsController extends AppController{
 			$resultUser = $this->Users->save($user);
 			if($resultUser){
 				$user_id = $resultUser->id;
-				$agent_id = $this->Auth->User('id');
-				$newarr =['user_id'=>$user_id,'agent_id'=>$agent_id];
+				$newarr =['user_id'=>$user_id,'agent_id'=>$this->authUserId];
 				$this->AgentsUsers->patchEntity($AgentsUsers, $newarr);
 
 				$this->AgentsUsers->save($AgentsUsers);
@@ -147,14 +183,13 @@ class AgentsController extends AppController{
 	
 	public function edit()
 	{
-		$id = $this->Auth->User('id');
-		$user = $this->Users->get($id);
+		$user = $this->Users->get($this->authUserId);
 		if ($this->request->is(['post', 'put'])) {
 			$this->Users->patchEntity($user, $this->request->data);
 			//pr($user->errors());die;
 			if ($this->Users->save($user)) {
 				$this->Flash->success(__('Your profile data has been updated.'));
-				return $this->redirect(['action' => 'index']);
+				return $this->redirect(['action' => 'edit']);
 			}
 			$errdata='';
 			if(count($user->errors())>0){

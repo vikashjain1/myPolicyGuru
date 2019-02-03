@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2019 at 12:10 PM
+-- Generation Time: Jan 31, 2019 at 12:13 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.0.15
 
@@ -238,6 +238,8 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `user_type_code` varchar(50) DEFAULT 'NORMAL',
   `name` varchar(50) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `account_type` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
@@ -263,23 +265,23 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_type_code`, `name`, `email`, `account_type`, `address`, `city`, `state`, `zip`, `how_many_homes`, `how_many_cars`, `boat_exists`, `how_many_children`, `small_business_exists`, `business_name`, `married`, `phone`, `password`, `status`, `request_date`, `created`, `modified`) VALUES
-(1, 'NORMAL', 'Rishi Kapoor good', 'rishi@test.com', 'business', 'sect4012', 'lko1', 'hary11', '122001', 2, 2, 0, 2, 0, 'japu', 0, '', '$2y$10$xjzItDbKNjt4GnarNt/n5OD1lDiZXvIZJG9oJ/0zq6Oer.HZzhyf2', 0, NULL, '0000-00-00 00:00:00', '2019-01-26 12:35:01'),
-(2, 'NORMAL', 'Vikash', 'vikajjjsh@test.com', 'individual', 'sect40', 'lko', 'hary', '122001', 2, 2, 1, 2, 1, 'japu', 1, '', '$2y$10$JaVaMUnNRX60rejeVr4K1ON5ZyRhTq5uMBcLcYnkzHkYvdhH7SO8O', 0, NULL, '0000-00-00 00:00:00', '2019-01-01 10:09:16'),
-(3, 'AGENT', 'raj kumar', 'raj@test.com', 'business', 'sect40', 'lko', 'hary', '122001', 2, 2, 1, 2, 1, 'japu new', 0, '', '$2y$10$TxR/S/4XOvTPuSglCaI72enw7ZWBVuhtGW9A3i8mv9cpDKZ6hNpsq', 0, NULL, '0000-00-00 00:00:00', '2019-01-25 12:35:31'),
-(5, 'NORMAL', '', 'rish1i@test.com', '', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$UU44uaPsc7PG/QwSrfYdJO1uKomgtuNXkRK7BjiwpSsMgzTQiSmwq', 0, NULL, '0000-00-00 00:00:00', '2019-01-06 13:59:07'),
-(6, 'NORMAL', '', 'vikash@agent.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$vnSb7f6Ya59Kn4cYA.tjPOyqR9YlwNzAAXJ1vSS/skV6MYXlvJXHS', 0, NULL, '2019-01-24 11:36:10', '2019-01-24 11:36:10'),
-(7, 'AGENT', '', 'rishi@agent.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$LFQhpXBvJ7FxvB4juISNJuaGdETvwBOmeCCkCiffvw3vckoQ0y7E.', 0, NULL, '2019-01-24 11:40:29', '2019-01-25 12:35:13'),
-(10, 'AGENT', 'rohit yadav new', 'rohit@agent.com', 'individual', 'sect40', 'lko', 'hary', '122001', 3, 3, 0, 3, 0, 'japu', 0, '', '$2y$10$HIyyaZcZNdhl1UC4kuRk1OKCf0pARBAOrWcGZnvyfw8zaf5dTaN9q', 0, NULL, '2019-01-24 11:59:50', '2019-01-26 15:14:31'),
-(11, 'AGENT', '', 'jaidev@agent.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$Wp8vJ6SyB17hzxVKE/DYceozT0yQ8722Fa/cdcbqzc1SC5fjwqTD6', 0, NULL, '2019-01-24 12:01:31', '2019-01-25 12:34:50'),
-(13, 'NORMAL', 'rajesh new ', 'firs22tuser@cust.com', '', 'sect40', 'lko', 'hary', '122001', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$2widfjIsN6X3Why4FeXHFudIxMxajdUL5gdDZ2sIiav50nDczai22', 0, NULL, '2019-01-25 18:56:58', '2019-01-26 12:39:42'),
-(14, 'NORMAL', 'rishi new', 'rishicustagent@test.com', '', 'sect40', 'lko', 'hary', '122001', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$OAygotrpdlxLweumUmZXq.nYE1f/9LqwGp/ETA8a1Zi3X.XDsxzOO', 0, NULL, '2019-01-26 11:48:16', '2019-01-26 12:03:58'),
-(15, 'NORMAL', 'jai', 'jai@test.com', '', 'sect56', 'lko', 'up', '77382828', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$/sxKnWo9aFls/1VkrdR.0.NAcgRJX/vaUM3iaMEKBi6TpmWCb7G3u', 0, NULL, '2019-01-26 12:01:41', '2019-01-26 12:03:48'),
-(16, 'NORMAL', 'jai cust new shri agent', 'polo@yetet.com', '', 'sect56', 'lko', 'up', '77382828', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$Wa/PxW5g35ciRIi4k1yIGONYZSwQ8cUscFdaaOmq2fD/TLQBaUxv2', 0, NULL, '2019-01-26 12:06:11', '2019-01-26 12:06:11'),
-(17, 'NORMAL', 'myboy', 'kakakka@test.com', '', 'sect667', 'gutggag', 'up east', '77737373', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$1gwEuHuE0KOQj3rFWr1KmuMgRwymgDisv7TulOh2Kjlby2eEG.JSK', 0, NULL, '2019-01-26 12:40:12', '2019-01-26 12:40:12'),
-(18, 'NORMAL', 'jaipal sen gupta', 'jaipal@test.com', '', 'sec 67', 'lko', 'harynan', '292020', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$SZEYqg/ZkUbGdxAYYE1mrOhZjdWmfmr/CgJp4key5BK8tAKMac.J2', 0, NULL, '2019-01-26 15:15:21', '2019-01-26 15:15:38'),
-(19, 'AGENT', '', 'jaipal@aganet.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$x9ckwXCYmBxFKt4nYJJIJ./KsYnfxVnUJmiqWCxTbSp3/bQJTTY9i', 0, NULL, '2019-01-26 15:19:28', '2019-01-26 15:19:28'),
-(20, 'NORMAL', '', 'pk@test.com', 'user', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$qbi3PngR14tLaljoDoezGu8kni8.5oM6aeVGVcrFR8TNAuYMwN1nS', 0, NULL, '2019-01-26 15:20:23', '2019-01-26 15:20:23');
+INSERT INTO `users` (`id`, `user_type_code`, `name`, `first_name`, `last_name`, `email`, `account_type`, `address`, `city`, `state`, `zip`, `how_many_homes`, `how_many_cars`, `boat_exists`, `how_many_children`, `small_business_exists`, `business_name`, `married`, `phone`, `password`, `status`, `request_date`, `created`, `modified`) VALUES
+(1, 'NORMAL', 'Rishi Kapoor good', 'first name goof', 'boy here gg', 'rishi@test.com', 'business', 'sect4012', 'lko1', 'hary11', '122001', 2, 2, 0, 2, 0, 'japu', 0, '', '$2y$10$xjzItDbKNjt4GnarNt/n5OD1lDiZXvIZJG9oJ/0zq6Oer.HZzhyf2', 0, NULL, '0000-00-00 00:00:00', '2019-01-31 10:50:11'),
+(2, 'NORMAL', 'Vikash', '', '', 'vikajjjsh@test.com', 'individual', 'sect40', 'lko', 'hary', '122001', 2, 2, 1, 2, 1, 'japu', 1, '', '$2y$10$JaVaMUnNRX60rejeVr4K1ON5ZyRhTq5uMBcLcYnkzHkYvdhH7SO8O', 0, NULL, '0000-00-00 00:00:00', '2019-01-01 10:09:16'),
+(3, 'AGENT', 'raj kumar', '', '', 'raj@test.com', 'business', 'sect40', 'lko', 'hary', '122001', 2, 2, 1, 2, 1, 'japu new', 0, '', '$2y$10$TxR/S/4XOvTPuSglCaI72enw7ZWBVuhtGW9A3i8mv9cpDKZ6hNpsq', 0, NULL, '0000-00-00 00:00:00', '2019-01-25 12:35:31'),
+(5, 'NORMAL', '', '', '', 'rish1i@test.com', '', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$UU44uaPsc7PG/QwSrfYdJO1uKomgtuNXkRK7BjiwpSsMgzTQiSmwq', 0, NULL, '0000-00-00 00:00:00', '2019-01-06 13:59:07'),
+(6, 'NORMAL', '', '', '', 'vikash@agent.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$vnSb7f6Ya59Kn4cYA.tjPOyqR9YlwNzAAXJ1vSS/skV6MYXlvJXHS', 0, NULL, '2019-01-24 11:36:10', '2019-01-24 11:36:10'),
+(7, 'AGENT', '', '', '', 'rishi@agent.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$LFQhpXBvJ7FxvB4juISNJuaGdETvwBOmeCCkCiffvw3vckoQ0y7E.', 0, NULL, '2019-01-24 11:40:29', '2019-01-25 12:35:13'),
+(10, 'AGENT', 'rohit yadav new', 'agent first rohit ', 'boy good', 'rohit@agent.com', 'individual', 'sect40', 'lko', 'hary', '122001', 3, 3, 0, 3, 0, 'japu', 0, '', '$2y$10$HIyyaZcZNdhl1UC4kuRk1OKCf0pARBAOrWcGZnvyfw8zaf5dTaN9q', 0, NULL, '2019-01-24 11:59:50', '2019-01-31 10:36:51'),
+(11, 'AGENT', '', '', '', 'jaidev@agent.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$Wp8vJ6SyB17hzxVKE/DYceozT0yQ8722Fa/cdcbqzc1SC5fjwqTD6', 0, NULL, '2019-01-24 12:01:31', '2019-01-25 12:34:50'),
+(13, 'NORMAL', 'rajesh new ', 'rajesh good', 'boy', 'firs22tuser@cust.com', '', 'sect40', 'lko', 'hary', '122001', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$2widfjIsN6X3Why4FeXHFudIxMxajdUL5gdDZ2sIiav50nDczai22', 0, NULL, '2019-01-25 18:56:58', '2019-01-31 10:43:41'),
+(14, 'NORMAL', 'rishi new', 'aaacscxccxc', 'ddsasasa', 'rishicustagent@test.com', '', 'sect40', 'lko', 'hary', '122001', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$OAygotrpdlxLweumUmZXq.nYE1f/9LqwGp/ETA8a1Zi3X.XDsxzOO', 0, NULL, '2019-01-26 11:48:16', '2019-01-31 10:48:57'),
+(15, 'NORMAL', 'jai', 'sasasas', 'aasasasa', 'jai@test.com', '', 'sect56', 'lko', 'up', '77382828', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$/sxKnWo9aFls/1VkrdR.0.NAcgRJX/vaUM3iaMEKBi6TpmWCb7G3u', 0, NULL, '2019-01-26 12:01:41', '2019-01-31 10:47:05'),
+(16, 'NORMAL', 'jai cust new shri agent', 'aaaaa', 'aaaaa', 'polo@yetet.com', '', 'sect56', 'lko', 'up', '77382828', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$Wa/PxW5g35ciRIi4k1yIGONYZSwQ8cUscFdaaOmq2fD/TLQBaUxv2', 0, NULL, '2019-01-26 12:06:11', '2019-01-31 10:47:12'),
+(17, 'NORMAL', 'myboy', '', '', 'kakakka@test.com', '', 'sect667', 'gutggag', 'up east', '77737373', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$1gwEuHuE0KOQj3rFWr1KmuMgRwymgDisv7TulOh2Kjlby2eEG.JSK', 0, NULL, '2019-01-26 12:40:12', '2019-01-26 12:40:12'),
+(18, 'NORMAL', 'jaipal sen gupta', '', '', 'jaipal@test.com', '', 'sec 67', 'lko', 'harynan', '292020', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$SZEYqg/ZkUbGdxAYYE1mrOhZjdWmfmr/CgJp4key5BK8tAKMac.J2', 0, NULL, '2019-01-26 15:15:21', '2019-01-26 15:15:38'),
+(19, 'AGENT', '', '', '', 'jaipal@aganet.com', 'agent', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$x9ckwXCYmBxFKt4nYJJIJ./KsYnfxVnUJmiqWCxTbSp3/bQJTTY9i', 0, NULL, '2019-01-26 15:19:28', '2019-01-26 15:19:28'),
+(20, 'NORMAL', '', '', '', 'pk@test.com', 'user', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$qbi3PngR14tLaljoDoezGu8kni8.5oM6aeVGVcrFR8TNAuYMwN1nS', 0, NULL, '2019-01-26 15:20:23', '2019-01-26 15:20:23');
 
 -- --------------------------------------------------------
 
@@ -291,41 +293,46 @@ CREATE TABLE `user_permissions` (
   `id` int(11) NOT NULL,
   `controller_name` varchar(50) DEFAULT NULL,
   `action_name` varchar(50) DEFAULT NULL,
-  `user_type_code` varchar(50) DEFAULT NULL
+  `user_type_code` varchar(50) DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0 means dontallow 1 means allow'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_permissions`
 --
 
-INSERT INTO `user_permissions` (`id`, `controller_name`, `action_name`, `user_type_code`) VALUES
-(1, 'AgentsController', 'dashboard', 'AGENT'),
-(2, 'AgentsController', 'viewUser', 'AGENT'),
-(3, 'AgentsController', 'edit', 'AGENT'),
-(4, 'AgentsController', 'logout', 'AGENT'),
-(5, 'AgentsController', 'addUser', 'AGENT'),
-(6, 'AgentsController', 'editUser', 'AGENT'),
-(7, 'CommunitiesController', 'add', 'NORMAL'),
-(8, 'CommunitiesController', 'response', 'NORMAL'),
-(9, 'CommunitiesController', 'view', 'NORMAL'),
-(10, 'CommunitiesController', 'yourPost', 'NORMAL'),
-(11, 'CommunitiesController', 'yourResponses', 'NORMAL'),
-(12, 'CommunitiesController', 'yourLikes', 'NORMAL'),
-(13, 'CommunitiesController', 'allresponse', 'NORMAL'),
-(14, 'CommunitiesController', 'addlike', 'NORMAL'),
-(15, 'CommunitiesController', 'addresponse', 'NORMAL'),
-(16, 'UsersController', 'add', 'NORMAL'),
-(17, 'UsersController', 'dashboard', 'NORMAL'),
-(18, 'UsersController', 'logout', 'NORMAL'),
-(19, 'UsersController', 'index', 'NORMAL'),
-(20, 'UsersController', 'view', 'NORMAL'),
-(21, 'UsersController', 'delete', 'NORMAL'),
-(22, 'UsersController', 'edit', 'NORMAL'),
-(23, 'PoliciesController', 'edit', 'NORMAL'),
-(24, 'PoliciesController', 'index', 'NORMAL'),
-(25, 'PoliciesController', 'download', 'NORMAL'),
-(26, 'PoliciesController', 'view', 'NORMAL'),
-(27, 'PoliciesController', 'add', 'NORMAL');
+INSERT INTO `user_permissions` (`id`, `controller_name`, `action_name`, `user_type_code`, `status`) VALUES
+(1, 'AgentsController', 'dashboard', 'AGENT', 1),
+(2, 'AgentsController', 'viewUser', 'AGENT', 1),
+(3, 'AgentsController', 'edit', 'AGENT', 1),
+(4, 'AgentsController', 'logout', 'AGENT', 1),
+(5, 'AgentsController', 'addUser', 'AGENT', 1),
+(6, 'AgentsController', 'editUser', 'AGENT', 1),
+(7, 'CommunitiesController', 'add', 'NORMAL', 1),
+(8, 'CommunitiesController', 'response', 'NORMAL', 1),
+(9, 'CommunitiesController', 'view', 'NORMAL', 1),
+(10, 'CommunitiesController', 'yourPost', 'NORMAL', 1),
+(11, 'CommunitiesController', 'yourResponses', 'NORMAL', 1),
+(12, 'CommunitiesController', 'yourLikes', 'NORMAL', 1),
+(13, 'CommunitiesController', 'allresponse', 'NORMAL', 1),
+(14, 'CommunitiesController', 'addlike', 'NORMAL', 1),
+(15, 'CommunitiesController', 'addresponse', 'NORMAL', 1),
+(16, 'UsersController', 'add', 'NORMAL', 1),
+(17, 'UsersController', 'dashboard', 'NORMAL', 1),
+(18, 'UsersController', 'logout', 'NORMAL', 1),
+(19, 'UsersController', 'index', 'NORMAL', 1),
+(20, 'UsersController', 'view', 'NORMAL', 1),
+(21, 'UsersController', 'delete', 'NORMAL', 1),
+(22, 'UsersController', 'edit', 'NORMAL', 1),
+(23, 'PoliciesController', 'edit', 'NORMAL', 1),
+(24, 'PoliciesController', 'index', 'NORMAL', 1),
+(25, 'PoliciesController', 'download', 'NORMAL', 1),
+(26, 'PoliciesController', 'view', 'NORMAL', 1),
+(27, 'PoliciesController', 'add', 'NORMAL', 1),
+(31, 'ClaimsController', 'view', 'NORMAL', 1),
+(32, 'ClaimsController', 'add', 'NORMAL', 1),
+(33, 'ClaimsController', 'edit', 'NORMAL', 1),
+(34, 'ClaimsController', 'download', 'NORMAL', 1);
 
 -- --------------------------------------------------------
 
@@ -346,7 +353,7 @@ CREATE TABLE `user_type` (
 INSERT INTO `user_type` (`id`, `name`, `code`) VALUES
 (1, 'Normal', 'NORMAL'),
 (2, 'Agent Type', 'AGENT'),
-(3, 'Admin', 'ADMIN');
+(3, 'System Admin', 'SYSADMIN');
 
 --
 -- Indexes for dumped tables
@@ -472,7 +479,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `user_type`
 --

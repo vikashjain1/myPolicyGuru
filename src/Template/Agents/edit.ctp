@@ -11,7 +11,8 @@
 		// validate signup form on keyup and submit
 		$("#UserForm").validate({
 			rules: {
-				name: "required"				
+				first_name: "required",
+			last_name: "required",
 				,
 				email: {
 					required: true,
@@ -36,7 +37,8 @@
 				
 			},
 			messages: {
-				name: "Please enter your name",
+				first_name: "Please enter your first  name",
+			last_name: "Please enter your last  name",
 				email: "Please enter a valid email address",
 				address: "Please enter  address",
 				city: "Please enter  city",
@@ -70,9 +72,15 @@ echo  $errorMsg;
 			                  <div class="panel-heading" style="color:green;font-size:15px;" ><?php echo  $this->Flash->render() ?></div>
               <div class="panel-body">
               <div class="form-group">
-                <label class="control-label col-sm-3" for="email">Name:</label>
+                <label class="control-label col-sm-3" for="first_name">First Name:</label>
                 <div class="col-sm-9 col-md-9 col-lg-9">
-                  <input type="text" class="form-control" id="name" name="name" placeholder="" value="<?php  echo  $user->name;?>">
+                  <input type="text" class="form-control" id="first_name" name="first_name" placeholder="" value="<?php  echo  $user->first_name;?>">
+                </div>
+              </div>
+			  <div class="form-group">
+                <label class="control-label col-sm-3" for="last_name">Last Name:</label>
+                <div class="col-sm-9 col-md-9 col-lg-9">
+                  <input type="text" class="form-control" id="last_name" name="last_name" placeholder="" value="<?php  echo  $user->last_name;?>">
                 </div>
               </div>
               <div class="form-group">

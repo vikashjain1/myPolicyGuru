@@ -30,7 +30,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php  echo $this->Html->css('responsive') ?>
 	    <?php  echo $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js']); ?>
 
-    <?php  echo $this->Html->script(['bootstrap.min','bootstrap-multiselect','custom','jquery-ui','jquery.validate']); ?>
+    <?php  echo $this->Html->script(['bootstrap.min','bootstrap-multiselect','custom','jquery-ui','jquery.validate', 'my_guru']); ?>
     <?php  echo $this->Html->script(['https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js']); ?>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<?php  echo $this->Html->meta('icon') ?>
@@ -55,43 +55,39 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </style>
 
 <body> 
-  <header><?php  
-	echo  $this->element('header');
-?>
-</header>    
-
-<section>
-<?php
-if($this->request->params['controller'] == "Users" && ($this->request->params['action'] == "login" || $this->request->params['action'] == "dashboard")){
-	$loginPageNewClassFlag = true;
-	$leftMenuFlag = false;
-}
-elseif($this->request->session()->read('Auth.User') && $this->request->params['action'] != "login" && $this->request->params['action'] != "dashboard"){
-	$loginPageNewClassFlag = false;
-	$leftMenuFlag = true;
-}
-else {
-	$loginPageNewClassFlag = false;
-	$leftMenuFlag = false;
-}
-?>
-  <div class="container-fluid <?php if($loginPageNewClassFlag == true) echo 'loginPageNew';?>">
-  <?php if($leftMenuFlag == true ) {
-	  
-	   if ($this->request->session()->read('Auth.User.user_type_code')==_AGENT_CODE){
-		    echo  $this->element('leftmenuagent');
-	   } else
-	 echo  $this->element('leftmenu');
-	   } ?>
-	<?php echo $this->fetch('content') ?>
-	</div>
-</section>
-<?php  
-echo  $this->element('footer');
-?>
+	<header><?php echo  $this->element('header');?></header>    
+	<section>
+		<?php
+		if(($this->request->params['controller'] == "Users" || $this->request->params['controller'] == "Agents") && ($this->request->params['action'] == "login" || $this->request->params['action'] == "dashboard")){
+			$loginPageNewClassFlag = true;
+			$leftMenuFlag = false;
+		}
+		elseif($this->request->session()->read('Auth.User') && $this->request->params['action'] != "login" && $this->request->params['action'] != "dashboard"){
+			$loginPageNewClassFlag = false;
+			$leftMenuFlag = true;
+		}
+		else {
+			$loginPageNewClassFlag = false;
+			$leftMenuFlag = false;
+		}
+		?>
+		<div class="container-fluid <?php if($loginPageNewClassFlag == true) echo 'loginPageNew';?>">
+		<?php 
+		if($leftMenuFlag == true ) {
+			if ($this->request->session()->read('Auth.User.user_type_code')==_AGENT_CODE){
+				echo  $this->element('leftmenuagent');
+			} 
+			else
+				echo  $this->element('leftmenu');
+		}
+		?>
+		<?php echo $this->fetch('content') ?>
+		</div>
+	</section>
+	<?php echo  $this->element('footer');?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  </body>
+</body>
 </html>
 <!-- The Modal -->
 <style>
@@ -99,7 +95,7 @@ echo  $this->element('footer');
     height: 20%;}
 </style>
 <div class="modal" >
-  
+
 </div>
 <!--
 <div id="ex1" class="modal">
@@ -112,10 +108,8 @@ $('.modalClassAjax').click(function(event) {
   var commId =$(this).attr('id');
   var comUrl = '<?php echo $this->Url->build(["controller" => "Communities",  "action" => "allresponse"]);?>';
   //this.blur(); // Manually remove focus from clicked link.
-  $.get(comUrl+'/'+commId
-  , function(html) {
-  var dataHtml = $('#ajax-content').html(html);  //alert($('#ajax-content').html());
-
+  $.get(comUrl+'/'+commId, function(html) {
+	var dataHtml = $('#ajax-content').html(html);  //alert($('#ajax-content').html());
     $(dataHtml).appendTo('body').modal();
 	//$('#ajax-content').remove();
   });
