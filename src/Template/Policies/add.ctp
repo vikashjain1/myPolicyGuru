@@ -48,12 +48,7 @@
 			  <div class="col-md-4">
 					<label>Policy Type: </label>
 					<?php
-					foreach($selectListdata as $policyid => $policyType){				
-						if(2 == $policyid){
-							echo $policyType;
-							break;
-						}
-					}
+					echo $policyType;
 					?>
 			  </div>
 			  <div class="col-md-4">
@@ -69,7 +64,7 @@
 			<div class="form-group">
 				<div class="col-md-4">
 				  <label>Insurance Carrier</label>
-				  <input type="hidden" value="2" name="policy_type" >
+				  <input type="hidden" value="<?php echo $policy_type;?>" name="policy_type" >
 				  <input type="text" name="carrier" value="<?php //echo  $policy->carrier ;?>" class="form-control">
 				</div>
 				<div class="col-md-4">
@@ -99,16 +94,12 @@
 		</div>
 	  </div> <!--ends of from Panel -->
 
-	  <!--claim table -->
+	   <!--claim table -->
 	  <div class="table-responsvie" id="cloneDivId">
 		
 		<div class="panel panel-default"  >
-			<div class="panel-heading changevehicleText" style="color:blue;font-size:18px;" 
-			id="addvehicleTextId1" >Add Vehicle 1</div>
-				<div  id="addAutoDetailsId">
-					<?php echo  $this->element('addAutoDetails');?>		
-				</div>
-			 </div>
+			
+					<?php echo  $this->element('addAutoDetails',['data'=>[]]);?>		
 		 </div>
 		 
 	  </div>

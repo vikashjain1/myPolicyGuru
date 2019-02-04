@@ -105,7 +105,6 @@ $( function() {
 		<div class="panel panel-default"  >
 			
 					<?php echo  $this->element('addAutoDetails',['data'=>$policy['policies_auto']]);?>		
-			 </div>
 		 </div>
 		 
 	  </div>

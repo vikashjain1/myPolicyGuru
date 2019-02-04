@@ -27,7 +27,8 @@
 				</div>
 				<div class="col-md-4">
 				  <label>Full Cost Replace </label>
-				  <input name="full_cost_replace[]"  type="text" id="full_cost_replace<?php echo  $elemId;?>"  class="form-control">
+				  <input name="full_cost_replace[<?php echo  $elemId-1;?>]"  type="checkbox" id="full_cost_replace<?php echo  $elemId;?>"  value="1"
+					 class="form-control">
 				</div>
 	</div>
 	
@@ -60,9 +61,25 @@
 				  class="form-control">
 				</div>
 				<div class="col-md-4"><label>Gap or Lease /loan Coverage</label>
-				  <input name="gap_or_lease[]"  type="text" id="gap_or_lease<?php echo  $elemId;?>"   
-				  class="form-control">
-				 		</div>
+				  <input name="gap_or_lease[<?php echo  $elemId-1;?>]"  type="checkbox" 
+				  id="gap_or_lease<?php echo  $elemId;?>"   
+				  value="1"
+					 class="form-control">
+				 </div>
+	</div>
+	<div class="form-group">
+				<div class="col-md-4">
+				  <label>Accident  Forgive </label>
+				 <input name="accident_forgive[<?php echo  $elemId-1;?>]"  type="checkbox" 
+				  id="accident_forgive<?php echo  $elemId;?>"   
+				  value="1"
+					 class="form-control">
+				</div>
+				<div class="col-md-4">
+				 &nbsp;
+				</div>
+				<div class="col-md-4">&nbsp;
+				 </div>
 	</div>
 	
 	</div>

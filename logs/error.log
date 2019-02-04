@@ -14946,3 +14946,911 @@ Stack Trace:
 #11 {main}
 
 
+2019-02-03 16:50:18 Error: [ParseError] syntax error, unexpected '?'
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/policies/edit/2
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/policies/list
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(964): Cake\View\View->_evaluate('D:\\xampp\\htdocs...', Array)
+#1 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(1350): Cake\View\View->_render('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(493): Cake\View\View->_renderElement('D:\\xampp\\htdocs...', Array, Array)
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\src\Template\Policies\edit.ctp(107): Cake\View\View->element('addAutoDetails', Array)
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(1005): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(964): Cake\View\View->_evaluate('D:\\xampp\\htdocs...', Array)
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('D:\\xampp\\htdocs...')
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#8 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PoliciesController))
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+
+2019-02-03 16:51:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 16:53:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:00:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff2
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:00:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:00:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.ttf
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:05:00 Error: [ParseError] syntax error, unexpected ')', expecting ']'
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/policies/list
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/policies/add/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Pol...', 'App')
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(91): Cake\Core\App::className('Policies', 'Controller', 'Controller')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2019-02-03 17:05:35 Error: [ParseError] syntax error, unexpected ')', expecting ']'
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/policies/list
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/policies/add/2
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Pol...', 'App')
+#5 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(91): Cake\Core\App::className('Policies', 'Controller', 'Controller')
+#6 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(425): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventManager.php(386): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(61): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2019-02-03 17:06:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff2
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:06:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:06:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.ttf
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:07:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:10:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:10:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:10:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:11:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:12:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:13:00 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-03 17:13:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 06:39:41 Warning: Headers already sent in D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2019-02-04 06:45:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 06:46:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 06:47:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:06:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:06:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:06:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:06:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:06:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:08:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:08:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:09:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:09:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:10:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:11:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:12:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:13:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:13:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:14:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:14:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:16:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:16:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:17:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:18:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:18:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:20:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:20:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff2
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:20:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:20:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.ttf
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:20:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:23:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:24:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:24:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 09:24:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:05:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:06:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:07:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:32:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:32:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:32:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:32:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:32:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:32:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css.map
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:40:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff2
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:40:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:40:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.ttf
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:43:23 Warning: Headers already sent in D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2019-02-04 10:48:53 Warning: Headers already sent in D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2019-02-04 10:50:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff2
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:50:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.woff
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2019-02-04 10:50:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Fonts could not be found.
+Exception Attributes: array (
+  'class' => 'Fonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /policyapp2/vikashversion2/myPolicyGuru/fonts/glyphicons-halflings-regular.ttf
+Referer URL: http://localhost/policyapp2/vikashversion2/myPolicyGuru/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\policyapp2\vikashversion2\myPolicyGuru\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

@@ -42,6 +42,16 @@ class PoliciesController extends AppController
 
     public function list()
     {
+		if ($this->request->is('post')) {
+			$postedData = $this->request->data;
+			if(isset($postedData['policy_type']) && !empty($postedData['policy_type'])){
+			$policy_type = $postedData['policy_type'];
+			return $this->redirect(['action' => 'add',$policy_type]);
+
+			
+			}
+			
+		}
 		$selectListquery = $this->PolicyTypes->find('list',[		
 							'keyField' => 'id',
 							'valueField' => 'policy_name'	
@@ -52,9 +62,10 @@ class PoliciesController extends AppController
 		$articles = $this->Paginator->paginate($this->Policies->find('all', [
 					'conditions' => ['Policies.user_id' => $this->authUserId]]));
         $this->set(compact('articles'));
+		
     }
 
-    public function add()
+    public function add($policyTypeId='')
     {
 		$this->set('errorMsg','');
         $article = $this->Policies->newEntity();
@@ -66,7 +77,10 @@ class PoliciesController extends AppController
 							'valueField' => 'policy_name'	
 		]);
 		$selectListdata = $selectListquery->toArray();
+		$policyType = $selectListdata[$policyTypeId];
 		$this->set('selectListdata', $selectListdata);
+		$this->set('policyType', $policyType);
+		$this->set('policy_type', $policyTypeId);
 
 		// Data now looks like
         if ($this->request->is('post')) {
@@ -108,18 +122,20 @@ class PoliciesController extends AppController
 					unset($postedData['id']);
 					for($i=0;$i<count($postedData['covered_items']);$i++ ){
 						$newarr =['policy_id'=>$policyId,
-						'make'=>$postedData['make'][$i],
-						'covered_items'=>$postedData['covered_items'][$i],
-						'model'=>$postedData['model'][$i],
-						'license_plate'=>$postedData['license_plate'][$i],
-						'full_cost_replace'=>$postedData['full_cost_replace'][$i],
-						'vin'=>$postedData['vin'][$i],
-						'comp_deduct'=>$postedData['comp_deduct'][$i],
-						'medical_pip'=>$postedData['medical_pip'][$i],
-						'liability_limit'=>$postedData['liability_limit'][$i],
-						'motor_limits'=>$postedData['motor_limits'][$i],
-						'tow_limits'=>$postedData['tow_limits'][$i],
-						'gap_or_lease'=>$postedData['gap_or_lease'][$i]
+						'make'=>(isset($postedData['make'][$i]))?$postedData['make'][$i]:'',
+						'covered_items'=>(isset($postedData['covered_items'][$i]))?$postedData['covered_items'][$i]:'',
+						'model'=>(isset($postedData['model'][$i]))?$postedData['model'][$i]:'',
+						'license_plate'=>(isset($postedData['license_plate'][$i]))?$postedData['license_plate'][$i]:'',
+						'full_cost_replace'=>(isset($postedData['full_cost_replace'][$i]) && $postedData['full_cost_replace'][$i]==1)?1:0,
+						'vin'=>(isset($postedData['vin'][$i]))?$postedData['vin'][$i]:'',
+						'comp_deduct'=>(isset($postedData['comp_deduct'][$i]))?$postedData['comp_deduct'][$i]:'',
+						'medical_pip'=>(isset($postedData['medical_pip'][$i]))?$postedData['medical_pip'][$i]:'',
+						'liability_limit'=>(isset($postedData['liability_limit'][$i]))?$postedData['liability_limit'][$i]:'',
+						'motor_limits'=>(isset($postedData['motor_limits'][$i]))?$postedData['motor_limits'][$i]:'',
+						'tow_limits'=>(isset($postedData['tow_limits'][$i]))?$postedData['tow_limits'][$i]:'',
+						'gap_or_lease'=>(isset($postedData['gap_or_lease'][$i]) && $postedData['gap_or_lease'][$i]==1)?1:0,
+						'accident_forgive'=>(isset($postedData['accident_forgive'][$i]) && $postedData['accident_forgive'][$i]==1)?1:0
+
 						
 						
 						];
@@ -130,7 +146,7 @@ class PoliciesController extends AppController
 					
 					///
 					$this->Flash->success(__('Your policy details has been saved.'));
-					return $this->redirect(['action' => 'add']);
+					return $this->redirect(['action' => 'add',$policyTypeId]);
 				}
 				$errdata='';
 				if(count($article->errors())>0){
@@ -214,21 +230,22 @@ class PoliciesController extends AppController
 					$deletePoliciesAuto = $this->PoliciesAuto->deleteAll(['policy_id'=>$policyId ]);
 					unset($postedData['id']);
 					for($i=0;$i<count($postedData['covered_items']);$i++ ){
-						$newarr =['policy_id'=>$policyId,
-						'make'=>$postedData['make'][$i],
-						'covered_items'=>$postedData['covered_items'][$i],
-						'model'=>$postedData['model'][$i],
-						'license_plate'=>$postedData['license_plate'][$i],
-						'full_cost_replace'=>$postedData['full_cost_replace'][$i],
-						'vin'=>$postedData['vin'][$i],
-						'comp_deduct'=>$postedData['comp_deduct'][$i],
-						'medical_pip'=>$postedData['medical_pip'][$i],
-						'liability_limit'=>$postedData['liability_limit'][$i],
-						'motor_limits'=>$postedData['motor_limits'][$i],
-						'tow_limits'=>$postedData['tow_limits'][$i],
-						'gap_or_lease'=>$postedData['gap_or_lease'][$i]
-						
-						
+						$newarr =[
+						'policy_id'=>$policyId,
+						'make'=>(isset($postedData['make'][$i]))?$postedData['make'][$i]:'',
+						'covered_items'=>(isset($postedData['covered_items'][$i]))?$postedData['covered_items'][$i]:'',
+						'model'=>(isset($postedData['model'][$i]))?$postedData['model'][$i]:'',
+						'license_plate'=>(isset($postedData['license_plate'][$i]))?$postedData['license_plate'][$i]:'',
+						'full_cost_replace'=>(isset($postedData['full_cost_replace'][$i]) && $postedData['full_cost_replace'][$i]==1)?1:0,
+						'vin'=>(isset($postedData['vin'][$i]))?$postedData['vin'][$i]:'',
+						'comp_deduct'=>(isset($postedData['comp_deduct'][$i]))?$postedData['comp_deduct'][$i]:'',
+						'medical_pip'=>(isset($postedData['medical_pip'][$i]))?$postedData['medical_pip'][$i]:'',
+						'liability_limit'=>(isset($postedData['liability_limit'][$i]))?$postedData['liability_limit'][$i]:'',
+						'motor_limits'=>(isset($postedData['motor_limits'][$i]))?$postedData['motor_limits'][$i]:'',
+						'tow_limits'=>(isset($postedData['tow_limits'][$i]))?$postedData['tow_limits'][$i]:'',
+						'gap_or_lease'=>(isset($postedData['gap_or_lease'][$i]) && $postedData['gap_or_lease'][$i]==1)?1:0,
+						'accident_forgive'=>(isset($postedData['accident_forgive'][$i]) && $postedData['accident_forgive'][$i]==1)?1:0			
+						//array endss below 
 						];
 						$PoliciesAuto = $this->PoliciesAuto->newEntity();
 						$PoliciesAuto= $this->PoliciesAuto->patchEntity($PoliciesAuto, $newarr);

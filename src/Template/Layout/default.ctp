@@ -124,14 +124,18 @@ var finalurl = '<?php echo $this->Url->build([
     event.preventDefault(); 
 	if($('#totalrowsAutoId').val()>0){
 		cnt =$('#totalrowsAutoId').val();
+			cnt++;
+
+		$('#totalrowsAutoId').val(cnt);
+	}else{
+			cnt++;
+
 	}
-	cnt++;
-	//alert(cnt++);   
+	alert(cnt);   
 	//var finalurl = 'http://localhost/policyapp2/vikashversion2/myPolicyGuru/policies/addtest/3';
 
 		 $.get(finalurl+"/"+cnt, function(html) {
 			 $('#cloneDivId').append(html);
-			alert(html);
 		 });
  
 });

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2019 at 12:13 PM
+-- Generation Time: Feb 04, 2019 at 11:56 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.0.15
 
@@ -143,7 +143,7 @@ CREATE TABLE `communities_likes` (
 --
 
 INSERT INTO `communities_likes` (`id`, `community_id`, `user_id`, `status`, `created`, `modified`) VALUES
-(9, 8, 1, 0, '2019-01-25 07:49:32', '2019-01-25 08:05:56'),
+(9, 8, 1, 0, '2019-01-25 07:49:32', '2019-02-03 10:29:02'),
 (10, 8, 20, 1, '2019-01-26 15:22:41', '2019-01-26 15:22:41');
 
 -- --------------------------------------------------------
@@ -177,6 +177,7 @@ INSERT INTO `communities_responses` (`id`, `community_id`, `user_id`, `response`
 --
 
 CREATE TABLE `policies` (
+  `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `policy_type` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
   `carrier` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
@@ -189,19 +190,68 @@ CREATE TABLE `policies` (
   `coverage_amount` int(11) DEFAULT NULL,
   `status` tinyint(1) DEFAULT '1',
   `created` datetime DEFAULT CURRENT_TIMESTAMP,
-  `modified` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `id` int(11) NOT NULL
+  `modified` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `policies`
 --
 
-INSERT INTO `policies` (`user_id`, `policy_type`, `carrier`, `policy_number`, `expiration_date`, `effective_date`, `policy_premium`, `policy_path`, `beneficiaries`, `coverage_amount`, `status`, `created`, `modified`, `id`) VALUES
-(1, '4,7', 'carrie22', '777882', '2018-12-30', '2018-12-31', 90907782, '', '', NULL, 0, '2018-12-28 06:48:59', '2019-01-13 12:34:59', 1),
-(1, '4', 'carrier345', '55555', '2018-12-29', '2018-12-02', 33333, '', '', NULL, 0, '2018-12-28 06:49:24', '2019-01-16 08:13:26', 2),
-(1, '1,4', 'jaidev carrier', '7676723', '2018-12-31', '2018-12-01', 6277272, '1546013018.jpg', NULL, NULL, 0, '2018-12-28 06:49:58', '2018-12-28 16:03:38', 3),
-(1, '2,4,7', 'catrr77', '822929', '2018-12-10', '2018-12-19', 9292992, '', 'Test Beneficiary', NULL, 0, '2018-12-28 16:04:17', '2019-01-13 12:05:01', 4);
+INSERT INTO `policies` (`id`, `user_id`, `policy_type`, `carrier`, `policy_number`, `expiration_date`, `effective_date`, `policy_premium`, `policy_path`, `beneficiaries`, `coverage_amount`, `status`, `created`, `modified`) VALUES
+(1, 1, '4,7', 'carrie22', '777882', '2018-12-30', '2018-12-31', 90907782, '', '', NULL, 0, '2018-12-28 06:48:59', '2019-01-13 12:34:59'),
+(2, 1, '2', 'carrier345', '55555', '2018-12-29', '2018-12-02', 33333, '', '', NULL, 0, '2018-12-28 06:49:24', '2019-02-02 19:27:34'),
+(3, 1, '2', 'jaidev carrier', '7676723', '2018-12-31', '2018-12-01', 6277272, '', NULL, NULL, 0, '2018-12-28 06:49:58', '2019-02-04 10:36:50'),
+(4, 1, '2,4,7', 'catrr77', '822929', '2018-12-10', '2018-12-19', 9292992, '', 'Test Beneficiary', NULL, 0, '2018-12-28 16:04:17', '2019-01-13 12:05:01'),
+(5, 1, '2', 'sdsdsd777', '55555', '2019-02-22', '2019-02-23', 33333, '', NULL, NULL, 1, '2019-02-03 13:58:28', '2019-02-03 14:26:16'),
+(6, 1, '2', 'jaducarr444', '55555', '2019-02-25', '2019-02-27', 33333, '1549277002.jpg', NULL, NULL, 1, '2019-02-04 10:43:22', '2019-02-04 10:43:22'),
+(7, 1, '2', 'jaducarr444', '55555', '2019-02-25', '2019-02-27', 33333, '1549277333.jpg', NULL, NULL, 1, '2019-02-04 10:48:53', '2019-02-04 10:48:53'),
+(8, 1, '2', 'sdsdsd3333', '55555', '2019-02-24', '2019-02-23', 33333, '', NULL, NULL, 1, '2019-02-04 10:51:42', '2019-02-04 10:52:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `policies_auto`
+--
+
+CREATE TABLE `policies_auto` (
+  `id` int(11) NOT NULL,
+  `policy_id` int(11) DEFAULT NULL,
+  `covered_items` varchar(255) DEFAULT NULL,
+  `make` varchar(255) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  `license_plate` varchar(255) NOT NULL,
+  `vin` varchar(255) NOT NULL,
+  `comp_deduct` varchar(255) NOT NULL,
+  `medical_pip` varchar(255) NOT NULL,
+  `liability_limit` varchar(255) NOT NULL,
+  `motor_limits` varchar(255) NOT NULL,
+  `tow_limits` varchar(255) NOT NULL,
+  `full_cost_replace` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0 means no 1 means yes',
+  `gap_or_lease` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0 means no 1 means yes',
+  `accident_forgive` tinyint(4) DEFAULT '0' COMMENT '0 means no 1 means yes'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `policies_auto`
+--
+
+INSERT INTO `policies_auto` (`id`, `policy_id`, `covered_items`, `make`, `model`, `license_plate`, `vin`, `comp_deduct`, `medical_pip`, `liability_limit`, `motor_limits`, `tow_limits`, `full_cost_replace`, `gap_or_lease`, `accident_forgive`) VALUES
+(6, 2, 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 0, 0, 0),
+(7, 2, 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 0, 0, 0),
+(8, 2, 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 'carrier345', 0, 0, 0),
+(15, 5, 'cover1', 'make1', 'model1', 'lic33 plater', 'cin', 'compreh', 'medicpip', 'lian', 'unisu22', 'towin', 1, 1, 0),
+(16, 5, 'items23', 'mak33', 'model aug', 'liceb55', 'vin2', 'carrier34522', 'medicpip', 'carrier345liability limi22', 'unisu22', 'towin44', 1, 1, 0),
+(47, 3, 'jaidev carrier full 2 first', 'jaidev carrier', 'jaidev carrier', 'jaidev carrier', 'jaidev carrier', 'jaidev carrier', 'jaidev carrier', 'jaidev carrier', 'jaidev carrier', 'jaidev carrier', 1, 0, 0),
+(48, 3, 'cover gap', 'make', 'model', 'liceb', 'vin', 'compreh', 'medicpip', 'lian', 'unisu', 'towin', 0, 1, 0),
+(49, 3, 'carrier345', 'make1', 'jaidev carrier', 'lic33 plater', 'carrier345', 'compreh', 'medicpip', 'lian', '99999', '7777', 1, 1, 1),
+(50, 3, '', '', '', '', '', '', '', '', '', '', 0, 0, 0),
+(51, 6, 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 1, 1, 1),
+(52, 6, 'jaducarr444', '', '', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', '', '', '', 0, 0, 1),
+(53, 7, 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', 1, 1, 1),
+(54, 7, 'jaducarr444', '', '', 'jaducarr444', 'jaducarr444', 'jaducarr444', 'jaducarr444', '', '', '', 0, 0, 1),
+(57, 8, 'carrier345', 'jaidev carrier', 'carrier345', 'jaidev carrier', '333dsdsdsdsd', 'jaidev carrier', '333', '', 'unisu2233', '33', 1, 1, 1),
+(58, 8, 'carrier345', '', '', 'lice2', '', 'jaducarr444', '', '', 'unisu3332323', '', 0, 0, 1),
+(59, 8, '', '', 'model889', '', '', '', '', 'liab77', '', '', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -266,7 +316,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_type_code`, `name`, `first_name`, `last_name`, `email`, `account_type`, `address`, `city`, `state`, `zip`, `how_many_homes`, `how_many_cars`, `boat_exists`, `how_many_children`, `small_business_exists`, `business_name`, `married`, `phone`, `password`, `status`, `request_date`, `created`, `modified`) VALUES
-(1, 'NORMAL', 'Rishi Kapoor good', 'first name goof', 'boy here gg', 'rishi@test.com', 'business', 'sect4012', 'lko1', 'hary11', '122001', 2, 2, 0, 2, 0, 'japu', 0, '', '$2y$10$xjzItDbKNjt4GnarNt/n5OD1lDiZXvIZJG9oJ/0zq6Oer.HZzhyf2', 0, NULL, '0000-00-00 00:00:00', '2019-01-31 10:50:11'),
+(1, 'NORMAL', 'Rishi Kapoor good', 'first name goof', 'boy here gg', 'rishi@test.com', 'user', 'sect4012', 'lko1', 'hary11', '122001', 2, 2, 0, 2, 0, 'japu', 0, '', '$2y$10$PyicJt3776qCuIKjEKY2/OXvaPRkvTH8P8KzioGLnJ/IB5Gq2T/E2', 0, NULL, '0000-00-00 00:00:00', '2019-02-02 15:40:56'),
 (2, 'NORMAL', 'Vikash', '', '', 'vikajjjsh@test.com', 'individual', 'sect40', 'lko', 'hary', '122001', 2, 2, 1, 2, 1, 'japu', 1, '', '$2y$10$JaVaMUnNRX60rejeVr4K1ON5ZyRhTq5uMBcLcYnkzHkYvdhH7SO8O', 0, NULL, '0000-00-00 00:00:00', '2019-01-01 10:09:16'),
 (3, 'AGENT', 'raj kumar', '', '', 'raj@test.com', 'business', 'sect40', 'lko', 'hary', '122001', 2, 2, 1, 2, 1, 'japu new', 0, '', '$2y$10$TxR/S/4XOvTPuSglCaI72enw7ZWBVuhtGW9A3i8mv9cpDKZ6hNpsq', 0, NULL, '0000-00-00 00:00:00', '2019-01-25 12:35:31'),
 (5, 'NORMAL', '', '', '', 'rish1i@test.com', '', '', '', '', '', 0, 0, 0, 0, 0, '', 0, '', '$2y$10$UU44uaPsc7PG/QwSrfYdJO1uKomgtuNXkRK7BjiwpSsMgzTQiSmwq', 0, NULL, '0000-00-00 00:00:00', '2019-01-06 13:59:07'),
@@ -328,11 +378,15 @@ INSERT INTO `user_permissions` (`id`, `controller_name`, `action_name`, `user_ty
 (24, 'PoliciesController', 'index', 'NORMAL', 1),
 (25, 'PoliciesController', 'download', 'NORMAL', 1),
 (26, 'PoliciesController', 'view', 'NORMAL', 1),
-(27, 'PoliciesController', 'add', 'NORMAL', 1),
+(27, 'PoliciesController', 'addtest', 'NORMAL', 1),
 (31, 'ClaimsController', 'view', 'NORMAL', 1),
 (32, 'ClaimsController', 'add', 'NORMAL', 1),
 (33, 'ClaimsController', 'edit', 'NORMAL', 1),
-(34, 'ClaimsController', 'download', 'NORMAL', 1);
+(34, 'ClaimsController', 'download', 'NORMAL', 1),
+(35, 'UsersController', 'changepwd', 'NORMAL', 1),
+(36, 'PoliciesController', 'list', 'NORMAL', 1),
+(37, 'PoliciesController', 'add', 'NORMAL', 1),
+(38, 'PoliciesController', 'addautovehicles', 'NORMAL', 1);
 
 -- --------------------------------------------------------
 
@@ -403,6 +457,12 @@ ALTER TABLE `policies`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `policies_auto`
+--
+ALTER TABLE `policies_auto`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `policy_types`
 --
 ALTER TABLE `policy_types`
@@ -464,7 +524,12 @@ ALTER TABLE `communities_responses`
 -- AUTO_INCREMENT for table `policies`
 --
 ALTER TABLE `policies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `policies_auto`
+--
+ALTER TABLE `policies_auto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 --
 -- AUTO_INCREMENT for table `policy_types`
 --
@@ -479,7 +544,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `user_type`
 --
