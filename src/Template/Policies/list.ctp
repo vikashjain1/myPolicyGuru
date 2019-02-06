@@ -57,7 +57,9 @@
 			}
 			?>
 			<tr>
-			  <td><?php echo $article->policy_number;?></td>
+			  <td>
+			  <?php echo  $this->Html->link($article->policy_number, 
+						  ['action' => 'view', $article->id]) ?></td>
 			  <td><?php 
 			  $allPolicyType=[];
 			  foreach($policy_typeexp as $id){
