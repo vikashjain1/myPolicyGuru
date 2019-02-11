@@ -5,7 +5,6 @@ use App\Controller\AppController;
 use App\Model\Table\Users;
 use App\Model\Table\AgentsUsers;
 
-
 class AgentsController extends AppController{
     public function initialize()
     {	
@@ -29,12 +28,9 @@ class AgentsController extends AppController{
 	public function dashboard()
 	{
 		//$this->viewBuilder()->layout('home');
-
 		if($this->Auth->User()){
 			 
-			 
 		}
-		
 	}
 	
 	public function login()
@@ -81,7 +77,7 @@ class AgentsController extends AppController{
 		if($this->request->is('post')) {
 			
 			$this->request->data['user_type_code'] = _AGENT_CODE;
-			$this->Users->patchEntity($user, $this->request->data);
+			$this->Users->patchEntity($user, $this->request->data,['validate' => 'add']);
 			if($this->Users->save($user)){
 				$this->Flash->success(__('Your account has been registered .'));				
 				return $this->redirect(['controller' => 'Agents', 'action' => 'login']);
@@ -100,22 +96,16 @@ class AgentsController extends AppController{
 		$this->set('user',$user);
 	}
 	
-	public function changepwd()
+	public function edit()
 	{
-		$id = $this->Auth->User('id');
-		$user = $this->Users->get($id);
+		$user = $this->Users->get($this->authUserId);
 		if ($this->request->is(['post', 'put'])) {
-			
-			if (($this->request->data['oldpassword']) && !empty($this->request->data['newpwd'])){
-			
-			if((new DefaultPasswordHasher)->check($this->request->data['oldpassword'],$user['password'])){
-				$this->request->data['password']= $this->request->data['newpwd'];
-				$this->Users->patchEntity($user, $this->request->data);
-			
-				if ($this->Users->save($user)) {
-					$this->Flash->success(__('Your password  has been updated.'));
-					return $this->redirect(['action' => 'changepwd']);
-				}
+			$this->Users->patchEntity($user, $this->request->data,['validate' => 'editagent']);
+			//pr($user->errors());die;
+			if ($this->Users->save($user)) {
+				$this->Flash->success(__('Your profile data has been updated.'));
+				return $this->redirect(['action' => 'edit']);
+			}
 			$errdata='';
 			if(count($user->errors())>0){
 				foreach($user->errors() as $ind =>$value){
@@ -125,19 +115,41 @@ class AgentsController extends AppController{
 				}	
 				$this->set('errorMsg',$errdata);
 			}			
-			$this->Flash->error(__('Unable to update your password .'));
-			}		
-		else{
-								//$this->Flash->error(__('Invalid old password .'));
-								$this->set('errorMsg','Invalid old password ');
-			
-
-			}
-					$this->set('user', $user);
-
-         
+			$this->Flash->error(__('Unable to update your profile .'));
 		}
-	}}
+		$this->set('user', $user);
+	}
+	
+	public function changepwd()
+	{
+		$id = $this->Auth->User('id');
+		$user = $this->Users->get($id);
+		if ($this->request->is(['post', 'put'])) {
+			if (($this->request->data['oldpassword']) && !empty($this->request->data['newpwd'])){
+				if((new DefaultPasswordHasher)->check($this->request->data['oldpassword'], $user['password'])){
+					$this->request->data['password']= $this->request->data['newpwd'];
+					$this->Users->patchEntity($user, $this->request->data,['validate' => 'changepwd']);
+					if ($this->Users->save($user)) {
+						$this->Flash->success(__('Your password  has been updated.'));
+						return $this->redirect(['action' => 'changepwd']);
+					}
+					$errdata='';
+					if(count($user->errors())>0){
+						foreach($user->errors() as $ind =>$value){
+							$errdata .='<br/>';
+							$errdata .= implode(",",array_values($value));
+						}	
+						$this->set('errorMsg',$errdata);
+					}
+					$this->Flash->error(__('Unable to update your password .'));
+				}
+				else{
+					$this->set('errorMsg','Invalid old password ');
+				}
+				$this->set('user', $user);
+			}
+		}
+	}
 	
 	public function viewUser()
 	{
@@ -180,32 +192,7 @@ class AgentsController extends AppController{
 		}
 		$this->set('user',$user);
 	}
-	
-	public function edit()
-	{
-		$user = $this->Users->get($this->authUserId);
-		if ($this->request->is(['post', 'put'])) {
-			$this->Users->patchEntity($user, $this->request->data);
-			//pr($user->errors());die;
-			if ($this->Users->save($user)) {
-				$this->Flash->success(__('Your profile data has been updated.'));
-				return $this->redirect(['action' => 'edit']);
-			}
-			$errdata='';
-			if(count($user->errors())>0){
-				foreach($user->errors() as $ind =>$value){
-					$errdata .='<br/>';
-					$errdata .= implode(",",array_values($value));
 
-				}	
-				$this->set('errorMsg',$errdata);
-			}			
-			$this->Flash->error(__('Unable to update your profile .'));
-		}
-		$this->set('user', $user);
-	}
-	
-	
 	public function editUser($userId)
 	{
 		if($userId){

@@ -5,8 +5,6 @@ use App\Controller\AppController;
 use Cake\Controller\Component\AuthComponent;
 use Cake\Auth\DefaultPasswordHasher;
 
-
-
 class UsersController extends AppController{
 
     public function initialize()
@@ -35,8 +33,6 @@ class UsersController extends AppController{
 		
 	}
 	
-	
-		
 	public function login()
 	{
 		if ($this->request->is('post')) { 
@@ -79,9 +75,9 @@ class UsersController extends AppController{
 	{
 		$user = $this->Users->newEntity();
 		if($this->request->is('post')) {
-			$this->Users->patchEntity($user, $this->request->data);
+			$this->Users->patchEntity($user, $this->request->data,['validate' => 'add']);
 			if($this->Users->save($user)){
-				$this->Flash->success(__('Your account has been registered .'));
+				$this->Flash->success(__('Your account has been registered.'));
 				return $this->redirect(['action' => 'index']);
 			}
 
@@ -91,7 +87,7 @@ class UsersController extends AppController{
 					$errdata .='<br/>';
 					$errdata .= implode(",",array_values($value));
 				}
-				$this->set('errorMsg',$errdata);
+				$this->set('errorMsg',$errdata);//pr($user->errors());die;
 			}		
 			$this->Flash->error(__('Unable to register your account.'));
 		}
@@ -103,8 +99,7 @@ class UsersController extends AppController{
 		$id = $this->Auth->User('id');
 		$user = $this->Users->get($id);
 		if ($this->request->is(['post', 'put'])) {
-			$this->Users->patchEntity($user, $this->request->data);
-			//pr($user->errors());die;
+			$this->Users->patchEntity($user, $this->request->data,['validate' => 'edit']);
 			if ($this->Users->save($user)) {
 				$this->Flash->success(__('Your profile data has been updated.'));
 				return $this->redirect(['action' => 'edit']);
@@ -114,9 +109,8 @@ class UsersController extends AppController{
 				foreach($user->errors() as $ind =>$value){
 					$errdata .='<br/>';
 					$errdata .= implode(",",array_values($value));
-
 				}	
-				$this->set('errorMsg',$errdata);
+				$this->set('errorMsg',$errdata);//pr($user->errors());die;
 			}			
 			$this->Flash->error(__('Unable to update your profile .'));
 		}
@@ -127,51 +121,42 @@ class UsersController extends AppController{
 	{
 		$id = $this->Auth->User('id');
 		$user = $this->Users->get($id);
-		if ($this->request->is(['post', 'put'])) {
-			
+		if ($this->request->is(['post', 'put'])) {	
 			if (($this->request->data['oldpassword']) && !empty($this->request->data['newpwd'])){
-			
-			if((new DefaultPasswordHasher)->check($this->request->data['oldpassword'],$user['password'])){
-				$this->request->data['password']= $this->request->data['newpwd'];
-				$this->Users->patchEntity($user, $this->request->data);
-			
-				if ($this->Users->save($user)) {
-					$this->Flash->success(__('Your password  has been updated.'));
-					return $this->redirect(['action' => 'changepwd']);
+				if((new DefaultPasswordHasher)->check($this->request->data['oldpassword'], $user['password'])){
+					$this->request->data['password']= $this->request->data['newpwd'];
+					$this->Users->patchEntity($user, $this->request->data,['validate' => 'changepwd']);
+					if ($this->Users->save($user)) {
+						$this->Flash->success(__('Your password  has been updated.'));
+						return $this->redirect(['action' => 'changepwd']);
+					}
+					$errdata='';
+					if(count($user->errors())>0){
+						foreach($user->errors() as $ind =>$value){
+							$errdata .='<br/>';
+							$errdata .= implode(",",array_values($value));
+						}	
+						$this->set('errorMsg',$errdata);
+					}
+					$this->Flash->error(__('Unable to update your password .'));
 				}
-			$errdata='';
-			if(count($user->errors())>0){
-				foreach($user->errors() as $ind =>$value){
-					$errdata .='<br/>';
-					$errdata .= implode(",",array_values($value));
-
-				}	
-				$this->set('errorMsg',$errdata);
-			}			
-			$this->Flash->error(__('Unable to update your password .'));
-			}		
-		else{
-								//$this->Flash->error(__('Invalid old password .'));
-								$this->set('errorMsg','Invalid old password ');
-			
-
+				else{
+					$this->set('errorMsg','Invalid old password ');
+				}
+				$this->set('user', $user);
 			}
-					$this->set('user', $user);
-
-         
 		}
-	}}
+	}
 	
 	public function delete($id)
 	{
 		$this->request->allowMethod(['post', 'delete']);
-	
+
 		$user = $this->Users->get($id);
 		if ($this->Users->delete($user)) {
 			$this->Flash->success(__('The user with id: {0} has been deleted.', h($id)));
 			return $this->redirect(['action' => 'index']);
-		}		
-		
+		}
 	}	
 }
 ?>
